@@ -1,0 +1,401 @@
+\documentclass [PhD] {uclathes}
+%\documentclass [PhD,draft] {uclathes}
+
+\renewcommand{\floatpagefraction}{0.7} 
+\renewcommand{\dblfloatpagefraction}{0.7}
+%\usepackage[utf8x]{inputenc}
+
+\usepackage{natbib}
+
+\usepackage[
+pdfauthor={Mingda Li},
+pdftitle={Mingda Li -- PhD Thesis},
+pdfsubject={Learning Deep Neuromuscular Control of the Torso for Anthropomimetic Animation},
+pdftex, pagebackref, pdfpagelabels, hypertexnames, bookmarks, bookmarksnumbered,
+plainpages=false,
+naturalnames=false,
+pdfpagemode=UseOutlines,
+]{hyperref}
+
+\hypersetup{
+colorlinks,
+citecolor=[rgb]{0.0,0.3,0.0},
+filecolor=[rgb]{0.6,0.0,0.0},
+linkcolor=[rgb]{0.0,0.0,0.4},
+urlcolor=[rgb]{0.0,0.0,0.4}}
+
+\usepackage{setspace} % single-spaces figure cations
+\usepackage{multirow}
+\usepackage{booktabs} % For formal tables
+\usepackage{amsmath, amsthm, bm, amssymb, gensymb}
+\usepackage{tikz} \usetikzlibrary{positioning}
+\usepackage{graphicx, caption, subcaption}
+\usepackage{adjustbox}
+\PassOptionsToPackage{draft}{graphicx}
+\graphicspath{ {figures-new/}{figures/} }
+\usepackage[utf8x]{inputenc} 
+\usepackage{romannum}
+
+%%%Negative Sampling
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\frenchspacing
+\usepackage{amsthm}
+
+
+% All commands to check here added by Mingda
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{appendix_theorem}{Theorem}
+\usepackage{amsmath,stackengine}
+\usepackage{amssymb}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{booktabs,subcaption,amsfonts,dcolumn}
+
+\usepackage{latexsym}
+\usepackage{balance}
+\usepackage{bbm}
+\usepackage{url}
+\usepackage{mathtools}% Loads amsmath
+\usepackage{tablefootnote}
+
+%below library is added by Zijun
+\usepackage{breqn} 
+%%%Negative Sampling End
+
+
+
+
+\usepackage{color} \definecolor{new-text-color}{rgb}{0,0,255}
+\newenvironment{NEW}{\color{new-text-color}}{}
+
+
+\def\Arrow{\makebox[6.26399pt]{$\blacktriangleright$}~}
+\def\Square{\makebox[6.26399pt]{$\blacksquare$}~}
+\newcommand{\mat}[1]{\bm{#1}}
+\renewcommand{\vec}[1]{\bm{#1}}
+\def\diag{\mathop{\mathrm{diag}}}
+
+
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage[detect-all]{siunitx}
+
+
+
+%%% LLIb
+
+\newcommand{\bldl}{\[\begin{array}{ll}}
+% \newcommand{\cldl}{\vspace*{-0.3cm}\[\begin{array}{ll}}
+\newcommand{\cldl}{\[\begin{array}{lrcl}}
+\newcommand{\eldl}{\end{array}\]}
+%\newtheorem{lemma}{Lemma}[section]
+\usepackage{mathptmx}
+\usepackage{algorithmic, amsmath,graphicx}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{booktabs,array}
+
+\newcounter{myrow}
+%%% Macros for the guide only %%%
+\hyphenation{either}
+\providecommand\AMSLaTeX{AMS\,\LaTeX}
+\newcommand\eg{\emph{e.g.}\ }
+\newcommand{\qr}[1]{\textit{Query #1}}
+\newcommand{\ex}[1]{\textit{Example #1}}
+\newcommand{\Bi}[1]{\ensuremath{\mathcal{B}_{#1}}\xspace} % the MBS of a partition
+\newcommand{\LB}{\ensuremath{\textsf{LB}}\xspace}
+\newcommand{\UB}{\ensuremath{\textsf{UB}}\xspace}
+\newcommand{\lowb}[1]{\ensuremath{\textsf{LB}_{\mathcal{B}_{#1}}}\xspace}
+
+\newcommand{\return}{\textsf{return}\xspace}
+\newcommand{\topk}{top-\ensuremath{k}\xspace}
+\newcommand{\simmetrics}{\ensuremath{\sim}\xspace}
+\newcommand{\bigo}{\ensuremath{\mathcal{O}}\xspace}
+
+\newcommand\etc{\emph{etc.}}
+\newcommand\bcmdtab{\noindent\bgroup\tabcolsep=0pt%
+	\begin{tabular}{@{}p{10pc}@{}p{20pc}@{}}}
+	\newcommand\ecmdtab{\end{tabular}\egroup}
+\newcommand\rch[1]{$\longrightarrow\rlap{$#1$}$\hspace{1em}}
+\newcommand\lra{\ensuremath{\quad\longrightarrow\quad}}
+
+%%% LLib ends
+
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+
+%% dip start
+
+%\usepackage[utf8]{inputenc}
+\usepackage{amsmath,stackengine}
+\usepackage{color}
+\usepackage{colortbl}
+%\usepackage{ntheorem}
+\usepackage{graphicx}
+\usepackage{balance}
+\usepackage{tablefootnote}
+\usepackage{booktabs,subcaption,amsfonts,dcolumn}
+\usepackage{multirow}
+\usepackage{indentfirst}
+%\theoremseparator{:}
+\newtheorem{hyp}{Hypothesis}
+%\newcommand{\system}{WASP}
+\newcommand{\ie}{{\em i.e.}}
+
+\newcommand{\etal}{{\em et al.}}
+\newcommand{\system}{DIP}
+\newcommand{\todo} [1]{\textcolor{blue}{{\sf TODO}: #1}}
+\newcommand{\sele} [1]{\textcolor{blue}{{\sf CHOOSE}: #1}}
+\newcommand{\mingda} [1] {\textcolor{orange}{{\it MingdaCamera}: #1}}
+\newcommand{\lume} [1] {\textcolor{blue}{{\it Lume}: #1}}
+
+
+%%% dip ends
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\title{Extracting Latent Semantic Information from Multi-domain Contents by Decalaritive Language and Efficient Algorithm}
+% Extracting latent semantic information from abandoned contents/sequences 
+% Advanced analytics of abandoned contents/sequences  via declaritive language and efficient algorithm
+
+\author         {Mingda Li}
+\department     {Computer Science}
+\degreeyear     {2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chair          {Junghoo Cho}
+\chair			{Carlo Zaniolo}
+\member         {Yizhou Sun}
+\member         {Yingnian Wu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dedication     {\textsl{To my mother, father and girl friend.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgments {
+	
+	I would like to thank my advisor Professor John Cho and Professor Carlo Zaniolo.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vitaitem   {2011-2015}
+{B.S. Computer Science and Technology\\
+Harbin Institute of Technology\\
+Harbin, China}
+\vitaitem  {2015–2016} 
+{Research Assistant\\
+ScAi Laboratory\\
+University of California, Los Angeles\\
+Los Angeles, California}
+\vitaitem   {2016–2020}
+{Teaching Assistant\\
+Computer Science Department\\
+University of California, Los Angeles\\
+Los Angeles, California}
+\vitaitem   {2016}
+{Research Intern\\
+	Teradata\\
+	Los Angeles, US}
+\vitaitem   {2017}
+{Research Intern\\
+	NEC Lab\\
+	Princeton, US}
+\vitaitem   {2018}
+{SDE Intern\\
+	Amazon AWS Redshift\\
+	Palo Alto, US}
+\vitaitem   {2019}
+{Applied Scientist Intern\\
+	Amazon Alexa AI\\
+	Boston, US}
+\vitaitem   {}
+{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\publication{Mingda Li, Weitong Ruan, Xinyue Liu, Luca Soldaini, Wael Hamza, Chengwei Su. ``Improving Spoken Language Understanding By Exploiting ASR N-best Hypotheses.'' ArXiv 2020. To be submitted to \emph{SLT 2021}}
+
+\publication{Mingda Li*, Zijun Xue*, Junghoo Cho. ``Amplified Negative Sampling: Sample-Efficient Training for a Large-Class Classifier.'' In review by the \emph{KDD 2020}}
+
+\publication{Jin Wang, Chunbin Lin, Mingda Li, Carlo Zaniolo. ``Boosting Approximate Dictionary-based Entity Extraction with Synonyms.'' Accepted by \emph{Information Sciences Journal 2020}}
+
+
+\publication{Mingda Li, Weitong Ruan, Xinyue Liu, Luca Soldaini, Wael Hamza, Chengwei Su. ``Multi-task Learning of Spoken Language Understanding by Integrating  N-Best Hypotheses with Hierarchical Attention.'' To be submitted to \emph{COLING 2020}}
+
+\publication{Mingda Li, Jin Wang, Youfu Li, Carlo Zaniolo. ``LLib and LFrame: Logical Libraries and DataFrames for More Expressive Logical Programming.''  To be submitted to \emph{ICLP 2020}}
+
+
+\publication{Jin Wang, Jiacheng Wu, Mingda Li, Jiaqi Gu, Ariyam Das, Carlo Zaniolo. ``Formal Semantics and High Performance in Declarative Machine Learning using Datalog.'' In review by \textit{VLDB Journal 2020}}
+
+\publication{Mingda Li, Cristian Lumezanu, Bo Zong, Haifeng Chen. ``Learning-based spoofing detection.'' In review by the \emph{EuroS\&P WTMC 2020}}
+
+\publication{Jin Wang, Chunbin Lin, Mingda Li, Carlo Zaniolo. ``An Efficient Sliding Window Approach for Approximate Entity Extraction with Synonyms.'' Accepted by \emph{EDBT 2019 }}
+
+\publication{Carlo Zaniolo, Ariyam Das, Jiaqi Gu, Youfu Li, Mingda li, Jin Wang. ``Monotonic Properties of Completed Aggregates in Recursive Queries.''  \emph{ArXiv 2019}}
+
+%\publication{Cristian Lumezanu, Nipun Arora, Haifeng Chen, Bo Zong, CHO Daeki, Mingda Li. ``Network endpoint spoofing detection and mitigation.'' US Patent App. 16/101,815, 2019.}
+
+\publication{Ariyam Das, Youfu Li, Jin Wang, Mingda Li, Carlo Zaniolo. ``BigData Applications from Graph Analytics to Machine Learning by Aggregates in Recursion.'' Accepted by \emph{ICLP 2019}}
+
+%\publication{Cristian Lumezanu, Nipun Arora, Haifeng Chen, Bo Zong, CHO Daeki, Mingda Li. ``Network endpoint spoofing detection and mitigation.'' US Patent App. 16/101,815, 2019.}
+
+
+%\publication{Cristian Lumezanu, Nipun Arora, Haifeng Chen, Bo Zong, CHO Daeki, Mingda Li. ``Neural network based spoofing detection.'' US Patent App. 16/101,794, 2019.}
+
+%\publication{Cristian Lumezanu, Nipun Arora, Haifeng Chen, Bo Zong, CHO Daeki, Mingda Li. ``Network gateway spoofing detection and mitigation.''US Patent App. 16/101,834, 2019.}
+
+
+
+\publication{Mingda Li, Cristian Lumezanu, Bo Zong, Haifeng Chen. ``Deep Learning IP Network Representations'' \textbf{BEST PAPER AWARD} of  \emph{ACM SIGCOMM Big-DAMA 2018}}
+
+\publication{Mingda Li, Cristian Lumezanu, Bo Zong, Haifeng Chen. ``Learning IP Network Representations.'' Accepted by \emph{ACM SIGCOMM CCR 2018}}
+
+\publication{Zijun Xue, Ruirui Li, Mingda Li. ``Recent Progress in Converesational AI.'' \emph{KDD Conversational AI workshop 2018}}
+
+
+\publication{Youfu Li, Mingda Li, Ling Ding, Matteo Interlandi . ``RIOS: Runtime Integrated Optimizer for Spark.'' Accepted by \emph{SOCC 2018}}
+
+\publication{Muhammad Ali Gulzar, Matteo Interlandi, Xueyuan Han, Mingda Li, Tyson Condie, Miryung Kim. ``Automated Debugging in Data-Intensive Scalable Computing.'' Accepted by \emph{SOCC 2017}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{
+	With large amounts of data continuously generated by intelligence devices,  efficiently analyzing huge data collections to unearth valuable insights has become one of the most elusive challenges for both academy and industry. 
+%	both academy and industry are motivated to develop powerful algorithm
+	%the big data analytics  to unearth valuable insights from huge data has motivated both academy and industry to develop scalable algorithms  . 	
+	The key elements to  establishing a scalable analyzing framework should involve a well-proposed algorithm to integrate all available information, an optimal training strategy  and a declaritive developing interface. In this dissertation, we focus on the comprehensive enhancement through the scalable analyzing framework by  (\romannum{1})  domain-specific framework designs to enrich the captured information, (\romannum{2})  a sample-efficient training method adaptive to a wide variety of multi-class classifiers with extreme large output-class size, and (\romannum{3}) a cross-language interface for succinct expressions of recursions  in advanced analytics.  
+	
+	
+	
+	%A series of challenges are contained in each of the three elements, which we want to address. 
+	Our contributions in this thesis are thus threefold: First, we aim to utilize  variants of recurrent neural network (RNN)  to incorporate some enlightening sequential information overlooked by the previous works in two different domains including Spoken Language Understanding (SLU) and Internet Embedding (IE). In SLU, we address the problem caused by solely relying on the first best interpretation (hypothesis) of an audio command through a series of new architectures comprising bidirectional LSTM and pooling layers to  jointly utilize the other hypotheses'  texts or embedding vectors, which are neglected but with valuable  information missed by the first best hypothesis. In IE, we propose the DIP, an extension of RNN, to build up the internet coordinate system with the  IP address sequences, which are assigned hierarchically and encode structural information of the network but are also unnoticed in previous distance-based internet embedding algorithms. Both DIP and the integration of all hypotheses bring significant performance improvements for the corresponding downstream tasks.
+	Then, we investigate the training algorithm for multi-class classifiers with a large output-class size, which is common in deep neural networks and typically implemented as a softmax final layer with one output neuron per each class. To avoid expensive computing the intractable normalizing constant of softmax for each training data point, we analyze and enhance the well-known negative sampling to the amplified negative sampling algorithm, which gains much higher performance with lower training cost. Finally, for the ubiquitous recursive queries in advanced data analytics, on top of BigDatalog and Apache Spark, we design a succinct and expressive analytics tool encapsulating  the functionality and classical  algorithms of Datalog, a quintessential logic programming language.  We provide the Logical Library (LLib), a Spark MLlib-like high-level API supporting a wide range of Datalog algorithms and the Logical DataFrame (LFrame), an extension to Spark DataFrame supporting both relational and logical operations. The LLib and LFrame enable smooth collaborations between logical applications and  other Spark libraries and cross-language  logical programming in Scala, Java, or Python. 
+	
+	
+	
+	
+	
+	
+	
+%    In the first part, we aim to utilize the variants of recurrent neural network (RNN)  to incorporate some enlightening sequential information overlooked by the previous works in different domains and tasks. 
+%    We find, 
+%%	However, in reality, we may find the provided algorithm could overlook  or  hardly integrate some enlightening information within its framework. For e.g., 
+%	in Spoken Language Understanding, only the best of automatic speech recognition (ASR)  interpretations (hypotheses) for  an input audio signal is utilized to understand the intent, while the rest hypotheses containing fragmented important messages are ignored. We investigate a series of  methods to jointly utilize top $n$ interpretations by integrating the hypothesized text or hypothesis embedding vectors with BiLSTM and achieve significant accuracy improvements for intent or domain classification.   
+%	 Similarly, while embedding  the Internet structure,  only the distances among IP address are utilized to build up the network coordinate system  but the information contained by the  IP address  is unnoticed. 
+%	% Since the RNN and its variants have been proven to be effective to capture causal and/or contextural information from sequantial data, we extend them to incorporate the information from sequences of spoken words or IP bits. 
+%	We propose the DIP, a deep learning based framework for IP network representations, which normalizes each IP address to seperate sequences by the volume of contained routable information within IP bits and exploits a variant of RNN for a low-dimensional representation.  
+%	
+%	In the second part, we investigate the training algorithm for multi-class classifiers with a large output-class size, which is common in deep neural networks and typicaly implemented as a softmax layer in the final layer 
+%	 %like natural language generation with  a softmax layer as final layer 
+%	 containing one output neuron per each word. 
+%%	The multi-class classifier  is very common in deep neural networks. For example, in the natural language generation or graph embedding models, the final layers are  always implemented  as a softmax layer  with one output neuron per each word or node, which can be as large as the size of the whole dictionary or graph.  
+%	It is prohibitively to calculate the intractable normalizing constant of softmax for each training data point. We analyze the well-known negative sampling and propose the amplified negative sampling algorithm, which gains higher performance with lower training cost. 
+%	
+	% explore the DNN frameworks to for internet embedding and  
+	
+	% However, in reality, we may find: the provided algorithm could overlook  or can hardly integrate some enlightening information within its framework; the training process can  be computationally intensive; and the expressing of complex logic computations could be complicated. 
+%	In this thesis, we tackle those problems separately by novel information integration architectures, a sample-efficient training algorithm and a decalrative logical programming interface expressing complex logic.
+	
+	 
+	% improve each component by demonstrating novel algorithms or expressive languages. 
+	
+	%Some of the bottlenecks for scalable analyzing involve the deficiency of proposed algorithm to integrate all the available data, the computationally intensive learning process of the algorithm, and the complicated development for   complex logic computations. In this thesis, we 
+	
+	%a well-designed architecture to integrate all the available features, an inexpensive  
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeintropages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In the first part, we aim to utilize the variants of recurrent neural network (RNN)  to incorporate some enlightening sequential information overlooked by the previous works in different domains and tasks. 
+We find, 
+%	However, in reality, we may find the provided algorithm could overlook  or  hardly integrate some enlightening information within its framework. For e.g., 
+in Spoken Language Understanding, only the best of automatic speech recognition (ASR)  interpretations (hypotheses) for  an input audio signal is utilized to understand the intent, while the rest hypotheses containing fragmented important messages are ignored. We investigate a series of  methods to jointly utilize top $n$ interpretations by integrating the hypothesized text or hypothesis embedding vectors with BiLSTM and achieve significant accuracy improvements for intent or domain classification.   
+Similarly, while embedding  the Internet structure,  only the distances among IP address are utilized to build up the network coordinate system  but the information contained by the  IP address  is unnoticed. 
+% Since the RNN and its variants have been proven to be effective to capture causal and/or contextural information from sequantial data, we extend them to incorporate the information from sequences of spoken words or IP bits. 
+We propose the DIP, a deep learning based framework for IP network representations, which normalizes each IP address to seperate sequences by the volume of contained routable information within IP bits and exploits a variant of RNN for a low-dimensional representation.  
+
+In the second part, we investigate the training algorithm for multi-class classifiers with a large output-class size, which is common in deep neural networks and typicaly implemented as a softmax layer in the final layer 
+%like natural language generation with  a softmax layer as final layer 
+containing one output neuron per each word. 
+%	The multi-class classifier  is very common in deep neural networks. For example, in the natural language generation or graph embedding models, the final layers are  always implemented  as a softmax layer  with one output neuron per each word or node, which can be as large as the size of the whole dictionary or graph.  
+It is prohibitively to calculate the intractable normalizing constant of softmax for each training data point. We analyze the well-known negative sampling and propose the amplified negative sampling algorithm, which gains higher performance with lower training cost. 
+
+% explore the DNN frameworks to for internet embedding and  
+
+% However, in reality, we may find: the provided algorithm could overlook  or can hardly integrate some enlightening information within its framework; the training process can  be computationally intensive; and the expressing of complex logic computations could be complicated. 
+%	In this thesis, we tackle those problems separately by novel information integration architectures, a sample-efficient training algorithm and a decalrative logical programming interface expressing complex logic.
+
+
+% improve each component by demonstrating novel algorithms or expressive languages. 
+
+%Some of the bottlenecks for scalable analyzing involve the deficiency of proposed algorithm to integrate all the available data, the computationally intensive learning process of the algorithm, and the complicated development for   complex logic computations. In this thesis, we 
+
+%a well-designed architecture to integrate all the available features, an inexpensive  
+
+\chapter{Introduction}
+
+
+\section{Motivations}
+In the big data era, we have witnessed the rising demand to efficiently and conveniently extracting insights  from large-scale data sets for decision making in different domains. The demand has driven researchers to propose various  neural network-based algorithms revolutionizing many fields, ranging from image processing \citep{he2016deep}, natural language processing \citep{devlin2018bert} to speech recognition \citep{amodei2016deep}, etc. In addition, the big data analyzing and machine learning platforms  in open sorce and commercial markets  like PyTorch \citep{paszke2019pytorch}, Tensorflow~\citep{abadi2016tensorflow} and Apache Spark~\citep{zaharia2010spark} are continuously built up, to provide maximum flexibility and speed while implementing the analyzing pipeline with exisiting or user-defined algorithms. 
+
+succinct large-scale data processing. 
+
+
+\section{Thesis Outline}
+
+\section{Contributions}
+
+
+\chapter{Extracing Latent  Information from IP Network}
+
+\input{dip}
+
+\chapter{Extracing Latent Information from Abandoned Speech Interpretations}
+
+\input{speech}
+
+\chapter{Amplified Negative Sampling: A Sample-Efficient Training Algorithm }
+
+\input{negativeSampling}
+
+\chapter{Expressive Library for Recursive Queries: LLib and LFrame}
+
+
+\input{llib}
+
+
+\chapter{Conclusion}
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliograpy}
+
+\bibliographystyle{apa}
+\bibliography{thesis}    % bibliography references
+
+\end{document}
+

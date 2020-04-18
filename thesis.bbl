@@ -1,0 +1,760 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{dls}{}]{dls}
+1st deep learning and security workshop.
+\newblock https://www.ieee-security.org/TC/SPW2018/DLS/.
+
+\bibitem[\protect\astroncite{BOM}{}]{BOM}
+Recursion example: bill of materials.
+\newblock
+  https://www.ibm.com/support/knowledgecenter/SSAE4W_9.6.0/db2\\/rbafzrecurse.htm.
+
+\bibitem[\protect\astroncite{Abadi et~al.}{2016}]{abadi2016tensorflow}
+Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M.,
+  Ghemawat, S., Irving, G., Isard, M., et~al. (2016).
+\newblock Tensorflow: A system for large-scale machine learning.
+\newblock In {\em 12th $\{$USENIX$\}$ Symposium on Operating Systems Design and
+  Implementation ($\{$OSDI$\}$ 16)}, pages 265--283.
+
+\bibitem[\protect\astroncite{Alsubaiee et~al.}{2014}]{alsubaiee2014asterixdb}
+Alsubaiee, S., Altowim, Y., Altwaijry, H., Behm, A., Borkar, V., Bu, Y., Carey,
+  M., Cetindil, I., Cheelangi, M., Faraaz, K., et~al. (2014).
+\newblock Asterixdb: A scalable, open source bdms.
+\newblock {\em Proceedings of the VLDB Endowment}, 7(14):1905--1916.
+
+\bibitem[\protect\astroncite{Amodei et~al.}{2016}]{amodei2016deep}
+Amodei, D., Ananthanarayanan, S., Anubhai, R., Bai, J., Battenberg, E., Case,
+  C., Casper, J., Catanzaro, B., Cheng, Q., Chen, G., et~al. (2016).
+\newblock Deep speech 2: End-to-end speech recognition in english and mandarin.
+\newblock In {\em International conference on machine learning}, pages
+  173--182.
+
+\bibitem[\protect\astroncite{arbor}{}]{arbor-spoofing}
+arbor.
+\newblock {Arbor confirms 1.7Tbps DDoS attack}.
+\newblock
+  https://asert.arbornetworks.com/netscout-arbor-confirms-1-7-tbps-ddos-attack-terabit-attack-era-upon-us/.
+
+\bibitem[\protect\astroncite{Ark}{}]{ark}
+Ark.
+\newblock Ark ipv4 routed topology dataset.
+\newblock http://www.caida.org/data/active/ipv4_routed_24_topology_dataset.xml.
+
+\bibitem[\protect\astroncite{Armbrust et~al.}{2015}]{sparksql}
+Armbrust, M., Xin, R.~S., Lian, C., Huai, Y., Liu, D., Bradley, J.~K., Meng,
+  X., Kaftan, T., Franklin, M.~J., Ghodsi, A., et~al. (2015).
+\newblock Spark sql: Relational data processing in spark.
+\newblock In {\em Proceedings of the 2015 ACM SIGMOD international conference
+  on management of data}, pages 1383--1394.
+
+\bibitem[\protect\astroncite{Bai et~al.}{2017}]{bai2017tapas}
+Bai, Y., Goldman, S., and Zhang, L. (2017).
+\newblock Tapas: Two-pass approximate adaptive sampling for softmax.
+\newblock {\em arXiv preprint arXiv:1707.03073}.
+
+\bibitem[\protect\astroncite{Baker and Savola}{2004}]{rpf}
+Baker, F. and Savola, P. (2004).
+\newblock Ingress filtering for multihomed networks.
+\newblock BCP~84, RFC Editor.
+\newblock http://www.rfc-editor.org/rfc/rfc3704.txt.
+
+\bibitem[\protect\astroncite{Bakhtiary et~al.}{2015}]{bakhtiary2015speeding}
+Bakhtiary, A.~H., Lapedriza, A., and Masip, D. (2015).
+\newblock Speeding up neural networks for large scale classification using wta
+  hashing.
+\newblock {\em arXiv preprint arXiv:1504.07488}.
+
+\bibitem[\protect\astroncite{Barkan and Koenigstein}{2016}]{barkan2016item2vec}
+Barkan, O. and Koenigstein, N. (2016).
+\newblock Item2vec: neural item embedding for collaborative filtering.
+\newblock In {\em 2016 IEEE 26th International Workshop on Machine Learning for
+  Signal Processing (MLSP)}, pages 1--6. IEEE.
+
+\bibitem[\protect\astroncite{Bengio}{2008}]{bengio2008adaptive}
+Bengio, Y.~e. (2008).
+\newblock Adaptive importance sampling to accelerate training of a neural
+  probabilistic language model.
+\newblock {\em IEEE Transactions on Neural Networks}, 19(4):713--722.
+
+\bibitem[\protect\astroncite{Blanc and Rendle}{2017}]{blanc2017adaptive}
+Blanc, G. and Rendle, S. (2017).
+\newblock Adaptive sampled softmax with kernel based sampling.
+\newblock {\em arXiv preprint arXiv:1712.00527}.
+
+\bibitem[\protect\astroncite{Bojanowski et~al.}{2017}]{fastText}
+Bojanowski, P., Grave, E., Joulin, A., and Mikolov, T. (2017).
+\newblock Enriching word vectors with subword information.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  5:135--146.
+
+\bibitem[\protect\astroncite{Bose et~al.}{2018}]{bose2018adversarial}
+Bose, A.~J., Ling, H., and Cao, Y. (2018).
+\newblock Adversarial contrastive estimation.
+\newblock {\em arXiv preprint arXiv:1805.03642}.
+
+\bibitem[\protect\astroncite{Bremler-Barr and Levy}{2005}]{spm}
+Bremler-Barr, A. and Levy, H. (2005).
+\newblock {Spoofing Prevention Method}.
+\newblock In {\em IEEE Infocom}.
+
+\bibitem[\protect\astroncite{Bruzzone and
+  Prieto}{1999}]{bruzzone1999incremental}
+Bruzzone, L. and Prieto, D.~F. (1999).
+\newblock An incremental-learning neural network for the classification of
+  remote-sensing images.
+\newblock {\em Pattern Recognition Letters}.
+
+\bibitem[\protect\astroncite{Caruana}{1997}]{caruana1997multitask}
+Caruana, R. (1997).
+\newblock Multitask learning.
+\newblock {\em Machine learning}, 28(1):41--75.
+
+\bibitem[\protect\astroncite{Chan and Woodland}{2004}]{chan2004improving}
+Chan, H.~Y. and Woodland, P. (2004).
+\newblock Improving broadcast news transcription by lightly supervised
+  discriminative training.
+\newblock In {\em 2004 IEEE International Conference on Acoustics, Speech, and
+  Signal Processing}, volume~1, pages I--737. IEEE.
+
+\bibitem[\protect\astroncite{Charniak and Johnson}{2005}]{charniak2005coarse}
+Charniak, E. and Johnson, M. (2005).
+\newblock Coarse-to-fine n-best parsing and maxent discriminative reranking.
+\newblock In {\em Proceedings of the 43rd annual meeting on association for
+  computational linguistics}, pages 173--180. Association for Computational
+  Linguistics.
+
+\bibitem[\protect\astroncite{Chen et~al.}{2015}]{chen2015strategies}
+Chen, W., Grangier, D., and Auli, M. (2015).
+\newblock Strategies for training large vocabulary neural language models.
+\newblock {\em arXiv preprint arXiv:1512.04906}.
+
+\bibitem[\protect\astroncite{Chen et~al.}{2008}]{spoofing-ddos}
+Chen, Y., Das, S., Dhar, P., Saddik, A.~E., and Nayak, A. (2008).
+\newblock Detecting and preventing ip-spoofed distributed dos attacks.
+\newblock {\em International Journal of Network Security}, 7(1):70--81.
+
+\bibitem[\protect\astroncite{cloudflare}{}]{cloudflare}
+cloudflare.
+\newblock {The root cause of large DDoS IP Spoofing}.
+\newblock
+  https://blog.cloudflare.com/the-root-cause-of-large-ddos-ip-spoofing/.
+
+\bibitem[\protect\astroncite{Collins et~al.}{2005}]{collins2005discriminative}
+Collins, M., Roark, B., and Saraclar, M. (2005).
+\newblock Discriminative syntactic language modeling for speech recognition.
+\newblock In {\em Proceedings of the 43rd Annual Meeting on Association for
+  Computational Linguistics}, pages 507--514. Association for Computational
+  Linguistics.
+
+\bibitem[\protect\astroncite{Consens and Mendelzon}{1990}]{consens1990low}
+Consens, M.~P. and Mendelzon, A.~O. (1990).
+\newblock Low complexity aggregation in graphlog and datalog.
+\newblock In {\em International Conference on Database Theory}, pages 379--394.
+  Springer.
+
+\bibitem[\protect\astroncite{Costa et~al.}{2004}]{pic}
+Costa, M., Castro, M., Rowstron, A., and Key, P. (2004).
+\newblock {PIC}: Practical {I}nternet coordinates for distance estimation.
+\newblock In {\em ICDCS}.
+
+\bibitem[\protect\astroncite{Cunha et~al.}{2011}]{cunha}
+Cunha, I., Teixeira, R., Veitch, D., and Diot, C. (2011).
+\newblock Predicting and tracking internet path changes.
+\newblock In {\em ACM Sigcomm}.
+
+\bibitem[\protect\astroncite{Dabek et~al.}{2004}]{vivaldi}
+Dabek, F., Cox, R., Kaashoek, F., and Morris, R. (2004).
+\newblock Vivaldi: a decentralized network coordinate system.
+\newblock In {\em SIGCOMM}.
+
+\bibitem[\protect\astroncite{de~Br{\'e}bisson and
+  Vincent}{2015}]{de2015exploration}
+de~Br{\'e}bisson, A. and Vincent, P. (2015).
+\newblock An exploration of softmax alternatives belonging to the spherical
+  loss family.
+\newblock {\em arXiv preprint arXiv:1511.05042}.
+
+\bibitem[\protect\astroncite{Dean and Ghemawat}{2004}]{dean2004mapreduce}
+Dean, J. and Ghemawat, S. (2004).
+\newblock Mapreduce: Simplified data processing on large clusters.
+
+\bibitem[\protect\astroncite{Devlin et~al.}{2018}]{devlin2018bert}
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2018).
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock {\em arXiv preprint arXiv:1810.04805}.
+
+\bibitem[\protect\astroncite{Dikici et~al.}{2012}]{dikici2012classification}
+Dikici, E., Semerci, M., Sara{\c{c}}lar, M., and Alpaydin, E. (2012).
+\newblock Classification and ranking approaches to discriminative language
+  modeling for asr.
+\newblock {\em IEEE Transactions on Audio, Speech, and Language Processing},
+  21(2):291--300.
+
+\bibitem[\protect\astroncite{Duan et~al.}{2008}]{idpf}
+Duan, Z., Yuan, X., and Chandrashekar, J. (2008).
+\newblock {Controlling IP Spoofing through Interdomain Packet Filters}.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing}, 5(1).
+
+\bibitem[\protect\astroncite{Duggan et~al.}{2015}]{duggan2015bigdawg}
+Duggan, J., Elmore, A.~J., Stonebraker, M., Balazinska, M., Howe, B., Kepner,
+  J., Madden, S., Maier, D., Mattson, T., and Zdonik, S. (2015).
+\newblock The bigdawg polystore system.
+\newblock {\em ACM Sigmod Record}, 44(2):11--16.
+
+\bibitem[\protect\astroncite{Erhan et~al.}{2010}]{erhan2010does}
+Erhan, D., Bengio, Y., Courville, A., Manzagol, P.-A., Vincent, P., and Bengio,
+  S. (2010).
+\newblock Why does unsupervised pre-training help deep learning?
+\newblock {\em Journal of Machine Learning Research}.
+
+\bibitem[\protect\astroncite{Eriksson et~al.}{2008}]{barford-sigcomm}
+Eriksson, B., Barford, P., and Nowak, R. (2008).
+\newblock {Network Discovery from Passive Measurements}.
+\newblock In {\em ACM Sigcomm}.
+
+\bibitem[\protect\astroncite{Eriksson et~al.}{2009}]{barford-infocom}
+Eriksson, B., Barford, P., and Nowak, R. (2009).
+\newblock {Estimating Hop Distance Between Arbitrary Host Pairs}.
+\newblock In {\em IEEE Infocom}.
+
+\bibitem[\protect\astroncite{Eriksson et~al.}{2007}]{barford-imc}
+Eriksson, B., Barford, P., Nowak, R., and Crovella, M. (2007).
+\newblock {Learning Network Structure from Passive Measurements}.
+\newblock In {\em IMC}.
+
+\bibitem[\protect\astroncite{fastText}{2019}]{fastTextGithub}
+fastText (2019).
+\newblock Facebook fasttext project source code.
+
+\bibitem[\protect\astroncite{Feamster and Rexford}{2017}]{self-driving}
+Feamster, N. and Rexford, J. (2017).
+\newblock Why (and how) networks should run themselves.
+\newblock {\em arXiv preprint arXiv:1710.11583}.
+
+\bibitem[\protect\astroncite{Feng et~al.}{2005}]{puzzles}
+Feng, W., Kaiser, E., Feng, W., and Luu, A. (2005).
+\newblock {The Design and Implementation of Network Puzzles}.
+\newblock In {\em Infocom}.
+
+\bibitem[\protect\astroncite{Ferguson and Senie}{2000}]{ingress}
+Ferguson, P. and Senie, D. (2000).
+\newblock Network ingress filtering: Defeating denial of service attacks which
+  employ ip source address spoofing.
+\newblock BCP~38, RFC Editor.
+\newblock http://www.rfc-editor.org/rfc/rfc2827.txt.
+
+\bibitem[\protect\astroncite{Frankel and Krishnan}{2011}]{ipsec}
+Frankel, S. and Krishnan, S. (2011).
+\newblock {IP Security (IPsec) and Internet Key Exchange (IKE) Document
+  Roadmap}.
+\newblock RFC 6071, RFC Editor.
+\newblock http://www.rfc-editor.org/rfc/rfc6071.txt.
+
+\bibitem[\protect\astroncite{github}{}]{github-spoofing}
+github.
+\newblock {February 28th DDoS incident}.
+\newblock https://githubengineering.com/ddos-incident-report/.
+
+\bibitem[\protect\astroncite{Goldberg and Levy}{2014}]{goldberg2014word2vec}
+Goldberg, Y. and Levy, O. (2014).
+\newblock word2vec explained: deriving mikolov et al.'s negative-sampling
+  word-embedding method.
+\newblock {\em arXiv preprint arXiv:1402.3722}.
+
+\bibitem[\protect\astroncite{Gong et~al.}{2013}]{gong2013multi}
+Gong, P., Ye, J., and Zhang, C. (2013).
+\newblock Multi-stage multi-task feature learning.
+\newblock {\em The Journal of Machine Learning Research}, 14(1):2979--3010.
+
+\bibitem[\protect\astroncite{Gonzalez et~al.}{2014}]{gonzalez2014graphx}
+Gonzalez, J.~E., Xin, R.~S., Dave, A., Crankshaw, D., Franklin, M.~J., and
+  Stoica, I. (2014).
+\newblock Graphx: Graph processing in a distributed dataflow framework.
+\newblock In {\em 11th $\{$USENIX$\}$ Symposium on Operating Systems Design and
+  Implementation ($\{$OSDI$\}$ 14)}, pages 599--613.
+
+\bibitem[\protect\astroncite{Gonzalez et~al.}{2017}]{net2vec}
+Gonzalez, R., Manco, F., Garcia-Duran, A., Mendes, J., Huici, F., Niccolini,
+  S., and Niepert, M. (2017).
+\newblock Net2vec: Deep learning for the network.
+\newblock In {\em ACM Big-DAMA'17}.
+
+\bibitem[\protect\astroncite{Goodman}{}]{Goodman}
+Goodman, J.
+\newblock Classes for fast maximum entropy training.
+\newblock {\em 2001 IEEE International Conference on Acoustics, Speech, and
+  Signal Processing. Proceedings (Cat. No.01CH37221)}.
+
+\bibitem[\protect\astroncite{Grave et~al.}{2017}]{grave2017efficient}
+Grave, E., Joulin, A., Ciss{\'e}, M., J{\'e}gou, H., et~al. (2017).
+\newblock Efficient softmax approximation for gpus.
+\newblock In {\em Proceedings of the 34th International Conference on Machine
+  Learning-Volume 70}, pages 1302--1310. JMLR. org.
+
+\bibitem[\protect\astroncite{Grover and Leskovec}{2016a}]{node2vec-kdd2016}
+Grover, A. and Leskovec, J. (2016a).
+\newblock node2vec: Scalable feature learning for networks.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}.
+
+\bibitem[\protect\astroncite{Grover and Leskovec}{2016b}]{grover2016node2vec}
+Grover, A. and Leskovec, J. (2016b).
+\newblock node2vec: Scalable feature learning for networks.
+\newblock In {\em Proceedings of the 22nd ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 855--864. ACM.
+
+\bibitem[\protect\astroncite{Gu et~al.}{2019}]{gu2019rasql}
+Gu, J., Watanabe, Y.~H., Mazza, W.~A., Shkapsky, A., Yang, M., Ding, L., and
+  Zaniolo, C. (2019).
+\newblock Rasql: Greater power and performance for big data analytics with
+  recursive-aggregate-sql on spark.
+\newblock In {\em Proceedings of the 2019 International Conference on
+  Management of Data}, pages 467--484. ACM.
+
+\bibitem[\protect\astroncite{Gutmann and Hyv{\"a}rinen}{2010}]{NCE}
+Gutmann, M. and Hyv{\"a}rinen, A. (2010).
+\newblock Noise-contrastive estimation: A new estimation principle for
+  unnormalized statistical models.
+\newblock In {\em Proceedings of the Thirteenth International Conference on
+  Artificial Intelligence and Statistics}, pages 297--304.
+
+\bibitem[\protect\astroncite{Hakkani-T{\"u}r et~al.}{2006}]{hakkani2006beyond}
+Hakkani-T{\"u}r, D., B{\'e}chet, F., Riccardi, G., and Tur, G. (2006).
+\newblock Beyond asr 1-best: Using word confusion networks in spoken language
+  understanding.
+\newblock {\em Computer Speech \& Language}, 20(4):495--514.
+
+\bibitem[\protect\astroncite{He et~al.}{2016}]{he2016deep}
+He, K., Zhang, X., Ren, S., and Sun, J. (2016).
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778.
+
+\bibitem[\protect\astroncite{Jin et~al.}{}]{hcf}
+Jin, C., Wang, H., and Shin, K.~G.
+\newblock Hop-count filtering: An effective defense against spoofed ddos
+  traffic.
+
+\bibitem[\protect\astroncite{Jin et~al.}{2003}]{hc-filter}
+Jin, C., Wang, H., and Shin, K.~G. (2003).
+\newblock Hop-count filtering: An effective defense against spoofed ddos
+  traffic.
+\newblock In {\em CCS}.
+
+\bibitem[\protect\astroncite{John et~al.}{2010}]{asym}
+John, W., Dusi, M., and claffy, k. (2010).
+\newblock {Estimating Routing Symmetry on Single Links by Passive Flow
+  Measurements}.
+\newblock In {\em ACM International Workshop on TRaffic Analysis and
+  Classification (TRAC)}.
+
+\bibitem[\protect\astroncite{Jyothi et~al.}{2012}]{jyothi2012large}
+Jyothi, P., Johnson, L., Chelba, C., and Strope, B. (2012).
+\newblock Large-scale discriminative language model reranking for voice-search.
+\newblock In {\em Proceedings of the NAACL-HLT 2012 Workshop: Will We Ever
+  Really Replace the N-gram Model? On the Future of Language Modeling for HLT},
+  pages 41--49. Association for Computational Linguistics.
+
+\bibitem[\protect\astroncite{Karpathy and Fei-Fei}{2015}]{karpathy2015deep}
+Karpathy, A. and Fei-Fei, L. (2015).
+\newblock Deep visual-semantic alignments for generating image descriptions.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\astroncite{Killalea}{2000}]{egress}
+Killalea, T. (2000).
+\newblock Recommended internet service provider security services and
+  procedures.
+\newblock BCP~46, RFC Editor.
+
+\bibitem[\protect\astroncite{Kingma and Ba}{2014}]{kingma2014adam}
+Kingma, D.~P. and Ba, J. (2014).
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}.
+
+\bibitem[\protect\astroncite{LeCun et~al.}{2015}]{lecun2015deep}
+LeCun, Y., Bengio, Y., and Hinton, G. (2015).
+\newblock Deep learning.
+\newblock {\em nature}.
+
+\bibitem[\protect\astroncite{Levchenko et~al.}{2017}]{packetlab}
+Levchenko, K., Dhamdhere, A., Huffaker, B., claffy, k., Allman, M., and Paxson,
+  V. (2017).
+\newblock {PacketLab: A Universal Measurement Endpoint Interface}.
+\newblock In {\em Internet Measurement Conference (IMC)}.
+
+\bibitem[\protect\astroncite{Levy and Goldberg}{2014}]{levy2014neural}
+Levy, O. and Goldberg, Y. (2014).
+\newblock Neural word embedding as implicit matrix factorization.
+\newblock In {\em Advances in neural information processing systems}, pages
+  2177--2185.
+
+\bibitem[\protect\astroncite{Li et~al.}{2018a}]{dip}
+Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018a).
+\newblock {Deep Learning IP Network Representations}.
+\newblock In {\em ACM Sigcomm Big-DAMA}.
+
+\bibitem[\protect\astroncite{Li et~al.}{2018b}]{dip-ccr}
+Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018b).
+\newblock {Learning IP Network Representations}.
+\newblock {\em SIGCOMM CCR}.
+
+\bibitem[\protect\astroncite{Liu et~al.}{2014}]{liu2014efficient}
+Liu, X., Wang, Y., Chen, X., Gales, M.~J., and Woodland, P.~C. (2014).
+\newblock Efficient lattice rescoring using recurrent neural network language
+  models.
+\newblock In {\em 2014 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}, pages 4908--4912. IEEE.
+
+\bibitem[\protect\astroncite{Lone et~al.}{2017}]{pam17-loops}
+Lone, Q., Luckie, M., Korczynski, M., and van Eeten, M. (2017).
+\newblock Using loops observed in traceroute to infer the ability to spoof.
+\newblock In {\em PAM}.
+
+\bibitem[\protect\astroncite{Lumezanu et~al.}{2007}]{peerwise}
+Lumezanu, C., Levin, D., and Spring, N. (2007).
+\newblock Peer{W}ise discovery and negotiation of faster paths.
+\newblock In {\em HotNets}.
+
+\bibitem[\protect\astroncite{Luong et~al.}{2013}]{luong2013better}
+Luong, T., Socher, R., and Manning, C. (2013).
+\newblock Better word representations with recursive neural networks for
+  morphology.
+\newblock In {\em Proceedings of the Seventeenth Conference on Computational
+  Natural Language Learning}, pages 104--113.
+
+\bibitem[\protect\astroncite{Marcus et~al.}{1993}]{marcus-etal-1993-building}
+Marcus, M.~P., Santorini, B., and Marcinkiewicz, M.~A. (1993).
+\newblock Building a large annotated corpus of {E}nglish: The {P}enn
+  {T}reebank.
+\newblock {\em Computational Linguistics}, 19(2):313--330.
+
+\bibitem[\protect\astroncite{McKinney et~al.}{}]{mckinney2010data}
+McKinney, W. et~al.
+\newblock Data structures for statistical computing in python.
+
+\bibitem[\protect\astroncite{McKinney et~al.}{2010}]{pythonDataframe}
+McKinney, W. et~al. (2010).
+\newblock Data structures for statistical computing in python.
+
+\bibitem[\protect\astroncite{Meng et~al.}{2016}]{meng2016mllib}
+Meng, X., Bradley, J., Yavuz, B., Sparks, E., Venkataraman, S., Liu, D.,
+  Freeman, J., Tsai, D., Amde, M., Owen, S., et~al. (2016).
+\newblock Mllib: Machine learning in apache spark.
+\newblock {\em The Journal of Machine Learning Research}, 17(1):1235--1241.
+
+\bibitem[\protect\astroncite{Miao et~al.}{2017}]{silkroad}
+Miao, R., Zeng, H., Kim, C., Lee, J., and Yu, M. (2017).
+\newblock {SilkRoad: Making Stateful Layer-4 Load Balancing Fast and Cheap
+  Using Switching ASICs}.
+\newblock In {\em ACM Sigcomm}.
+
+\bibitem[\protect\astroncite{Mikolov et~al.}{2013a}]{mikolov2013efficient}
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013a).
+\newblock Efficient estimation of word representations in vector space.
+\newblock {\em arXiv preprint arXiv:1301.3781}.
+
+\bibitem[\protect\astroncite{Mikolov et~al.}{2010}]{mikolov2010recurrent}
+Mikolov, T., Karafi{\'a}t, M., Burget, L., {\v{C}}ernock{\`y}, J., and
+  Khudanpur, S. (2010).
+\newblock Recurrent neural network based language model.
+\newblock In {\em Interspeech}.
+
+\bibitem[\protect\astroncite{Mikolov et~al.}{2013b}]{mikolov2013exploiting}
+Mikolov, T., Le, Q.~V., and Sutskever, I. (2013b).
+\newblock Exploiting similarities among languages for machine translation.
+\newblock {\em arXiv preprint arXiv:1309.4168}.
+
+\bibitem[\protect\astroncite{Mikolov et~al.}{2013c}]{mikolov2013distributed}
+Mikolov, T., Sutskever, I., Chen, K., Corrado, G.~S., and Dean, J. (2013c).
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock In {\em Advances in neural information processing systems}, pages
+  3111--3119.
+
+\bibitem[\protect\astroncite{MLM}{2008}]{mlm}
+MLM (2008).
+\newblock Multi-level_marketing.
+
+\bibitem[\protect\astroncite{Mnih and Teh}{2012}]{mnih2012fast}
+Mnih, A. and Teh, Y.~W. (2012).
+\newblock A fast and simple algorithm for training neural probabilistic
+  language models.
+\newblock {\em arXiv preprint arXiv:1206.6426}.
+
+\bibitem[\protect\astroncite{Morbini et~al.}{2012}]{morbini2012reranking}
+Morbini, F., Audhkhasi, K., Artstein, R., Van~Segbroeck, M., Sagae, K.,
+  Georgiou, P., Traum, D.~R., and Narayanan, S. (2012).
+\newblock A reranking approach for recognition and classification of speech
+  input in conversational dialogue systems.
+\newblock In {\em 2012 IEEE Spoken Language Technology Workshop (SLT)}, pages
+  49--54. IEEE.
+
+\bibitem[\protect\astroncite{Morin and Bengio}{2005}]{morin2005hierarchical}
+Morin, F. and Bengio, Y. (2005).
+\newblock Hierarchical probabilistic neural network language model.
+\newblock In {\em Aistats}, volume~5, pages 246--252. Citeseer.
+
+\bibitem[\protect\astroncite{Mussmann et~al.}{2017}]{mussmann2017fast}
+Mussmann, S., Levy, D., and Ermon, S. (2017).
+\newblock Fast amortized inference and learning in log-linear models with
+  randomly perturbed nearest neighbor search.
+\newblock {\em arXiv preprint arXiv:1707.03372}.
+
+\bibitem[\protect\astroncite{Ng and Zhang}{2002}]{gnp}
+Ng, T. S.~E. and Zhang, H. (2002).
+\newblock Predicting {I}nternet network distance with coordinates-based
+  approaches.
+\newblock In {\em INFOCOM}.
+
+\bibitem[\protect\astroncite{node2vec}{2019}]{node2vecGithub}
+node2vec, G. (2019).
+\newblock Node2vec project souce code.
+\newblock https://github.com/snap-stanford/snap.git.
+
+\bibitem[\protect\astroncite{Oba et~al.}{2007}]{oba2007approach}
+Oba, T., Hori, T., and Nakamura, A. (2007).
+\newblock An approach to efficient generation of high-accuracy and compact
+  error-corrective models for speech recognition.
+\newblock In {\em Eighth Annual Conference of the International Speech
+  Communication Association}.
+
+\bibitem[\protect\astroncite{Olston et~al.}{2008}]{olston2008pig}
+Olston, C., Reed, B., Srivastava, U., Kumar, R., and Tomkins, A. (2008).
+\newblock Pig latin: a not-so-foreign language for data processing.
+\newblock In {\em Proceedings of the 2008 ACM SIGMOD international conference
+  on Management of data}, pages 1099--1110. ACM.
+
+\bibitem[\protect\astroncite{Padmanabhan et~al.}{2016}]{reasons}
+Padmanabhan, R., Dhamdhere, A., Aben, E., kc~claffy, and Spring, N. (2016).
+\newblock Reasons dynamic addresses change.
+\newblock In {\em IMC}.
+
+\bibitem[\protect\astroncite{Park and Lee}{2001}]{rbf}
+Park, K. and Lee, H. (2001).
+\newblock {On the Effectiveness of Route-Based Packet Filtering for Distributed
+  DoS Attack Prevention in Power-Law Internets}.
+\newblock In {\em ACM Sigcomm}.
+
+\bibitem[\protect\astroncite{Paszke et~al.}{2019}]{paszke2019pytorch}
+Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen,
+  T., Lin, Z., Gimelshein, N., Antiga, L., et~al. (2019).
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  8024--8035.
+
+\bibitem[\protect\astroncite{Peng et~al.}{2013}]{peng2013search}
+Peng, F., Roy, S., Shahshahani, B., and Beaufays, F. (2013).
+\newblock Search results based n-best hypothesis rescoring with maximum entropy
+  classification.
+\newblock In {\em 2013 IEEE Workshop on Automatic Speech Recognition and
+  Understanding}, pages 422--427. IEEE.
+
+\bibitem[\protect\astroncite{Pyxida}{}]{pyxida}
+Pyxida.
+\newblock Pyxida.
+\newblock http://pyxida.sourceforge.net/.
+
+\bibitem[\protect\astroncite{Rawat et~al.}{2019}]{rawat2019sampled}
+Rawat, A.~S., Chen, J., Yu, F. X.~X., Suresh, A.~T., and Kumar, S. (2019).
+\newblock Sampled softmax with random fourier features.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  13834--13844.
+
+\bibitem[\protect\astroncite{RouteViews}{}]{routeviews}
+RouteViews.
+\newblock http://www.routeviews.org.
+
+\bibitem[\protect\astroncite{Ruiz et~al.}{2018}]{ruiz2018augment}
+Ruiz, F. J.~R., Titsias, M.~K., Dieng, A.~B., and Blei, D.~M. (2018).
+\newblock Augment and reduce: Stochastic inference for large categorical
+  distributions.
+
+\bibitem[\protect\astroncite{Sak et~al.}{2010}]{sak2010fly}
+Sak, H., Saraclar, M., and G{\"u}ng{\"o}r, T. (2010).
+\newblock On-the-fly lattice rescoring for real-time automatic speech
+  recognition.
+\newblock In {\em Eleventh annual conference of the international speech
+  communication association}.
+
+\bibitem[\protect\astroncite{Sak et~al.}{2011a}]{discriminative}
+Sak, H., Saraclar, M., and Gungor, T. (2011a).
+\newblock Discriminative reranking of {ASR} hypotheses with morpholexical and
+  n-best-list features.
+\newblock In {\em 2011 {IEEE} Workshop on Automatic Speech Recognition {\&}
+  Understanding, {ASRU} 2011, Waikoloa, HI, USA, December 11-15, 2011}, pages
+  202--207.
+
+\bibitem[\protect\astroncite{Sak et~al.}{2011b}]{Sak2011DiscriminativeRO}
+Sak, H., Saraçlar, M., and G{\"u}ng{\"o}r, T. (2011b).
+\newblock Discriminative reranking of asr hypotheses with morpholexical and
+  n-best-list features.
+\newblock {\em 2011 IEEE Workshop on Automatic Speech Recognition and
+  Understanding}, pages 202--207.
+
+\bibitem[\protect\astroncite{Schroff et~al.}{2015}]{schroff2015facenet}
+Schroff, F., Kalenichenko, D., and Philbin, J. (2015).
+\newblock Facenet: A unified embedding for face recognition and clustering.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 815--823.
+
+\bibitem[\protect\astroncite{Schuster and
+  Paliwal}{1997}]{schuster1997bidirectional}
+Schuster, M. and Paliwal, K.~K. (1997).
+\newblock Bidirectional recurrent neural networks.
+\newblock {\em IEEE Transactions on Signal Processing}, 45(11):2673--2681.
+
+\bibitem[\protect\astroncite{Sennrich et~al.}{2015}]{sennrich2015neural}
+Sennrich, R., Haddow, B., and Birch, A. (2015).
+\newblock Neural machine translation of rare words with subword units.
+\newblock {\em arXiv preprint arXiv:1508.07909}.
+
+\bibitem[\protect\astroncite{Shkapsky et~al.}{2016}]{shkapsky2016big}
+Shkapsky, A., Yang, M., Interlandi, M., Chiu, H., Condie, T., and Zaniolo, C.
+  (2016).
+\newblock Big data analytics with datalog queries on spark.
+\newblock In {\em Proceedings of the 2016 International Conference on
+  Management of Data}, pages 1135--1149. ACM.
+
+\bibitem[\protect\astroncite{Shue et~al.}{2005}]{ipsec-overhead}
+Shue, C., Shin, Y., Gupta, M., and Choi, J.~Y. (2005).
+\newblock Analysis of ipsec overheads for vpn servers.
+\newblock In {\em 1st IEEE ICNP Workshop on Secure Network Protocols, 2005.
+  (NPSec).}
+
+\bibitem[\protect\astroncite{Sommer and Paxson}{2010}]{vern}
+Sommer, R. and Paxson, V. (2010).
+\newblock Outside the closed world: On using machine learning for network
+  intrusion detection.
+\newblock In {\em Proceedings of the 2010 IEEE Symposium on Security and
+  Privacy}.
+
+\bibitem[\protect\astroncite{Spearman}{1904}]{spearman1904proof}
+Spearman, C. (1904).
+\newblock The proof and measurement of association between two things.
+\newblock {\em American journal of Psychology}, 15(1):72--101.
+
+\bibitem[\protect\astroncite{spoofing-ps}{}]{spoofing-ps}
+spoofing-ps.
+\newblock {Port scanning techniques and the defense against them}.
+\newblock
+  https://www.sans.org/reading-room/whitepapers/auditing/port-scanning-techniques-defense-70.
+
+\bibitem[\protect\astroncite{spoofing-state}{}]{spoofing-state}
+spoofing-state.
+\newblock {State of IP Spoofing}.
+\newblock https://spoofer.caida.org/summary.php.
+
+\bibitem[\protect\astroncite{Spring et~al.}{2003}]{rocketfuel}
+Spring, N., Mahajan, R., and Anderson, T. (2003).
+\newblock {Quantifying the Causes of Path Inflation}.
+\newblock In {\em ACM Sigcomm}.
+
+\bibitem[\protect\astroncite{Thusoo et~al.}{2009}]{thusoo2009hive}
+Thusoo, A., Sarma, J.~S., Jain, N., Shao, Z., Chakka, P., Anthony, S., Liu, H.,
+  Wyckoff, P., and Murthy, R. (2009).
+\newblock Hive: a warehousing solution over a map-reduce framework.
+\newblock {\em Proceedings of the VLDB Endowment}, 2(2):1626--1629.
+
+\bibitem[\protect\astroncite{Tur and De~Mori}{2011}]{tur2011spoken}
+Tur, G. and De~Mori, R. (2011).
+\newblock {\em Spoken language understanding: Systems for extracting semantic
+  information from speech}.
+\newblock John Wiley \& Sons.
+
+\bibitem[\protect\astroncite{Tur et~al.}{2002}]{tur2002improving}
+Tur, G., Wright, J., Gorin, A., Riccardi, G., and Hakkani-T{\"u}r, D. (2002).
+\newblock Improving spoken language understanding using word confusion
+  networks.
+\newblock In {\em Seventh International Conference on Spoken Language
+  Processing}.
+
+\bibitem[\protect\astroncite{Vijayanarasimhan
+  et~al.}{2014}]{vijayanarasimhan2014deep}
+Vijayanarasimhan, S., Shlens, J., Monga, R., and Yagnik, J. (2014).
+\newblock Deep networks with large output spaces.
+\newblock {\em arXiv preprint arXiv:1412.7479}.
+
+\bibitem[\protect\astroncite{Vincent et~al.}{2015}]{vincent2015efficient}
+Vincent, P., De~Br{\'e}bisson, A., and Bouthillier, X. (2015).
+\newblock Efficient exact gradient update for training deep networks with very
+  large sparse targets.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  1108--1116.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2016a}]{dn-emb}
+Wang, D., Cui, P., and Zhu, W. (2016a).
+\newblock {Structural Deep Network Embedding}.
+\newblock In {\em KDD}.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2016b}]{net-emb}
+Wang, D., Cui, P., and Zhu, W. (2016b).
+\newblock Structural deep network embedding.
+\newblock In {\em Proceedings of the 22Nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2007}]{iphc}
+Wang, H., Jin, C., and Shin, K.~G. (2007).
+\newblock Defense against spoofed ip traffic using hop-count filtering.
+\newblock {\em IEEE/ACM Transactions on Networking}, 15:40--53.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2018}]{wang2018learning}
+Wang, L., Li, Y., Huang, J., and Lazebnik, S. (2018).
+\newblock Learning two-branch neural networks for image-text matching tasks.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2017}]{wang2017knowledge}
+Wang, Q., Mao, Z., Wang, B., and Guo, L. (2017).
+\newblock Knowledge graph embedding: A survey of approaches and applications.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  29(12):2724--2743.
+
+\bibitem[\protect\astroncite{word2vec}{2019}]{word2vecGithub}
+word2vec, G. (2019).
+\newblock Word2vec project source code.
+\newblock https://github.com/tmikolov/word2vec.git.
+
+\bibitem[\protect\astroncite{Yaar et~al.}{2006}]{spi}
+Yaar, A., Perrig, A., and Song, D. (2006).
+\newblock Stackpi: New packet marking and filtering mechanisms for ddos and ip
+  spoofing defense.
+\newblock {\em IEEE Journal on Selected Areas in Communications},
+  24(10):1853--1863.
+
+\bibitem[\protect\astroncite{Yang et~al.}{}]{yang2015parallel}
+Yang, M., Shkapsky, A., and Zaniolo, C.
+\newblock Parallel bottom-up evaluation of logic programs: Deals on
+  shared-memory multicore machines.
+
+\bibitem[\protect\astroncite{Zafarani and Liu}{2009}]{Zafarani+Liu:2009}
+Zafarani, R. and Liu, H. (2009).
+\newblock Social computing data repository at {ASU}.
+
+\bibitem[\protect\astroncite{Zaharia et~al.}{2012}]{zaharia2012resilient}
+Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., Franklin,
+  M.~J., Shenker, S., and Stoica, I. (2012).
+\newblock Resilient distributed datasets: A fault-tolerant abstraction for
+  in-memory cluster computing.
+\newblock In {\em Proceedings of the 9th USENIX conference on Networked Systems
+  Design and Implementation}, pages 2--2. USENIX Association.
+
+\bibitem[\protect\astroncite{Zaharia et~al.}{}]{zaharia2010spark}
+Zaharia, M., Chowdhury, M., Franklin, M.~J., Shenker, S., Stoica, I., et~al.
+\newblock Spark: Cluster computing with working sets.
+
+\bibitem[\protect\astroncite{Zaharia et~al.}{2013}]{sparkstreaming}
+Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013).
+\newblock Discretized streams: Fault-tolerant streaming computation at scale.
+\newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
+  systems principles}, pages 423--438.
+
+\bibitem[\protect\astroncite{Zaremba et~al.}{2014}]{zaremba2014recurrent}
+Zaremba, W., Sutskever, I., and Vinyals, O. (2014).
+\newblock Recurrent neural network regularization.
+
+\bibitem[\protect\astroncite{Zhao et~al.}{2011}]{zhao2011efficient}
+Zhao, X., Sala, A., Zheng, H., and Zhao, B.~Y. (2011).
+\newblock Efficient shortest paths on massive social graphs.
+\newblock In {\em CollaborateCom}.
+
+\end{thebibliography}

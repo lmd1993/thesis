@@ -1,0 +1,66 @@
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivations}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{1.2 Thesis Outline}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{1.3 Contributions}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{2 Extracing Latent Information from IP Network}{}% 5
+\BOOKMARK [1][-]{section.2.1}{2.1 Deep Learning IP Network Representations}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Introduction}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Background and Related Work}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Learning Network Representations}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 Evaluation}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.5}{2.1.5 Discussion}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.6}{2.1.6 Conclusions}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{2.2 Learning IP Maps for Network Spoofing Detection}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Introduction}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Towards learned maps for spoofing detection}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Learning-based spoofing detection}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 Evaluation}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 Discussion: Limitations and opportunities}{section.2.2}% 18
+\BOOKMARK [0][-]{chapter.3}{3 Extracing Latent Information from Abandoned Speech Interpretations}{}% 19
+\BOOKMARK [1][-]{section.3.1}{3.1 Introduction}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{3.2 Baseline, Oracle and Direct Models}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Baseline and Oracle}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Direct Models}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{3.3 Integration of N-BEST Hypotheses}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Hypothesized Text Concatenation}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Hypothesis Embedding Concatenation}{section.3.3}% 26
+\BOOKMARK [1][-]{section.3.4}{3.4 Experiment}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Dataset}{section.3.4}% 28
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Performance on Entire Test Set}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Performance Comparison among Various Subsets}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 Improvements on Different Domains and Different Numbers of Hypotheses}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.5}{3.4.5 Intent Classification}{section.3.4}% 32
+\BOOKMARK [1][-]{section.3.5}{3.5 Conclusions and Future Work}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{4 Amplified Negative Sampling: A Sample-Efficient Training Algorithm }{}% 34
+\BOOKMARK [1][-]{section.4.1}{4.1 Introduction}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{4.2 Related Work}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{4.3 Framework}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Preliminaries}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Negative Sampling}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.3}{4.3.3 Optimal Model of Negative Sampling and Full-gradient Model}{section.4.3}% 40
+\BOOKMARK [1][-]{section.4.4}{4.4 Amplified Negative Sampling}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.5}{4.5 Experiments}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Model Accuracy and Training Efficiency}{section.4.5}% 43
+\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 Language Model perplexity test}{section.4.5}% 44
+\BOOKMARK [2][-]{subsection.4.5.3}{4.5.3 Experiments on Other Downstream Tasks}{section.4.5}% 45
+\BOOKMARK [1][-]{section.4.6}{4.6 Conclustion}{chapter.4}% 46
+\BOOKMARK [0][-]{chapter.5}{5 Expressive Library for Recursive Queries: LLib and LFrame}{}% 47
+\BOOKMARK [1][-]{section.5.1}{5.1 Introduction}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{5.2 Prelimiaries}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Datalog}{section.5.2}% 50
+\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Related Platforms: Apache Spark, BigDatalog and RaSQL}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Spark MLlib and DataFrame}{section.5.2}% 52
+\BOOKMARK [1][-]{section.5.3}{5.3 LLib}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 LLib Working Paradigm}{section.5.3}% 54
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 LLib Categories}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Extension of LLib}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Collaboration with other applications}{section.5.3}% 57
+\BOOKMARK [2][-]{subsection.5.3.5}{5.3.5 Multiple Datalog applications}{section.5.3}% 58
+\BOOKMARK [2][-]{subsection.5.3.6}{5.3.6 User Defined Datalog Function}{section.5.3}% 59
+\BOOKMARK [1][-]{section.5.4}{5.4 LFrame}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Conversion from DataFrame to LFrame}{section.5.4}% 61
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 LFrame: Unary Operation}{section.5.4}% 62
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 LFrame: N-ary Operation}{section.5.4}% 63
+\BOOKMARK [1][-]{section.5.5}{5.5 Conclusion}{chapter.5}% 64
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 65
+\BOOKMARK [0][-]{section*.28}{Bibliograpy}{}% 66
