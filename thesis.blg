@@ -3,40 +3,40 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: apa.bst
 Database file #1: thesis.bib
-You're missing a field name---line 884 of file thesis.bib
+You're missing a field name---line 893 of file thesis.bib
  :  
  :  %   title = {Apache Hive},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 959 of file thesis.bib
+Repeated entry---line 968 of file thesis.bib
  : @misc{BOM
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1412 of file thesis.bib
+Repeated entry---line 1421 of file thesis.bib
  : @misc{ark
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1451 of file thesis.bib
+Repeated entry---line 1460 of file thesis.bib
  : @inproceedings{pic
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1463 of file thesis.bib
+Repeated entry---line 1472 of file thesis.bib
  : @inproceedings{vivaldi
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1477 of file thesis.bib
+Repeated entry---line 1486 of file thesis.bib
  : @inproceedings{barford-infocom
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1504 of file thesis.bib
+Repeated entry---line 1513 of file thesis.bib
  : @techreport{ipsec
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1580 of file thesis.bib
+Repeated entry---line 1589 of file thesis.bib
  : @inproceedings{gnp
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1600 of file thesis.bib
+Repeated entry---line 1609 of file thesis.bib
  : @misc{pyxida
  :             ,
 I'm skipping whatever remains of this entry
@@ -66,45 +66,45 @@ Warning--empty year in yang2015parallel
 Warning--empty booktitle in yang2015parallel
 Warning--empty year in zaharia2010spark
 Warning--empty journal in zaharia2010spark
-You've used 131 entries,
+You've used 132 entries,
             1940 wiz_defined-function locations,
-            1081 strings with 26731 characters,
-and the built_in function-call counts, 55590 in all, are:
-= -- 5346
-> -- 2636
-< -- 78
-+ -- 932
-- -- 912
-* -- 4659
-:= -- 9393
-add.period$ -- 398
-call.type$ -- 131
-change.case$ -- 1106
-chr.to.int$ -- 125
-cite$ -- 156
-duplicate$ -- 2287
-empty$ -- 3747
-format.name$ -- 1092
-if$ -- 11028
+            1086 strings with 26947 characters,
+and the built_in function-call counts, 56188 in all, are:
+= -- 5411
+> -- 2654
+< -- 79
++ -- 938
+- -- 918
+* -- 4703
+:= -- 9479
+add.period$ -- 402
+call.type$ -- 132
+change.case$ -- 1114
+chr.to.int$ -- 126
+cite$ -- 157
+duplicate$ -- 2316
+empty$ -- 3792
+format.name$ -- 1099
+if$ -- 11161
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 111
-newline$ -- 647
-num.names$ -- 366
-pop$ -- 1309
+missing$ -- 112
+newline$ -- 652
+num.names$ -- 369
+pop$ -- 1320
 preamble$ -- 1
-purify$ -- 1108
+purify$ -- 1116
 quote$ -- 0
-skip$ -- 1580
+skip$ -- 1604
 stack$ -- 0
-substring$ -- 3074
-swap$ -- 535
-text.length$ -- 38
+substring$ -- 3126
+swap$ -- 548
+text.length$ -- 39
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 784
+type$ -- 790
 warning$ -- 23
-while$ -- 372
+while$ -- 377
 width$ -- 0
-write$ -- 1609
+write$ -- 1623
 (There were 10 error messages)

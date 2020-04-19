@@ -292,6 +292,12 @@ Grave, E., Joulin, A., Ciss{\'e}, M., J{\'e}gou, H., et~al. (2017).
 \newblock In {\em Proceedings of the 34th International Conference on Machine
   Learning-Volume 70}, pages 1302--1310. JMLR. org.
 
+\bibitem[\protect\astroncite{Graves et~al.}{2013}]{graves2013speech}
+Graves, A., Mohamed, A.-r., and Hinton, G. (2013).
+\newblock Speech recognition with deep recurrent neural networks.
+\newblock In {\em 2013 IEEE international conference on acoustics, speech and
+  signal processing}, pages 6645--6649. IEEE.
+
 \bibitem[\protect\astroncite{Grover and Leskovec}{2016a}]{node2vec-kdd2016}
 Grover, A. and Leskovec, J. (2016a).
 \newblock node2vec: Scalable feature learning for networks.
