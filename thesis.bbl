@@ -318,6 +318,12 @@ Gu, J., Watanabe, Y.~H., Mazza, W.~A., Shkapsky, A., Yang, M., Ding, L., and
 \newblock In {\em Proceedings of the 2019 International Conference on
   Management of Data}, pages 467--484. ACM.
 
+\bibitem[\protect\astroncite{Gulzar et~al.}{2017}]{gulzar2017automated}
+Gulzar, M.~A., Interlandi, M., Han, X., Li, M., Condie, T., and Kim, M. (2017).
+\newblock Automated debugging in data-intensive scalable computing.
+\newblock In {\em Proceedings of the 2017 Symposium on Cloud Computing}, pages
+  520--534.
+
 \bibitem[\protect\astroncite{Gutmann and Hyv{\"a}rinen}{2010}]{NCE}
 Gutmann, M. and Hyv{\"a}rinen, A. (2010).
 \newblock Noise-contrastive estimation: A new estimation principle for

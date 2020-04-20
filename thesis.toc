@@ -1,81 +1,81 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Motivations}{2}{section.1.1}% 
-\contentsline {section}{\numberline {1.2}Thesis Outline}{4}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Contributions}{4}{section.1.3}% 
-\contentsline {chapter}{\numberline {2}Extracing Latent Information from IP Network}{5}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Deep Learning IP Network Representations}{6}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}Introduction}{6}{subsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.1.2}Background and Related Work}{8}{subsection.2.1.2}% 
-\contentsline {subsection}{\numberline {2.1.3}Learning Network Representations}{10}{subsection.2.1.3}% 
-\contentsline {subsubsection}{\numberline {2.1.3.1}Data sources}{10}{subsubsection.2.1.3.1}% 
-\contentsline {subsubsection}{\numberline {2.1.3.2}IP transformation}{10}{subsubsection.2.1.3.2}% 
-\contentsline {subsubsection}{\numberline {2.1.3.3}Network construction}{12}{subsubsection.2.1.3.3}% 
-\contentsline {subsection}{\numberline {2.1.4}Evaluation}{15}{subsection.2.1.4}% 
-\contentsline {subsubsection}{\numberline {2.1.4.1}Data and methodology}{15}{subsubsection.2.1.4.1}% 
-\contentsline {subsubsection}{\numberline {2.1.4.2}Embedding accuracy}{15}{subsubsection.2.1.4.2}% 
-\contentsline {subsection}{\numberline {2.1.5}Discussion}{18}{subsection.2.1.5}% 
-\contentsline {subsection}{\numberline {2.1.6}Conclusions}{19}{subsection.2.1.6}% 
-\contentsline {section}{\numberline {2.2}Learning IP Maps for Network Spoofing Detection}{20}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Introduction}{20}{subsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.2.2}Towards learned maps for spoofing detection}{22}{subsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.2.3}Learning-based spoofing detection}{24}{subsection.2.2.3}% 
-\contentsline {subsubsection}{\numberline {2.2.3.1}IP map learning}{24}{subsubsection.2.2.3.1}% 
-\contentsline {subsubsection}{\numberline {2.2.3.2}Spoofing detector}{28}{subsubsection.2.2.3.2}% 
-\contentsline {subsection}{\numberline {2.2.4}Evaluation}{29}{subsection.2.2.4}% 
-\contentsline {subsubsection}{\numberline {2.2.4.1}Coverage}{31}{subsubsection.2.2.4.1}% 
-\contentsline {subsubsection}{\numberline {2.2.4.2}Accuracy}{33}{subsubsection.2.2.4.2}% 
-\contentsline {subsubsection}{\numberline {2.2.4.3}Model transfer}{34}{subsubsection.2.2.4.3}% 
-\contentsline {subsubsection}{\numberline {2.2.4.4}Performance}{35}{subsubsection.2.2.4.4}% 
-\contentsline {subsection}{\numberline {2.2.5}Discussion: Limitations and opportunities}{35}{subsection.2.2.5}% 
-\contentsline {chapter}{\numberline {3}Extracing Latent Information from Abandoned Speech Interpretations}{38}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Introduction}{38}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Baseline, Oracle and Direct Models}{40}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Baseline and Oracle}{40}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Direct Models}{41}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}Integration of N-BEST Hypotheses}{42}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Hypothesized Text Concatenation}{43}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}Hypothesis Embedding Concatenation}{43}{subsection.3.3.2}% 
-\contentsline {section}{\numberline {3.4}Experiment}{44}{section.3.4}% 
-\contentsline {subsection}{\numberline {3.4.1}Dataset}{44}{subsection.3.4.1}% 
-\contentsline {subsection}{\numberline {3.4.2}Performance on Entire Test Set}{45}{subsection.3.4.2}% 
-\contentsline {subsection}{\numberline {3.4.3}Performance Comparison among Various Subsets}{45}{subsection.3.4.3}% 
-\contentsline {subsection}{\numberline {3.4.4}Improvements on Different Domains and Different Numbers of Hypotheses}{46}{subsection.3.4.4}% 
-\contentsline {subsection}{\numberline {3.4.5}Intent Classification}{47}{subsection.3.4.5}% 
-\contentsline {section}{\numberline {3.5}Conclusions and Future Work}{48}{section.3.5}% 
-\contentsline {chapter}{\numberline {4}Amplified Negative Sampling: A Sample-Efficient Training Algorithm }{50}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{50}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Related Work}{52}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Framework}{54}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}Preliminaries}{54}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Negative Sampling}{55}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}Optimal Model of Negative Sampling and Full-gradient Model}{57}{subsection.4.3.3}% 
-\contentsline {section}{\numberline {4.4}Amplified Negative Sampling}{58}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Experiments}{62}{section.4.5}% 
-\contentsline {subsection}{\numberline {4.5.1}Model Accuracy and Training Efficiency}{63}{subsection.4.5.1}% 
-\contentsline {subsection}{\numberline {4.5.2}Language Model perplexity test}{66}{subsection.4.5.2}% 
-\contentsline {subsection}{\numberline {4.5.3}Experiments on Other Downstream Tasks}{67}{subsection.4.5.3}% 
-\contentsline {section}{\numberline {4.6}Conclustion}{69}{section.4.6}% 
-\contentsline {chapter}{\numberline {5}Expressive Library for Recursive Queries: LLib and LFrame}{70}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Introduction}{70}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Prelimiaries}{73}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}Datalog}{73}{subsection.5.2.1}% 
-\contentsline {subsection}{\numberline {5.2.2}Related Platforms: Apache Spark, BigDatalog and RaSQL}{74}{subsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.2.3}Spark MLlib and DataFrame}{75}{subsection.5.2.3}% 
-\contentsline {section}{\numberline {5.3}LLib}{76}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}LLib Working Paradigm}{76}{subsection.5.3.1}% 
-\contentsline {subsubsection}{\numberline {5.3.1.1}Working session and acquiring data}{78}{subsubsection.5.3.1.1}% 
-\contentsline {subsubsection}{\numberline {5.3.1.2}Initializing an executable object of LLib and mapping the schema}{78}{subsubsection.5.3.1.2}% 
-\contentsline {subsubsection}{\numberline {5.3.1.3}Execution and persistence}{80}{subsubsection.5.3.1.3}% 
-\contentsline {subsubsection}{\numberline {5.3.1.4}Operate on multiple datasets}{81}{subsubsection.5.3.1.4}% 
-\contentsline {subsection}{\numberline {5.3.2}LLib Categories}{82}{subsection.5.3.2}% 
-\contentsline {subsection}{\numberline {5.3.3}Extension of LLib}{88}{subsection.5.3.3}% 
-\contentsline {subsection}{\numberline {5.3.4}Collaboration with other applications}{88}{subsection.5.3.4}% 
-\contentsline {subsection}{\numberline {5.3.5}Multiple Datalog applications}{89}{subsection.5.3.5}% 
-\contentsline {subsection}{\numberline {5.3.6}User Defined Datalog Function}{90}{subsection.5.3.6}% 
-\contentsline {section}{\numberline {5.4}LFrame}{91}{section.5.4}% 
-\contentsline {subsection}{\numberline {5.4.1}Conversion from DataFrame to LFrame}{92}{subsection.5.4.1}% 
-\contentsline {subsection}{\numberline {5.4.2}LFrame: Unary Operation}{93}{subsection.5.4.2}% 
-\contentsline {subsection}{\numberline {5.4.3}LFrame: N-ary Operation}{95}{subsection.5.4.3}% 
-\contentsline {section}{\numberline {5.5}Conclusion}{97}{section.5.5}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{98}{chapter.6}% 
-\contentsline {chapter}{Bibliograpy}{98}{section*.28}% 
+\contentsline {section}{\numberline {1.2}Contributions}{4}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Thesis Outline}{5}{section.1.3}% 
+\contentsline {chapter}{\numberline {2}Extracing Latent Information from IP Network}{7}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Deep Learning IP Network Representations}{8}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Introduction}{8}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Background and Related Work}{10}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Learning Network Representations}{12}{subsection.2.1.3}% 
+\contentsline {subsubsection}{\numberline {2.1.3.1}Data sources}{12}{subsubsection.2.1.3.1}% 
+\contentsline {subsubsection}{\numberline {2.1.3.2}IP transformation}{12}{subsubsection.2.1.3.2}% 
+\contentsline {subsubsection}{\numberline {2.1.3.3}Network construction}{14}{subsubsection.2.1.3.3}% 
+\contentsline {subsection}{\numberline {2.1.4}Evaluation}{17}{subsection.2.1.4}% 
+\contentsline {subsubsection}{\numberline {2.1.4.1}Data and methodology}{17}{subsubsection.2.1.4.1}% 
+\contentsline {subsubsection}{\numberline {2.1.4.2}Embedding accuracy}{17}{subsubsection.2.1.4.2}% 
+\contentsline {subsection}{\numberline {2.1.5}Discussion}{20}{subsection.2.1.5}% 
+\contentsline {subsection}{\numberline {2.1.6}Conclusions}{21}{subsection.2.1.6}% 
+\contentsline {section}{\numberline {2.2}Learning IP Maps for Network Spoofing Detection}{22}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Introduction}{22}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Towards learned maps for spoofing detection}{24}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Learning-based spoofing detection}{26}{subsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.3.1}IP map learning}{26}{subsubsection.2.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.2.3.2}Spoofing detector}{30}{subsubsection.2.2.3.2}% 
+\contentsline {subsection}{\numberline {2.2.4}Evaluation}{31}{subsection.2.2.4}% 
+\contentsline {subsubsection}{\numberline {2.2.4.1}Coverage}{33}{subsubsection.2.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.2.4.2}Accuracy}{35}{subsubsection.2.2.4.2}% 
+\contentsline {subsubsection}{\numberline {2.2.4.3}Model transfer}{36}{subsubsection.2.2.4.3}% 
+\contentsline {subsubsection}{\numberline {2.2.4.4}Performance}{37}{subsubsection.2.2.4.4}% 
+\contentsline {subsection}{\numberline {2.2.5}Discussion: Limitations and opportunities}{37}{subsection.2.2.5}% 
+\contentsline {chapter}{\numberline {3}Extracing Latent Information from Abandoned Speech Interpretations}{40}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introduction}{40}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Baseline, Oracle and Direct Models}{42}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Baseline and Oracle}{42}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Direct Models}{43}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}Integration of N-BEST Hypotheses}{44}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Hypothesized Text Concatenation}{45}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Hypothesis Embedding Concatenation}{45}{subsection.3.3.2}% 
+\contentsline {section}{\numberline {3.4}Experiment}{46}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Dataset}{46}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Performance on Entire Test Set}{47}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Performance Comparison among Various Subsets}{47}{subsection.3.4.3}% 
+\contentsline {subsection}{\numberline {3.4.4}Improvements on Different Domains and Different Numbers of Hypotheses}{48}{subsection.3.4.4}% 
+\contentsline {subsection}{\numberline {3.4.5}Intent Classification}{49}{subsection.3.4.5}% 
+\contentsline {section}{\numberline {3.5}Conclusions and Future Work}{50}{section.3.5}% 
+\contentsline {chapter}{\numberline {4}Amplified Negative Sampling: A Sample-Efficient Training Algorithm }{52}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{52}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Related Work}{54}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Framework}{56}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Preliminaries}{56}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Negative Sampling}{57}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Optimal Model of Negative Sampling and Full-gradient Model}{59}{subsection.4.3.3}% 
+\contentsline {section}{\numberline {4.4}Amplified Negative Sampling}{60}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}Experiments}{64}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Model Accuracy and Training Efficiency}{65}{subsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.5.2}Language Model perplexity test}{68}{subsection.4.5.2}% 
+\contentsline {subsection}{\numberline {4.5.3}Experiments on Other Downstream Tasks}{69}{subsection.4.5.3}% 
+\contentsline {section}{\numberline {4.6}Conclustion}{71}{section.4.6}% 
+\contentsline {chapter}{\numberline {5}Expressive Library for Recursive Queries: LLib and LFrame}{72}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Introduction}{72}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Prelimiaries}{75}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Datalog}{75}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Related Platforms: Apache Spark, BigDatalog and RaSQL}{76}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}Spark MLlib and DataFrame}{77}{subsection.5.2.3}% 
+\contentsline {section}{\numberline {5.3}LLib}{78}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}LLib Working Paradigm}{78}{subsection.5.3.1}% 
+\contentsline {subsubsection}{\numberline {5.3.1.1}Working session and acquiring data}{80}{subsubsection.5.3.1.1}% 
+\contentsline {subsubsection}{\numberline {5.3.1.2}Initializing an executable object of LLib and mapping the schema}{80}{subsubsection.5.3.1.2}% 
+\contentsline {subsubsection}{\numberline {5.3.1.3}Execution and persistence}{82}{subsubsection.5.3.1.3}% 
+\contentsline {subsubsection}{\numberline {5.3.1.4}Operate on multiple datasets}{83}{subsubsection.5.3.1.4}% 
+\contentsline {subsection}{\numberline {5.3.2}LLib Categories}{84}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Extension of LLib}{90}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}Collaboration with other applications}{90}{subsection.5.3.4}% 
+\contentsline {subsection}{\numberline {5.3.5}Multiple Datalog applications}{91}{subsection.5.3.5}% 
+\contentsline {subsection}{\numberline {5.3.6}User Defined Datalog Function}{92}{subsection.5.3.6}% 
+\contentsline {section}{\numberline {5.4}LFrame}{93}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Conversion from DataFrame to LFrame}{94}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}LFrame: Unary Operation}{95}{subsection.5.4.2}% 
+\contentsline {subsection}{\numberline {5.4.3}LFrame: N-ary Operation}{97}{subsection.5.4.3}% 
+\contentsline {section}{\numberline {5.5}Conclusion}{99}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{100}{chapter.6}% 
+\contentsline {chapter}{Bibliograpy}{101}{section*.28}% 

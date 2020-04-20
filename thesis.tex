@@ -389,35 +389,60 @@ Although the huge success has been achieved, for the advanced analytics on scala
 
 \end{itemize}
 
+\section{Contributions}
+All the contributions of this thesis center around  the aforementioned motivations and summarized as follows:
+\begin{itemize}
+	\item We realize and experimentally show  the structural information contained in IP addresses for internet embedding and propose a deep learning based framework, DIP, to utilize the information. To the best of our knowledge, DIP is the first framework to predict distance (or hop count) to arbitrary IPs (even unknown hosts i.e., not contained in training data) based only on the value of their IP address and routable prefix without any other domain knowledge.
+	\item We further explore the impact of deep learning in the network  security area by using network embeddings to learn IP maps for spoofing detection. We  combine the DIP with the hop count filtering, a well-known map-based spoofing detection mechanism, which maps each IP to a hop count value for one target IP address and is restricted to the detection on specific targets. The new framework can help any Internet server detect packets spoofed with any IP address without any additional measurements to that IP.
+	\item We pioneer the spoken language understanding research on jointly utilizing all hypotheses from ASR module. We investigate the exact matching between hypotheses and the ground-truth transcription of the input speech, which reveals the value contained in the 2$^{nd}-n^{th}$ best hypotheses. To involve more than one hypothesis during NLU, we introduces a series of simple yet efficient models and significantly improve the SLU system robustness to the noises from  ASR module. 
+	\item We take the effort to efficiently train the high computational cost multi-class classifiers. We propose a new sample-efficient training algorithm, amplified negative sampling (ANS). We theoretically and experimentally demonstrate the ANS leads to the higher-accuracy model of a larger sample size without paying its high computational cost.
+	\item Finally, we design a cross-language (Python, Scala, or Java) Datalog programming interface with two important components, LLib and LFrame. LLib is the high-level logical library, providing the encapsulation of a wide range of Datalog algorihtms.  LFrame is an extension to DataFrame with the functionality of basic logical operations defined by us like  definitions of recursive rules. With running examples, we show the simplified development of recursive applications   and flexible collaborations between LLib or LFrame and exisiting Spark libraries with the help of expressive LLib and LFrame.
+\end{itemize}
 
 
 
 \section{Thesis Outline}
-We optimize the advanced  scalable data processing framework with a top-down approach from algorithm to development tool.
-\section{Contributions}
+
+In this dissertation, we mainly address the three of the most important elements of the efficient scalable data analyzing. We firstly explore how to make full use of all information while extracting semantics and insights for decision making. More specifically, in  Chapter \ref{ch:dip}: (a) We propose the DIP, a variant of RNN, for establishing the network coordinate system via embedding the IP address sequence. Compared to the coordinate system built on single source of structural data like latency or hop count, we demonstrate the superiority of DIP for unknown IPs; (b) We show the spoofing detection, one of a wide range of problems the DIP framework can be applicable to, and the benefits of combination with DIP on   significantly reduced cost of achieving complete IP maps. In Chapter \ref{ch:nbest}, we explore the value of unused ASR interpretations and numerous ways to integrate them in the  spoken language understanding system.   
+
+Secondly, we explore how a 
+  large-class classifier can be  efficiently trained through a sample-efficient training algorithm in Chapter \ref{ch:nec}. In the chapter, the intuition, theoretical and experimental analysis of the  developed algorithm, amplified negative sampling, are  discussed.  Then, we explore how to design a succinct interface for advanced data analytics with superiority on recursion expressions in Chapter \ref{ch:lib}. We develop a high-level Datalog library, LLib,  for simplified end-to-end recursive application development with existing Datalog algorithms and a data structure, LFrame, for flexibly defining logic of a new recursive application. We finally conclude the dissertation and talk about the future work in Chapter \ref{ch:con}.
+  
+  
+
+%The remainder of the dissertation is organized as follows. In Chapter \ref{ch:dip}, 
+
 
 
 \chapter{Extracing Latent  Information from IP Network}
+\label{ch:dip}
 
 \input{dip}
 
 \chapter{Extracing Latent Information from Abandoned Speech Interpretations}
+\label{ch:nbest}
 
 \input{speech}
 
 \chapter{Amplified Negative Sampling: A Sample-Efficient Training Algorithm }
-
+\label{ch:nec}
 \input{negativeSampling}
 
 \chapter{Expressive Library for Recursive Queries: LLib and LFrame}
-
+\label{ch:lib}
 
 \input{llib}
 
 
 \chapter{Conclusion}
+\label{ch:con}
 
+In this dissertation, we have presented models to extract information with involvement of unused data for the optimal downstream task performance. We also discussed the approaches to improve the efficiency of  developing analytics algorithms with complex recursions and training large-class classifier for the big data. In this section, we will wrap up the dissertation and suggest some avenues for future research.
+%training deep neural networks efficiently for large-class classifier 
 
+In Chapter \ref{ch:dip}, we discussed the way to include the IP address sequence in the internet embedding by deep learning, which we found could tackle the issue of missing information for locating unknown IP addresses and provide sufficient coverage of  protected networks in denial-of-service attacks. We discovered the hidden structural information encoded in a node's IPv4 address. To extract the encoded information, we designed a deep learning based framework, DIP, which is a ten-layer neural network and a variant of RNN. During the training of DIP, we jointly utilized the IP address, hop count and routing information and used the distance estimation as the objective. With experiments on  test data, we found the learned embedding vectors  could preserve the real-world clustering of the associated nodes and predict distance between them accurately. Moreover, for unknown hosts, DIP could accurately impute hop count distance to them merely by their IP addresses and routable prefixes. These findings inspired us to apply DIP on hop count filtering based spoofing detection, a classical framework in network security. We reviewed the previous design of spoofing detection with the explicitly computed IP maps, the collection of  immutable structural network properties  among IPs like hop counts.  Since DIP could learn the embedding of internet and predict the structural properties of arbitrary IPs, the DIP-based detection mechanism could save the time of measuring the structural properties to build up  IP maps and increase the coverage of protected hosts. 
+
+In Chapter \ref{ch:nbest}, we discussed the way to include the 2$^{nd}$-$n^{th}$ best hypotheses generated by ASR module in SLU pipeline, which we found  could improve the SLU system robustness to ASR errors. 
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliograpy}
 
