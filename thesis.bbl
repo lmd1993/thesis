@@ -133,6 +133,12 @@ Chen, Y., Das, S., Dhar, P., Saddik, A.~E., and Nayak, A. (2008).
 \newblock Detecting and preventing ip-spoofed distributed dos attacks.
 \newblock {\em International Journal of Network Security}, 7(1):70--81.
 
+\bibitem[\protect\astroncite{Chodorow}{2013}]{chodorow2013mongodb}
+Chodorow, K. (2013).
+\newblock {\em MongoDB: the definitive guide: powerful and scalable data
+  storage}.
+\newblock " O'Reilly Media, Inc.".
+
 \bibitem[\protect\astroncite{cloudflare}{}]{cloudflare}
 cloudflare.
 \newblock {The root cause of large DDoS IP Spoofing}.
@@ -243,6 +249,13 @@ Ferguson, P. and Senie, D. (2000).
   employ ip source address spoofing.
 \newblock BCP~38, RFC Editor.
 \newblock http://www.rfc-editor.org/rfc/rfc2827.txt.
+
+\bibitem[\protect\astroncite{Fiscus}{1997}]{fiscus1997post}
+Fiscus, J.~G. (1997).
+\newblock A post-processing system to yield reduced word error rates:
+  Recognizer output voting error reduction (rover).
+\newblock In {\em 1997 IEEE Workshop on Automatic Speech Recognition and
+  Understanding Proceedings}, pages 347--354. IEEE.
 
 \bibitem[\protect\astroncite{Frankel and Krishnan}{2011}]{ipsec}
 Frankel, S. and Krishnan, S. (2011).
@@ -384,6 +397,13 @@ Kingma, D.~P. and Ba, J. (2014).
 \newblock Adam: A method for stochastic optimization.
 \newblock {\em arXiv preprint arXiv:1412.6980}.
 
+\bibitem[\protect\astroncite{Kumar et~al.}{2014}]{kumar2014normalization}
+Kumar, K., Liu, C., and Gong, Y. (2014).
+\newblock Normalization of asr confidence classifier scores via confidence
+  mapping.
+\newblock In {\em Fifteenth Annual Conference of the International Speech
+  Communication Association}.
+
 \bibitem[\protect\astroncite{LeCun et~al.}{2015}]{lecun2015deep}
 LeCun, Y., Bengio, Y., and Hinton, G. (2015).
 \newblock Deep learning.
@@ -410,6 +430,11 @@ Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018a).
 Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018b).
 \newblock {Learning IP Network Representations}.
 \newblock {\em SIGCOMM CCR}.
+
+\bibitem[\protect\astroncite{Liu et~al.}{2019}]{liu2019multi}
+Liu, X., He, P., Chen, W., and Gao, J. (2019).
+\newblock Multi-task deep neural networks for natural language understanding.
+\newblock {\em arXiv preprint arXiv:1901.11504}.
 
 \bibitem[\protect\astroncite{Liu et~al.}{2014}]{liu2014efficient}
 Liu, X., Wang, Y., Chen, X., Gales, M.~J., and Woodland, P.~C. (2014).
@@ -754,8 +779,14 @@ Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., Franklin,
 Zaharia, M., Chowdhury, M., Franklin, M.~J., Shenker, S., Stoica, I., et~al.
 \newblock Spark: Cluster computing with working sets.
 
-\bibitem[\protect\astroncite{Zaharia et~al.}{2013}]{sparkstreaming}
-Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013).
+\bibitem[\protect\astroncite{Zaharia et~al.}{2013a}]{sparkstreaming}
+Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013a).
+\newblock Discretized streams: Fault-tolerant streaming computation at scale.
+\newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
+  systems principles}, pages 423--438.
+
+\bibitem[\protect\astroncite{Zaharia et~al.}{2013b}]{zaharia2013discretized}
+Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013b).
 \newblock Discretized streams: Fault-tolerant streaming computation at scale.
 \newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
   systems principles}, pages 423--438.
@@ -763,6 +794,10 @@ Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013).
 \bibitem[\protect\astroncite{Zaremba et~al.}{2014}]{zaremba2014recurrent}
 Zaremba, W., Sutskever, I., and Vinyals, O. (2014).
 \newblock Recurrent neural network regularization.
+
+\bibitem[\protect\astroncite{Zhang and Yang}{2017}]{zhang2017survey}
+Zhang, Y. and Yang, Q. (2017).
+\newblock A survey on multi-task learning.
 
 \bibitem[\protect\astroncite{Zhao et~al.}{2011}]{zhao2011efficient}
 Zhao, X., Sala, A., Zheng, H., and Zhao, B.~Y. (2011).
