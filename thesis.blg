@@ -49,6 +49,7 @@ refers to entry "DBLP:conf/asru/2011", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/asru/2011"
 Warning--to sort, need author or key in dls
 Warning--to sort, need author or key in BOM
+Warning--to sort, need author or key in py4j
 Warning--empty year in dls
 Warning--empty year in BOM
 Warning--empty year in arbor-spoofing
@@ -70,45 +71,45 @@ Warning--empty year in yang2015parallel
 Warning--empty booktitle in yang2015parallel
 Warning--empty year in zaharia2010spark
 Warning--empty journal in zaharia2010spark
-You've used 139 entries,
+You've used 141 entries,
             1940 wiz_defined-function locations,
-            1112 strings with 28033 characters,
-and the built_in function-call counts, 59275 in all, are:
-= -- 5711
-> -- 2788
-< -- 85
-+ -- 989
-- -- 964
-* -- 4946
-:= -- 9987
-add.period$ -- 423
-call.type$ -- 139
-change.case$ -- 1171
-chr.to.int$ -- 132
-cite$ -- 164
-duplicate$ -- 2452
-empty$ -- 4005
-format.name$ -- 1154
-if$ -- 11788
+            1118 strings with 28209 characters,
+and the built_in function-call counts, 59656 in all, are:
+= -- 5739
+> -- 2816
+< -- 84
++ -- 999
+- -- 974
+* -- 4987
+:= -- 10076
+add.period$ -- 428
+call.type$ -- 141
+change.case$ -- 1185
+chr.to.int$ -- 134
+cite$ -- 168
+duplicate$ -- 2461
+empty$ -- 4021
+format.name$ -- 1165
+if$ -- 11839
 int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 119
-newline$ -- 686
-num.names$ -- 390
-pop$ -- 1393
+missing$ -- 120
+newline$ -- 695
+num.names$ -- 393
+pop$ -- 1403
 preamble$ -- 1
-purify$ -- 1174
+purify$ -- 1188
 quote$ -- 0
-skip$ -- 1704
+skip$ -- 1711
 stack$ -- 0
-substring$ -- 3310
-swap$ -- 588
-text.length$ -- 42
+substring$ -- 3303
+swap$ -- 582
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 830
-warning$ -- 23
-while$ -- 400
+type$ -- 842
+warning$ -- 24
+while$ -- 399
 width$ -- 0
-write$ -- 1709
+write$ -- 1729
 (There were 11 error messages)

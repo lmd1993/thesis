@@ -479,7 +479,7 @@
 % LIST OF TABLES
 %
 \newif\if@tables
-\@tablesfalse  % rbw did this in \makeintropages; I moved it here.  ---johnh 950825
+\@tablestrue  % rbw did this in \makeintropages; I moved it here.  ---johnh 950825
 \def\listoftables{
   \if@tables\chapter*{List of Tables\markboth
    {LIST OF TABLES}{LIST OF TABLES}}\@starttoc{lot}\fi}

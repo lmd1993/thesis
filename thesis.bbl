@@ -9,6 +9,10 @@ Recursion example: bill of materials.
 \newblock
   https://www.ibm.com/support/knowledgecenter/SSAE4W_9.6.0/db2\\/rbafzrecurse.htm.
 
+\bibitem[\protect\astroncite{py4}{2020}]{py4j}
+ (2020).
+\newblock \"py4j\".
+
 \bibitem[\protect\astroncite{Abadi et~al.}{2016}]{abadi2016tensorflow}
 Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M.,
   Ghemawat, S., Irving, G., Isard, M., et~al. (2016).
@@ -173,6 +177,12 @@ Dabek, F., Cox, R., Kaashoek, F., and Morris, R. (2004).
 \newblock Vivaldi: a decentralized network coordinate system.
 \newblock In {\em SIGCOMM}.
 
+\bibitem[\protect\astroncite{Das et~al.}{2019}]{das2019bigdata}
+Das, A., Li, Y., Wang, J., Li, M., and Zaniolo, C. (2019).
+\newblock Bigdata applications from graph analytics to machine learning by
+  aggregates in recursion.
+\newblock {\em arXiv preprint arXiv:1909.08249}.
+
 \bibitem[\protect\astroncite{de~Br{\'e}bisson and
   Vincent}{2015}]{de2015exploration}
 de~Br{\'e}bisson, A. and Vincent, P. (2015).
@@ -330,12 +340,6 @@ Gu, J., Watanabe, Y.~H., Mazza, W.~A., Shkapsky, A., Yang, M., Ding, L., and
   recursive-aggregate-sql on spark.
 \newblock In {\em Proceedings of the 2019 International Conference on
   Management of Data}, pages 467--484. ACM.
-
-\bibitem[\protect\astroncite{Gulzar et~al.}{2017}]{gulzar2017automated}
-Gulzar, M.~A., Interlandi, M., Han, X., Li, M., Condie, T., and Kim, M. (2017).
-\newblock Automated debugging in data-intensive scalable computing.
-\newblock In {\em Proceedings of the 2017 Symposium on Cloud Computing}, pages
-  520--534.
 
 \bibitem[\protect\astroncite{Gutmann and Hyv{\"a}rinen}{2010}]{NCE}
 Gutmann, M. and Hyv{\"a}rinen, A. (2010).
@@ -790,6 +794,11 @@ Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013b).
 \newblock Discretized streams: Fault-tolerant streaming computation at scale.
 \newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
   systems principles}, pages 423--438.
+
+\bibitem[\protect\astroncite{Zaniolo et~al.}{2019}]{zaniolo2019monotonic}
+Zaniolo, C., Das, A., Gu, J., Li, Y., Wang, J., et~al. (2019).
+\newblock Monotonic properties of completed aggregates in recursive queries.
+\newblock {\em arXiv preprint arXiv:1910.08888}.
 
 \bibitem[\protect\astroncite{Zaremba et~al.}{2014}]{zaremba2014recurrent}
 Zaremba, W., Sutskever, I., and Vinyals, O. (2014).

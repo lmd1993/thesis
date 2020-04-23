@@ -1,0 +1,17 @@
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Absolute mean error (standard deviation between brackets) of distance prediction of DIP{} and {\em mean}, for both known and new IPs, when varying the number of IPs, the number of servers and the embedding dimension. The default values are 10,000 IPs, 95 servers, and 140 dimensions.\relax }}{18}{table.caption.8}% 
+\contentsline {table}{\numberline {2.2}{\ignorespaces Map-based spoofing detection methods.\relax }}{30}{table.caption.11}% 
+\contentsline {table}{\numberline {2.3}{\ignorespaces Performance of training for data sets containing hop count information from 96 servers to 1,000, 10,000, and 100,000 IPs. Each data set is sparse, with only about 15\% of all entries available.\relax }}{37}{table.caption.14}% 
+\addvspace {10pt}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Spoken recognition quality distribution of the $n$ best hypotheses.\relax }}{40}{table.caption.15}% 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Motivating example: comparison of ASR $n$-Best hypotheses with the corresponding transcription. \relax }}{41}{table.caption.16}% 
+\contentsline {table}{\numberline {3.3}{\ignorespaces Micro and Macro F1 score for multi-class domain classification.\relax }}{46}{table.caption.20}% 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Performance comparison for the subset ($\sim $ 19\%) where ASR first best disagrees with transcription.\relax }}{47}{table.caption.21}% 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }}{47}{table.caption.22}% 
+\contentsline {table}{\numberline {3.6}{\ignorespaces Intent classification for three important domains.\relax }}{48}{table.caption.25}% 
+\addvspace {10pt}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Word-analogy semantic-task top-1 accuracy.\relax }}{69}{table.4.1}% 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Training time (seconds).\relax }}{70}{table.4.2}% 
+\addvspace {10pt}
+\addvspace {10pt}
