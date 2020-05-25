@@ -478,7 +478,7 @@ We propose to {\em learn a structural model (or embedding) of the Internet and u
 %
 %Building end-host maps may complement in-network spoofing mechanisms but are specific to the host on which they are constructed and difficult, if not impossible to transfer to another host.
 
-%In this paper, we ask the following question: how can we efficiently increase the coverage of host-based spoofing to protect {\em any} server in the Internet against attack packets spoofed with {\em any} IP address? 
+%In this chapter, we ask the following question: how can we efficiently increase the coverage of host-based spoofing to protect {\em any} server in the Internet against attack packets spoofed with {\em any} IP address? 
 %
 %We identify two key contributors for the incomplete coverage of existing host-based defenses: the construction cost and specificity of IP maps.
 %
@@ -502,7 +502,7 @@ Second, our work explores the impact of deep learning in the network and securit
 %
 It is precisely such a trade-off that we analyze in our work: while learning IP maps for spoofing detection can ease the task of administrators and help build complete maps much faster, it may decrease the detection accuracy. Understanding this balance can lead to better and more protected networks.
 
-%The rest of the paper flows as follows. In the next section, we revisit map-based spoofing detection mechanisms and reiterate the motivation for learning maps. We describe our vision for a learning-based spoofing detector in Section~\ref{sec:design}. In Section~\ref{sec:eval}, we use real world data to evaluate the trade-offs involved in introducing learning to spoofing detection. We discuss the limitations and opportunities of our work in Section~\ref{sec:discussion} and conclude in Section~\ref{sec:conclusions}.
+%The rest of the chapter flows as follows. In the next section, we revisit map-based spoofing detection mechanisms and reiterate the motivation for learning maps. We describe our vision for a learning-based spoofing detector in Section~\ref{sec:design}. In Section~\ref{sec:eval}, we use real world data to evaluate the trade-offs involved in introducing learning to spoofing detection. We discuss the limitations and opportunities of our work in Section~\ref{sec:discussion} and conclude in Section~\ref{sec:conclusions}.
 
 \subsection{Towards learned maps for spoofing detection}
 
@@ -525,7 +525,7 @@ A likely cause for the incomplete coverage is the misaligned economic incentives
 
 
 \textbf{Host maps.}
-Host-based detection aligns the incentives by pushing the onus of detection towards the edge of the network. Hosts\footnote{Throughout the paper, we interchangeably refer to the server that deploys host-based maps as host, end-host, target, destination, or victim.}, rather than routers, build and maintain IP maps and benefit immediately from them. Most notably, several solutions build maps between IPs and hop count values to the target, relying on hop count data as a measure of the network topology~\citep{iphc,hcf}. 
+Host-based detection aligns the incentives by pushing the onus of detection towards the edge of the network. Hosts\footnote{Throughout the chapter, we interchangeably refer to the server that deploys host-based maps as host, end-host, target, destination, or victim.}, rather than routers, build and maintain IP maps and benefit immediately from them. Most notably, several solutions build maps between IPs and hop count values to the target, relying on hop count data as a measure of the network topology~\citep{iphc,hcf}. 
 Hop counts can be easily derived from the IP TTL field, whose value depends on the network infrastructure (\ie{}, every router decrements the value before forwarding the packet) and cannot be easily forged by an attacker.  
 
 By pushing map computation to the edge, host-based maps decentralize the spoofing detection process and may see decreased coverage. 
@@ -573,7 +573,7 @@ Figure~\ref{fig:learnedmaps} presents a visual representation of the benefits of
 
 To illustrate the benefits of a learning-based spoofing detector, we propose a prototype detection framework based on the hop count filtering method first introduced by Wang~\etal{}~\citep{hcf}.
 Our prototype consists of two main components: an offline IP map learning module (to learn IP representations and estimate hop counts between IPs) and a spoofing detector (to detect spoofed traffic). We describe both modules next and study their effectiveness in the next section. 
-%Building a real spoofing detection framework is a non goal of the paper. We merely seek to understand whether a learning-based spoofing detector is a viable direction through real-world measurements.
+%Building a real spoofing detection framework is a non goal of the chapter. We merely seek to understand whether a learning-based spoofing detector is a viable direction through real-world measurements.
 
 
 
@@ -688,7 +688,7 @@ We train our spoofing detector for 1,000 iterations on a server with four 3.5GHz
 
 {\bf Assumptions.} We assume a single attacker, randomly placed in the Internet, with no knowledge about network structure around the spoofing target or the spoofed IP. This means that the attacker cannot use information about hop count to the target to avoid detection. We also assume that the hop count information is static and does not change. In Section~\ref{spoof:discussion}, we discuss what happens when we relax these assumptions. 
 
-{\bf Goals and non-goals.} Our main goal is to evaluate the feasibility of learned maps for detecting spoofed network packets and to inform future decisions of security operators or researchers. We use an existing embedding algorithm, DIP~\citep{dip} to learn hop count information between IPs, and study its interaction with hop count filtering~\citep{hcf}. A non-goal is to evaluate the DIP embedding accuracy. For a detailed study, we refer the reader to the DIP paper~\citep{dip}, which analyzes the embedding accuracy when varying various learning parameters and in contrast to other distance prediction mechanisms.
+{\bf Goals and non-goals.} Our main goal is to evaluate the feasibility of learned maps for detecting spoofed network packets and to inform future decisions of security operators or researchers. We use an existing embedding algorithm, DIP~\citep{dip} to learn hop count information between IPs, and study its interaction with hop count filtering~\citep{hcf}. A non-goal is to evaluate the DIP embedding accuracy. For a detailed study, we refer the reader to the DIP chapter~\citep{dip}, which analyzes the embedding accuracy when varying various learning parameters and in contrast to other distance prediction mechanisms.
 %Our focus is thus on understanding the coverage of a learning-based spoofing detector: how likely is it to protect {\em any} target from packets spoofed with {\em any} IP address. 
 \begin{figure*}[t]
 	\centering

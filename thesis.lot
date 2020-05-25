@@ -11,7 +11,8 @@
 \contentsline {table}{\numberline {3.5}{\ignorespaces Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }}{47}{table.caption.22}% 
 \contentsline {table}{\numberline {3.6}{\ignorespaces Intent classification for three important domains.\relax }}{48}{table.caption.25}% 
 \addvspace {10pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Word-analogy semantic-task top-1 accuracy.\relax }}{69}{table.4.1}% 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Training time (seconds).\relax }}{70}{table.4.2}% 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Word-analogy semantic-task top-1 accuracy.\relax }}{68}{table.4.1}% 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Training time (seconds).\relax }}{68}{table.4.2}% 
 \addvspace {10pt}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Execution time comparison for typical Datalog algorithms.\relax }}{88}{table.caption.28}% 
 \addvspace {10pt}

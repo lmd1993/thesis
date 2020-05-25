@@ -4,15 +4,6 @@
 1st deep learning and security workshop.
 \newblock https://www.ieee-security.org/TC/SPW2018/DLS/.
 
-\bibitem[\protect\astroncite{BOM}{}]{BOM}
-Recursion example: bill of materials.
-\newblock
-  https://www.ibm.com/support/knowledgecenter/SSAE4W_9.6.0/db2\\/rbafzrecurse.htm.
-
-\bibitem[\protect\astroncite{py4}{2020}]{py4j}
- (2020).
-\newblock \"py4j\".
-
 \bibitem[\protect\astroncite{Abadi et~al.}{2016}]{abadi2016tensorflow}
 Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M.,
   Ghemawat, S., Irving, G., Isard, M., et~al. (2016).
@@ -50,6 +41,10 @@ Armbrust, M., Xin, R.~S., Lian, C., Huai, Y., Liu, D., Bradley, J.~K., Meng,
 \newblock Spark sql: Relational data processing in spark.
 \newblock In {\em Proceedings of the 2015 ACM SIGMOD international conference
   on management of data}, pages 1383--1394.
+
+\bibitem[\protect\astroncite{Bader and Madduri}{2006}]{Bader2006GTgraphA}
+Bader, D.~A. and Madduri, K. (2006).
+\newblock Gtgraph : A synthetic graph generator suite.
 
 \bibitem[\protect\astroncite{Bai et~al.}{2017}]{bai2017tapas}
 Bai, Y., Goldman, S., and Zhang, L. (2017).
@@ -176,6 +171,11 @@ Cunha, I., Teixeira, R., Veitch, D., and Diot, C. (2011).
 Dabek, F., Cox, R., Kaashoek, F., and Morris, R. (2004).
 \newblock Vivaldi: a decentralized network coordinate system.
 \newblock In {\em SIGCOMM}.
+
+\bibitem[\protect\astroncite{Dagenais}{2009}]{py4j}
+Dagenais, B. (2009).
+\newblock Py4j - a bridge between python and java.
+  https://www.py4j.org/index.html.
 
 \bibitem[\protect\astroncite{Das et~al.}{2019}]{das2019bigdata}
 Das, A., Li, Y., Wang, J., Li, M., and Zaniolo, C. (2019).
@@ -783,14 +783,8 @@ Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., Franklin,
 Zaharia, M., Chowdhury, M., Franklin, M.~J., Shenker, S., Stoica, I., et~al.
 \newblock Spark: Cluster computing with working sets.
 
-\bibitem[\protect\astroncite{Zaharia et~al.}{2013a}]{sparkstreaming}
-Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013a).
-\newblock Discretized streams: Fault-tolerant streaming computation at scale.
-\newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
-  systems principles}, pages 423--438.
-
-\bibitem[\protect\astroncite{Zaharia et~al.}{2013b}]{zaharia2013discretized}
-Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013b).
+\bibitem[\protect\astroncite{Zaharia et~al.}{2013}]{zaharia2013discretized}
+Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013).
 \newblock Discretized streams: Fault-tolerant streaming computation at scale.
 \newblock In {\em Proceedings of the twenty-fourth ACM symposium on operating
   systems principles}, pages 423--438.

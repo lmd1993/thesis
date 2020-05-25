@@ -18,9 +18,6 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Model accuracy\relax }}{65}{figure.caption.26}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Training time.\relax }}{65}{figure.caption.26}% 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Amplifying factor vs learning rate\relax }}{65}{figure.caption.26}% 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces PTB: Negative sampling 5.\relax }}{68}{figure.caption.27}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces PTB: Negative sampling 15.\relax }}{68}{figure.caption.27}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Different amplifying factor.\relax }}{68}{figure.caption.27}% 
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Working paradigm comparison between existing distributed Spark-Based Datalog platforms and the LLib.\relax }}{78}{figure.caption.28}% 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Working paradigm comparison between existing Spark-Based Datalog platforms and LLib.\relax }}{76}{figure.caption.27}% 
 \addvspace {10pt}

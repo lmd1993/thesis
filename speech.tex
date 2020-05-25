@@ -44,20 +44,20 @@ before feeding the best interpretation to the NLU module. These approaches propo
 
 Those reranking models could benefit the first two cases in Table \ref{tbl:expMotiv} when there is an utterance matching with transcription. However, in other cases like the third row, it is hard to integrate the fragmented information  in multiple hypotheses. 
 
-This paper proposes various methods integrating $n$-best hypotheses to tackle the problem. To the best of our knowledge, this is the first study that attempts to collectively exploit the $n$-best speech interpretations in the SLU system.  This paper serves as the basis of our $n$-best-hypotheses-based SLU system, focusing on the methods of integration for the hypotheses. 
+This chapter proposes various methods integrating $n$-best hypotheses to tackle the problem. To the best of our knowledge, this is the first study that attempts to collectively exploit the $n$-best speech interpretations in the SLU system.  This chapter serves as the basis of our $n$-best-hypotheses-based SLU system, focusing on the methods of integration for the hypotheses. 
 Since further improvements of the integration framework require considerable setup and descriptions, where jointly optimized tasks (e.g. transcription reconstruction) trained with multiple ways (multitask \citep{caruana1997multitask}, multistage learning \citep{gong2013multi}) and more features (confidence score, rank position, etc.) are involved, we leave those to a subsequent article.
 
 % we will leave the  discussion about using more tasks (e.g. transcription reconstruction) with multiple ways (multitask \citep{caruana1997multitask}, multistage learning \citep{gong2013multi}) and involving more features (confidence score, rank position, etc.) in integration framework for further improvements in a subsequent article.  
 
 % The.........
 
-% In this paper, we will focus on the discussion ...., which serves our basic in the whole system..., This work is the first part of ... system. The furhter discussion about ... will be elaberated on our next paper.
+% In this chapter, we will focus on the discussion ...., which serves our basic in the whole system..., This work is the first part of ... system. The furhter discussion about ... will be elaberated on our next chapter.
 % introduction end, discussion related work, mikolov 
 
 % To the best of our knowledge, ...
 % Seperate process of 
 % not influence the embedding of words: "Bose" "Bowls" 
-% Mikolov's paper
+% Mikolov's chapter
 % pooling with sliding window n*1 stride 1, 
 
 \begin{table}[t!]
@@ -81,7 +81,7 @@ Since further improvements of the integration framework require considerable set
 \end{table}
 
 
-This paper is organized as follows. Section \ref{speech:pretrain} introduces the Baseline, Oracle and Direct models. Section \ref{speech:models} describes proposed ways to integrate $n$-best hypotheses during training. The experimental setup and results are described in Section \ref{speech:exp}. Section \ref{speech:conclusion} contains conclusions and future work.
+This chapter is organized as follows. Section \ref{speech:pretrain} introduces the Baseline, Oracle and Direct models. Section \ref{speech:models} describes proposed ways to integrate $n$-best hypotheses during training. The experimental setup and results are described in Section \ref{speech:exp}. Section \ref{speech:conclusion} contains conclusions and future work.
 
 
 \section{Baseline, Oracle and Direct Models}
@@ -415,7 +415,7 @@ domain-specific
 intent classification for three popular domains due to space limit. As Table \ref{tbl:intent} shows, the margins of using multiple hypotheses with PoolingAvg are significant as well.
 \section{Conclusions and Future Work}
 \label{speech:conclusion}
-This paper improves the SLU system robustness to ASR errors by integrating $n$-best hypotheses in different ways, e.g. the aggregation of predictions from hypotheses or the concatenation of hypothesis text or embedding. 
+This chapter improves the SLU system robustness to ASR errors by integrating $n$-best hypotheses in different ways, e.g. the aggregation of predictions from hypotheses or the concatenation of hypothesis text or embedding. 
 % To leverage the $n$-best hypotheses, we propose multiple methods to combine $n$-bests, e.g.  concatenation on hypothesized text or hypotheses embedding . 
 We can achieve significant classification accuracy improvements over production-quality baselines on domain and intent classifications, 14\% to 25\% relative gains.  The improvement is more significant for a subset of testing data where ASR first best is different from transcription. We also observe that with more hypotheses utilized, the performance can be further improved. 
 In the future, we aim to employ additional features (e.g. confidence scores for hypotheses or tokens) to integrate $n$-bests more efficiently, where we can train a function $f$ to obtain a weight for each hypothesis embedding before pooling. 

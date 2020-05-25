@@ -1,4 +1,4 @@
-In this chapter, we propose a new sample-efficient training method, called \emph{amplified negative sampling}, for training multi-class classifiers with a large output-class size. Our method jumps out of the framework of softmax appximation and directly tackle the optimum convergence point of the learning algorithm. Our proposed method is based on our  analysis of the well-known negative sampling technique~\citep{mikolov2013distributed} and is designed for (1) higher performance in the general task and (2) lower training computational cost. Our  analysis  provides a better understanding of a few empirical observations that are well known among practitioners. Our experiments on real-world datasets demonstrate that our proposed method leads to sampling cost savings with performance boost compared to the standard technique.
+In this chapter, we propose a new sample-efficient training method, called \emph{amplified negative sampling}, for training multi-class classifiers with a large output-class size. Our method jumps out of the framework of softmax appximation and directly tackle the optimum convergence point of the learning algorithm. Our proposed method is based on our  analysis of the well-known negative sampling technique~\citep{mikolov2013distributed} and is designed for (1) higher performance in the general task and (2) lower training computational cost. Our experiments on real-world datasets demonstrate that our proposed method leads to sampling cost savings with performance boost compared to the standard technique.
 
 \section{Introduction}
 
@@ -9,13 +9,15 @@ The key idea behind negative sampling is as follows: Given a training data point
 
 In general, it is reported that using a larger negative sample size leads to better downstream performance. For example, when Mikolov used negative sampling to embed words into high-dimensional vectors in~\citep{mikolov2013distributed}, he reported between 2-15\% increase in downstream task performance when he used the 15 negative samples ($k=15$) compared to 5 negative samples ($k=5$). Unfortunately, the training cost of $k=15$ is three times as large as that of $k=5$, making its use significantly less appealing in practice. For instance, since training on a larger corpus generally improves the downstream performance as well, it may be the case that using a smaller $k$ on a larger corpus may be just as good as or even better than using a larger $k$ on a smaller corpus. This is the primary topic of this chapter. Is it possible to get the best of both worlds? Can we achieve a higher-quality model trained on a larger $k$ without paying its training cost?
 
-To obtain an answer to this question, we first conduct a rigorous mathematical analysis of the impact of the negative-sampling technique on the accuracy of the learned model. The result of this analysis will show exactly how negative sampling affects the accuracy of the learned model and provide theoretical explanations for a few empirical observations that have been well known among practitioners. It will also shed light on how it can be further improved for higher training efficiency. Based on this insight, we find a surprisingly simple yet effective  modification to the negative sampling technique, named \emph{amplified negative sampling}.  Compared to the standard negative-sampling technique, our proposed technique can be used to either (1) \emph{improve the prediction accuracy} of the trained model \emph{for the same training cost} or (2) \emph{lower the training cost for the same prediction accuracy}. We demonstrate the effectiveness of our proposed technique through extensive experiments on real-world data sets.
+%To obtain an answer to this question, we first conduct a rigorous mathematical analysis of the impact of the negative-sampling technique on the accuracy of the learned model. The result of this analysis will show exactly how negative sampling affects the accuracy of the learned model and provide theoretical explanations for a few empirical observations that have been well known among practitioners. It will also shed light on how it can be further improved for higher training efficiency. Based on this insight, 
 
-In summary, we make the following contributions in this chapter.
+In this chapter, we give our answer to this question by finding a surprisingly simple yet effective  modification to the negative sampling technique, named \emph{amplified negative sampling}.  Compared to the standard negative-sampling technique, our proposed technique can be used to either (1) \emph{improve the prediction accuracy} of the trained model \emph{for the same training cost} or (2) \emph{lower the training cost for the same prediction accuracy}. We demonstrate the effectiveness of our proposed technique through extensive experiments on real-world data sets.
+
+In summary, we make the following contributions in this chapter:
 %	\item We provide a rigorous mathematical analysis of the impact of negative sampling on the trained model under the three most popular loss functions, $L1$, $L2$, and cross entropy. As far as we know, our work is the first that derives the exact analytical form of the global optimal points when the classifier is trained with negative sampling under the three popular loss functions. The result of our analysis provides a clear understanding of the implication of negative sampling. 
 	%For example, we prove that the optimal model trained with the $L2$ loss function is the same as that with the \emph{cross entropy} loss function. We also show that the optimal model trained with the $L1$ loss function is a sparse binary model. 
-We propose \emph{amplified negative sampling}, a simple yet effective modification to the widely-used negative-sampling technique that can improve its accuracy and lower its training cost based on our rigorous mathematical analysis.
- We compare the effectiveness of our proposed technique with standard negative sampling by conducting an extensive set of experiments on real-world data sets. Our results show that the effectiveness of our technique is in line with our theoretical prediction and can often be \emph{twice as sample efficient} as the standard technique. 
+(\romannum{1}) We propose \emph{amplified negative sampling}, a simple yet effective modification to the widely-used negative-sampling technique that can improve its accuracy and lower its training cost based on our rigorous mathematical analysis.
+ (\romannum{2}) We compare the effectiveness of our proposed technique with standard negative sampling by conducting an extensive set of experiments on real-world data sets. Our results show that the effectiveness of our technique is in line with our theoretical prediction and can often be \emph{twice as sample efficient} as the standard technique. 
 
 
 The rest of this chapter is organized as follows. In Section~\ref{sec:NS:framework}, 
@@ -27,7 +29,7 @@ and wrap up the chapter in Section~\ref{sec:NS:conclusion}.
 \section{Related Work}
 \label{sec:NS:related}
 Softmax has been widely used in various models. In large output class classification problem, the intractable normalizing constant of softmax function will slow down the computation efficiency greatly. There are three major types of strategies have been investigated by the research community, including sampled softmax\citep{bengio2008adaptive}, hierarchical softmax\citep{morin2005hierarchical} and spherical softmax\citep{vincent2015efficient}.
-We are not aiming to approximate the softmax function. This work makes two related yet distinct contributions: (1) a rigorous mathematical analysis of negative sampling and (2) an efficient training method based on negative sampling strategy for a large classifier.  The \citep{ruiz2018augment} share a similar scope with us which is not targeting on softmax appximation. Since the amplifying factor is distribution agnostic, this method actually can be applied to all the sampling-based softmax approximation method\citep{blanc2017adaptive,rawat2019sampled}.
+We are not aiming to approximate the softmax function. This work makes one related yet distinct contribution: an efficient training method based on negative sampling strategy for a large classifier.  The \citep{ruiz2018augment} share a similar scope with us which is not targeting on softmax appximation. Since the amplifying factor is distribution agnostic, this method actually can be applied to all the sampling-based softmax approximation method\citep{blanc2017adaptive,rawat2019sampled}.
 
 \textbf{Sampled Softmax} This category contains the method which generates a subset of negative samples to avoid the high overhead of full negative sampling. Among this category, one class of methods try to generate samples from the softmax distribution. An adaptive sampling method was proposed by Bengio~\citep{bengio2008adaptive} inspired by the importance sampling. Another prominent example is the negative sampling~\citep{mikolov2013efficient} which uses a simple noisy distribution to generate negative samples. TAPAS~\citep{bai2017tapas} uses a two pass scheme to generate samples from two different size candidate pools to reduce the sample overhead. Hashing method~\citep{bakhtiary2015speeding, vijayanarasimhan2014deep} is also applied to either find the closest class or partial computation.  ~\citep{rawat2019sampled}. 
 Another class of methods instead focus on the sampled loss, including Noisy Contrastive Estimation(NCE)~\citep{NCE} by assuming the partition as an extra parameter to be computed during the computation and Adversarial Contrastive Estimation(ACE)~\citep{bose2018adversarial} and ~\citep{schroff2015facenet,mussmann2017fast} selects the hardest negative examples.
@@ -39,7 +41,7 @@ Hierarchical softmax was introduced in ~\citep{Goodman} by utilizing the cluster
 The spherical softmax was proposed in ~\citep{vincent2015efficient,de2015exploration} which use quadratic function to replace the exponential function and enable faster computation of the gradients. However, these method seems not quite stable when the output label size is large. Kernel-based methods are also explored in ~\citep{blanc2017adaptive,rawat2019sampled}. These works introduces quadratic kernel and random Fourier features which show very promising results.
 \section{Framework}
 \label{sec:NS:framework}
-In this section, we briefly go over the general problem formulation of multi-class classifier learning and negative sampling to introduce key notation used in this paper.
+In this section, we briefly go over the general problem formulation of multi-class classifier learning and negative sampling to introduce key notation used in this chapter.
 \subsection{Preliminaries}
 We are given a dataset $D = \{(x_1, y_1),$$(x_2, y_2),$$..., (x_n, y_n)\}$, where $x_i \in X$ is an \emph{input feature} and $y_i \in Y$ is an \emph{output class label}. We assume a discrete space of feature values $x_i$ and output labels $y_i$, such that $x_i$ and $y_i$ take an integer value between $1 \le x_i \le m$ and $1 \le y_i \le m$. The multi-class classifier learning problem is to find a classifier $C: X \rightarrow Y$ that returns the correct label $y_i$ given the input feature $x_i$: $y_i = C(x_i)$. Due to noise in the dataset and the uncertainty in predicting the correct label, this problem is often formulated as finding a conditional probability distribution $P(y|x)$ from the dataset $D$, which is interpreted as the probability that the correct output label is $y$ given the input feature $x$.
 
@@ -64,13 +66,13 @@ L_{\textit{CE}}:&
 %\end{split}
 
 %\end{equation}
-Here, $\mathbbm{1}(y=y_i)$ is an indicator function that takes the value $1$ if $y = y_i$ and $0$ otherwise. In order to make our discussion concrete, we primarily assume $L2$ as our loss function in the rest of this paper and simply state the result of our analysis for the other loss functions. 
+Here, $\mathbbm{1}(y=y_i)$ is an indicator function that takes the value $1$ if $y = y_i$ and $0$ otherwise. In order to make our discussion concrete, we primarily assume $L2$ as our loss function in the rest of this chapter and simply state the result of our analysis for the other loss functions. 
 
 The gradient-descent method is often utilized to identify the parameter $\theta^*$ that minimizes the loss function $L(f_{\theta}, D)$. Given the definition of the $L2$ loss function, its gradient is:
 \small
 \begin{align}
-&\nabla_{\theta} L_2(f_{\theta},D) =\nonumber\\
-&-2\!\!\!\!\!\!\sum_{(x_i,y_i)\in D} \!\!\left[\sum_{y \in Y} 
+&\nabla_{\theta} L_2(f_{\theta},D) = 
+ -2\!\!\!\!\!\!\sum_{(x_i,y_i)\in D} \!\!\left[\sum_{y \in Y} 
 (\mathbbm{1}(y=y_i) - f_{\theta}(x_i, y)) \nabla_{\theta} f_{\theta}(x_i, y)\right] \label{eq:allneg}    
 \end{align}
 \normalsize
@@ -102,6 +104,8 @@ In this section, we investigate the achievable optimal model of the NEG-$k(i)$ a
 \begin{align*}
 \#(a)   &= \big\vert \{(x, y) \in D \mid x = a \}\big\vert \\
 \#(a,b) &= \big\vert \{(x, y) \in D \mid x = a \text{ and } y = b\}\big\vert
+%\#(x)   &= \big\vert \{(x_j, y_j) \in D \mid x_j = x \}\big\vert \\
+%\#(x,y) &= \big\vert \{(x_j, y_j) \in D \mid x_j = x \text{ and } y_j = y\}\big\vert
 \end{align*}
 \normalsize
 When we select the $k$ negative samples for the $i$th training data $(x_i, y_i)$, NEG-$k(i)$, we assume that a negative sample $y \in Y - \{y_i\}$ is sampled with replacement with probability $p_{y}$. Two popular choices of the sampling probability $p_{y}$ are (1) the uniform distribution $p_{y} = c$ for some constant $c$ and (2) according to the frequency of $y$ in $D$. Our results are stated with the generic symbol $p_y$ without making any explicit assumption on the sampling distribution. With this notation, we now could show the analysis to the negative sampling.
@@ -143,7 +147,7 @@ When we select the $k$ negative samples for the $i$th training data $(x_i, y_i)$
  	\normalsize
  \end{corollary}
 
-Note that the theorem and corollary mentioned above are achievable global optimal model but it does not guarantee that the global optimal can be always achieved in practice. The Corollary has ever been mentioned in ~\citep{levy2014neural} while in our another work, we provide a rigorous mathematical analysis and proof to both the Theorem \ref{th:neg-k} and the Corallary \ref{th:full-gradient}. For this paper, we do not show the analysis as we focus proposing a more efficient sample-based training method based on the Theorem \ref{th:neg-k} and the Corallary \ref{th:full-gradient}. In next section, we will show the design of the new sample-efficient training method and the analysis for it. 
+Note that the theorem and corollary mentioned above are achievable global optimal model but it does not guarantee that the global optimal can be always achieved in practice.  In our another work, we provide a rigorous mathematical analysis and proof to the Theorem \ref{th:neg-k}, the Corollary \ref{th:full-gradient} and more extended corollaries. For this chapter, we do not show the analysis as we focus proposing a more efficient sample-based training method based on the Theorem \ref{th:neg-k} and the Corollary \ref{th:full-gradient}. In next section, we will show the design of the new sample-efficient training method and the analysis for it. 
  
 \section{Amplified Negative Sampling}
 \label{sec:NS:amplified}
@@ -161,7 +165,8 @@ The key idea behind our amplified negative sampling comes from Theorem~\ref{th:n
 \begin{equation}
 L_2(f_{\theta},D)\!=
 \!\!\!\!\!\!\!\sum_{(x_i,y_i)\in D}\!\!\left[(1 - f_{\theta}(x_i, y_i))^2 + 
-\beta\!\!\!\!\!\!\!\sum_{y \in \text{NEG-$k$}(i)}\!\!\!\!\!\!\! f_{\theta}(x_i, y)^2 \right]\label{eq:amplify}
+\beta\!\!\!\!\!\!\!\sum_{y \in \text{NEG-$k$}(i)}\!\!\!\!\!\!\! f_{\theta}(x_i, y)^2 \right]
+\label{eq:amplify}
 \end{equation}
 \normalsize
 Note that Equation~\ref{eq:amplify} is different from Equation~\ref{eq:neg-k} just by a constant factor $\beta$ of the second term. We refer to $\beta$ as a \emph{amplifying factor}, since its intended role is to artificially ``amplify'' the effect of the negative samples NEG-$k$(i) by making its size look larger than they really are. % to make the trained model closer to the one from a larger $k$. 
@@ -212,7 +217,7 @@ as $t \rightarrow \infty$. By setting $\frac{\partial L_2}{\partial \theta_{ab}}
 \begin{array}{l}
 \theta_{t,ab}^{*} \xrightarrow{P} \frac{\#(a,b)}{\beta\, k \,p_{b} [\#(a)- \#(a,b)] + \#(a,b)} \qquad\text{ as } t \rightarrow \infty.
 \end{array}
-\label{eq:amplify}
+\label{eq:amplifyed}
 \end{equation}
 
 The proof for other loss functions can be done similarly.
@@ -238,7 +243,7 @@ In our experiments, we also explored a few other directions, including (1) decay
 \section{Experiments}
 \label{sec:NS:exp}
 
-The primary goal of this section is to experimentally investigate the following two issues: (1) Does the result of our analysis hold in practice? We want to examine how well our theoretical results match with experiments. We also want to experimentally explore a few questions raised in this paper, including the choice of the optimal amplifying factor and the difference between the learning rate and the amplifying factor. (2) Does amplified negative sampling help other downstream tasks as well? The performance of other downstream tasks may not necessarily depend on how accurately the trained model captures the conditional probability $P(y|x)$, so we want to experimentally check whether amplified negative sampling has positive effects on other downstream tasks or not. 
+The primary goal of this section is to experimentally investigate the following two issues: (1) Does the result of our analysis hold in practice? We want to examine how well our theoretical results match with experiments. We also want to experimentally explore a few questions raised in this chapter, including the choice of the optimal amplifying factor and the difference between the learning rate and the amplifying factor. (2) Does amplified negative sampling help other downstream tasks as well? The performance of other downstream tasks may not necessarily depend on how accurately the trained model captures the conditional probability $P(y|x)$, so we want to experimentally check whether amplified negative sampling has positive effects on other downstream tasks or not. 
 
 In the subsection (Model Accuracy and Training Efficiency)~\ref{sec:simulation}, we explore the first issue by measuring the difference between the maximum likelihood estimator (MLE) $\tilde{P}(y|x) = \frac{\#(x,y)}{\#(x)}$ and the models trained with (a) full-gradient training (b) negative sampling and (c) amplified negative sampling. The results of our experiments show that the conclusions of our analysis hold in practice to a surprising degree of accuracy. They also show that the learning rate and the amplifying factor have vastly different effects on the trained model. In the subsection (Experiments on Other Downstream Tasks)~\ref{sec:realworld}, we investigate the second issue by running experiments on three different downstream tasks: word-analogy tasks~~\citep{mikolov2013efficient}, rare-word-similarity tasks~~\citep{fastText}, and graph-node-classification tasks~~\citep{node2vec-kdd2016}. Here, we observe that amplified negative sampling leads to improved performance on these  downstream tasks as well. 
 
@@ -318,48 +323,48 @@ From the graph, a few things are clear: (1) Full-gradient training converges to 
 
 \textbf{Learning Rate vs Amplifying Factor.} In Figure~\ref{fig:amplifyLR}, we compare the effect of using different learning rates and amplifying factors. The graph is from training the model using Neg15 under $L1$ loss. The curve labeled as \emph{S\_LR} is obtained by multiplying the default learning rate of 0.025 by a factor between 10 and 1,000. The curve labeled as \emph{S\_Amplify} is obtained by including the amplifying factor $\beta$ between 10 and 1,000. The vertical axis is again in the logarithmic scale due to the high difference between the two curves and represents the model accuracy (the mean absolute difference from MLE) at the given learning rate/amplifying factor. From the graph, we see that changing the learning rate and changing the amplifying factor lead to vastly different results. As we increase the learning rate, the trained model diverges further away from MLE. When we increase the amplifying factor, however, the trained model stays close to MLE all the way through $\beta = 100$. Only after $\beta > 100$, the model starts to diverge and becomes unstable. This result is consistent with our analysis; according to Corollary~\ref{th:amplified}, amplifying converges to MLE at $\beta \approx 140$ under the current setting,\footnote{Amplified negative sampling converges to MLE when $\beta k p_y = 1$. Given $k=15$ and the uniform probability $p_y \approx 1/2000$ for this experiment, $\beta k p_y = 1$ at $\beta \approx 140$.} so its divergence beyond $\beta > 140$ is expected.
 
-\subsection{Language Model perplexity test}
-In this section, Amplified Negative Sampling method is tested on the Language Model on Penn Tree Bank(PTB) dataset~\citep{marcus-etal-1993-building} to demonstrate its performance. We use one of the commonly tested RNN Language model~\citep{zaremba2014recurrent} with the medium regularized settings as in ~\citep{blanc2017adaptive}. The PTB dataset contains 929K training words, 73k validation and 82k test words. We keep the original settings of the RNN model and set the hidden dimension as 650.
-
-The perplexity result is reported in Figure \ref{fig:neg5} and \ref{fig:neg15} for Neg5 and Neg15 experiment. For each negative sample setting, the amplifying factor is set to 1, 3 and 10 respectively. As the amplifying factor got enlarged, the perplexity got decreased. Every experiment converges in around 20 epochs.
-As shown in figure \ref{fig:neg5}, the amplifying factor can effectively decrease the perplexity compared with other model when only a few number of samples are allowed. Here the result is drawn from ~\citep{blanc2017adaptive} to demonstrate the Neg5 result with amplifying factor 10 can compete with ~\citep{blanc2017adaptive}'s 10 sample result.
-
-Further experiments are made on the effect of the amplifying factor. As shown in Figure \ref{fig:factor}, when the amplifying factor is increased from 1, the perplexity have a clear decrease until 10 and the perplexity starts to increase when the amplifying factor keeps enlarging. The best model performance will be obtained when the amplifying factor is configured around 10. An explanation based on formula (\ref{eq:amplify}) is the convergence condition is $t$(epoch) tends to infinity. However, in experiment, the training process will be stopped as the performance doesn't change anymore or the model got trapped in the saddle point. In this case, the model won't converge to the optimum value and a large amplifying factor will also change the convergence point to a non-optimum point.
-
-
-
-
-\begin{figure*}[ht]
-	\centering
-	\begin{minipage}{.31\textwidth}
-		\centering
-		\captionsetup{justification=centering,margin=0.1cm}
-		\includegraphics[width=1\linewidth]{Graph/negSamp/L2Neg5_60_Nolog.pdf}
-
-		\captionof{figure}{PTB: Negative sampling 5.}
-		\label{fig:neg5}
-	\end{minipage}%
-	\begin{minipage}{.31\textwidth}
-		\centering
-		\captionsetup{justification=centering,margin=0.1cm}
-		\includegraphics[width=1\linewidth]{Graph/negSamp/L2Neg30_60_Nolog.pdf}
-
-		\captionof{figure}{PTB: Negative sampling 15.}
-		\label{fig:neg15}
-	\end{minipage}%
-	\begin{minipage}{.38\textwidth}
-		\captionsetup{justification=centering,margin=0.1cm}
-		\centering
-		\includegraphics[width=.8\linewidth]{Graph/negSamp/L2NegAllAmplify.pdf}
-
-		\captionof{figure}{Different amplifying factor.}
-		\label{fig:factor}
-	\end{minipage}%
-
-\end{figure*}
+%\subsection{Language Model perplexity test}
+%In this section, Amplified Negative Sampling method is tested on the Language Model on Penn Tree Bank(PTB) dataset~\citep{marcus-etal-1993-building} to demonstrate its performance. We use one of the commonly tested RNN Language model~\citep{zaremba2014recurrent} with the medium regularized settings as in ~\citep{blanc2017adaptive}. The PTB dataset contains 929K training words, 73k validation and 82k test words. We keep the original settings of the RNN model and set the hidden dimension as 650.
+%
+%The perplexity result is reported in Figure \ref{fig:neg5} and \ref{fig:neg15} for Neg5 and Neg15 experiment. For each negative sample setting, the amplifying factor is set to 1, 3 and 10 respectively. As the amplifying factor got enlarged, the perplexity got decreased. Every experiment converges in around 20 epochs.
+%As shown in figure \ref{fig:neg5}, the amplifying factor can effectively decrease the perplexity compared with other model when only a few number of samples are allowed. Here the result is drawn from ~\citep{blanc2017adaptive} to demonstrate the Neg5 result with amplifying factor 10 can compete with ~\citep{blanc2017adaptive}'s 10 sample result.
+%
+%Further experiments are made on the effect of the amplifying factor. As shown in Figure \ref{fig:factor}, when the amplifying factor is increased from 1, the perplexity have a clear decrease until 10 and the perplexity starts to increase when the amplifying factor keeps enlarging. The best model performance will be obtained when the amplifying factor is configured around 10. An explanation based on formula (\ref{eq:amplifyed}) is the convergence condition is $t$(epoch) tends to infinity. However, in experiment, the training process will be stopped as the performance doesn't change anymore or the model got trapped in the saddle point. In this case, the model won't converge to the optimum value and a large amplifying factor will also change the convergence point to a non-optimum point.
+%
+%
+%
+%
+%\begin{figure*}[ht]
+%	\centering
+%	\begin{minipage}{.31\textwidth}
+%		\centering
+%		\captionsetup{justification=centering,margin=0.1cm}
+%		\includegraphics[width=1\linewidth]{Graph/negSamp/L2Neg5_60_Nolog.pdf}
+%
+%		\captionof{figure}{PTB: Negative sampling 5.}
+%		\label{fig:neg5}
+%	\end{minipage}%
+%	\begin{minipage}{.31\textwidth}
+%		\centering
+%		\captionsetup{justification=centering,margin=0.1cm}
+%		\includegraphics[width=1\linewidth]{Graph/negSamp/L2Neg30_60_Nolog.pdf}
+%
+%		\captionof{figure}{PTB: Negative sampling 15.}
+%		\label{fig:neg15}
+%	\end{minipage}%
+%	\begin{minipage}{.38\textwidth}
+%		\captionsetup{justification=centering,margin=0.1cm}
+%		\centering
+%		\includegraphics[width=.8\linewidth]{Graph/negSamp/L2NegAllAmplify.pdf}
+%
+%		\captionof{figure}{Different amplifying factor.}
+%		\label{fig:factor}
+%	\end{minipage}%
+%
+%\end{figure*}
 
 \subsection{Experiments on Other Downstream Tasks}\label{sec:realworld}
-In the previous set of experiments, we investigated the effect of amplified negative sampling on the trained model in terms of its difference from MLE and a language model. In the next set of experiments, we investigate its effect on three other downstream tasks: (a) word-analogy tasks (b) rare-word-similarity tasks and (c) graph-node-classification tasks. In all our experiments, we compare the results from Neg5, Neg5-Amplify3, and Neg15 at training epoch 3. 
+In the previous set of experiments, we investigated the effect of amplified negative sampling on the trained model in terms of its difference from MLE. In the next set of experiments, we investigate its effect on three other downstream tasks: (a) word-analogy tasks (b) rare-word-similarity tasks and (c) graph-node-classification tasks. In all our experiments, we compare the results from Neg5, Neg5-Amplify3, and Neg15 at training epoch 3. 
 
 \textbf{Word2vec: Word analogy.} This test is conducted with the CBOW model trained on the Text8 corpus~~\citep{mikolov2013distributed} using the code downloaded from ~\citep{word2vecGithub} after we add amplifying code. The performance is evaluated by the 14 word-analogy tasks in~~\citep{mikolov2013distributed}. We use the default parameter settings of the downloaded code.
 
@@ -476,7 +481,7 @@ From our other experiments whose results we could not include here due to space 
 \end{minipage}}
 %\end{minipage}
 % \section{Experiments}\label{sec:experiments}
-% The primary goal of this section is to experimentally investigate the following two issues: (1) Does the result of our analysis hold in practice? We want to examine how well our theoretical results match with experiments. We also want to experimentally explore a few questions raised in this paper, including the choice of the optimal amplifying factor and the difference between the learning rate and the amplifying factor. (2) Does amplified negative sampling help other downstream tasks as well? The performance of other downstream tasks may not necessarily depend on how accurately the trained model captures the conditional probability $P(y|x)$, so we want to experimentally check whether amplified negative sampling has positive effects on other downstream tasks or not. 
+% The primary goal of this section is to experimentally investigate the following two issues: (1) Does the result of our analysis hold in practice? We want to examine how well our theoretical results match with experiments. We also want to experimentally explore a few questions raised in this chapter, including the choice of the optimal amplifying factor and the difference between the learning rate and the amplifying factor. (2) Does amplified negative sampling help other downstream tasks as well? The performance of other downstream tasks may not necessarily depend on how accurately the trained model captures the conditional probability $P(y|x)$, so we want to experimentally check whether amplified negative sampling has positive effects on other downstream tasks or not. 
 
 % In the subsection (Model Accuracy and Training Efficiency)~\ref{sec:simulation}, we explore the first issue by measuring the difference between the maximum likelihood estimator (MLE) $\tilde{P}(y|x) = \frac{\#(x,y)}{\#(x)}$ and the models trained with (a) full-gradient training (b) negative sampling and (c) amplified negative sampling. The results of our experiments show that the conclusions of our analysis hold in practice to a surprising degree of accuracy. They also show that the learning rate and the amplifying factor have vastly different effects on the trained model. In the subsection (Experiments on Other Downstream Tasks)~\ref{sec:realworld}, we investigate the second issue by running experiments on three different downstream tasks: word-analogy tasks~~\citep{mikolov2013efficient}, rare-word-similarity tasks~~\citep{fastText}, and graph-node-classification tasks~~\citep{node2vec-kdd2016}. Here, we observe that amplified negative sampling leads to improved performance on these  downstream tasks as well. 
 
@@ -712,6 +717,6 @@ From our other experiments whose results we could not include here due to space 
 %     \end{minipage}
 % %\end{minipage}
 \section{Conclustion}
-In this paper, we proposed \emph{amplified negative sampling}, a new sample-efficient method for training multi-class classifiers with a large output-class size. Our proposed method was based on our rigorous mathematical analysis. Our extensive set of experiments demonstrated that amplified negative sampling gives us the best of both worlds: It leads to the higher-accuracy model of a larger sample size without paying its high computational cost. Given its simplicity, and experimental effectiveness, we believe our proposed method will be an important extension to the widely-popular technique that results in meaningful improvements in practice.
+In this chapter, we proposed \emph{amplified negative sampling}, a new sample-efficient method for training multi-class classifiers with a large output-class size. Our proposed method was based on our rigorous mathematical analysis. Our extensive set of experiments demonstrated that amplified negative sampling gives us the best of both worlds: It leads to the higher-accuracy model of a larger sample size without paying its high computational cost. Given its simplicity, and experimental effectiveness, we believe our proposed method will be an important extension to the widely-popular technique that results in meaningful improvements in practice.
 
 \label{sec:NS:conclusion}

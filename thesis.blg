@@ -8,10 +8,6 @@ You're missing a field name---line 900 of file thesis.bib
  :  %   title = {Apache Hive},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 975 of file thesis.bib
- : @misc{BOM
- :          ,
-I'm skipping whatever remains of this entry
 Repeated entry---line 1442 of file thesis.bib
  : @misc{ark
  :          ,
@@ -48,12 +44,10 @@ A bad cross reference---entry "discriminative"
 refers to entry "DBLP:conf/asru/2011", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/asru/2011"
 Warning--to sort, need author or key in dls
-Warning--to sort, need author or key in BOM
-Warning--to sort, need author or key in py4j
 Warning--empty year in dls
-Warning--empty year in BOM
 Warning--empty year in arbor-spoofing
 Warning--empty year in ark
+Warning--empty booktitle in Bader2006GTgraphA
 Warning--empty year in cloudflare
 Warning--empty journal in dean2004mapreduce
 Warning--empty year in github-spoofing
@@ -71,45 +65,45 @@ Warning--empty year in yang2015parallel
 Warning--empty booktitle in yang2015parallel
 Warning--empty year in zaharia2010spark
 Warning--empty journal in zaharia2010spark
-You've used 141 entries,
+You've used 140 entries,
             1940 wiz_defined-function locations,
-            1118 strings with 28209 characters,
-and the built_in function-call counts, 59656 in all, are:
-= -- 5739
-> -- 2816
-< -- 84
-+ -- 999
-- -- 974
-* -- 4987
-:= -- 10076
-add.period$ -- 428
-call.type$ -- 141
-change.case$ -- 1185
+            1117 strings with 28265 characters,
+and the built_in function-call counts, 59189 in all, are:
+= -- 5688
+> -- 2803
+< -- 85
++ -- 992
+- -- 968
+* -- 4945
+:= -- 10020
+add.period$ -- 425
+call.type$ -- 140
+change.case$ -- 1177
 chr.to.int$ -- 134
-cite$ -- 168
-duplicate$ -- 2461
-empty$ -- 4021
-format.name$ -- 1165
-if$ -- 11839
-int.to.chr$ -- 8
+cite$ -- 163
+duplicate$ -- 2441
+empty$ -- 3985
+format.name$ -- 1162
+if$ -- 11735
+int.to.chr$ -- 7
 int.to.str$ -- 0
 missing$ -- 120
-newline$ -- 695
-num.names$ -- 393
-pop$ -- 1403
+newline$ -- 690
+num.names$ -- 396
+pop$ -- 1393
 preamble$ -- 1
-purify$ -- 1188
+purify$ -- 1180
 quote$ -- 0
-skip$ -- 1711
+skip$ -- 1697
 stack$ -- 0
-substring$ -- 3303
-swap$ -- 582
-text.length$ -- 41
+substring$ -- 3257
+swap$ -- 571
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 842
-warning$ -- 24
-while$ -- 399
+type$ -- 836
+warning$ -- 22
+while$ -- 398
 width$ -- 0
-write$ -- 1729
-(There were 11 error messages)
+write$ -- 1718
+(There were 10 error messages)
