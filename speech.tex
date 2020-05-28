@@ -1,4 +1,6 @@
-In a modern spoken language understanding (SLU) system, the natural language understanding (NLU) module takes interpretations of a speech from the automatic speech recognition (ASR) module as the input. The NLU module usually uses the first best interpretation of a given speech in downstream tasks such as domain and intent classification. However, the ASR module might misrecognize some speeches and the first best interpretation could be erroneous and noisy. Solely relying on the first best interpretation could make the performance of downstream tasks non-optimal especially when the ASR model does not perform well. To address this issue, we introduce a series of simple yet efficient models for improving the understanding of semantics of the input speeches by collectively exploiting the $n$-best speech interpretations from the ASR module. 
+In this chapter, we describe  the second to $n$-th best interpretations of a speech, the unused data in spoken language understanding (SLU)  domain by introducing (1) reasons why the second to $n$-th best interpretations of a speech could help understanding, (2) approaches to include those interpretations in SLU systems and (3)  downstream tasks which could benefit from incorporating those interpretations. 
+
+In a modern SLU system, the natural language understanding (NLU) module takes interpretations of a speech from the automatic speech recognition (ASR) module as the input. The NLU module usually uses the first best interpretation of a given speech in downstream tasks such as domain and intent classification. However, the ASR module might misrecognize some speeches and the first best interpretation could be erroneous and noisy. Solely relying on the first best interpretation could make the performance of downstream tasks non-optimal especially when the ASR model does not perform well. To address this issue, we introduce a series of simple yet efficient models for improving the understanding of semantics of the input speeches by collectively exploiting the $n$-best speech interpretations from the ASR module. 
 
 \section{Introduction}
 \label{alexa:intro}
@@ -123,8 +125,10 @@ hypothesis is considered, we also perform experiments to utilize ASR $n$-best hy
 
 \begin{figure}[!htp]
 	\vspace{2em}
-	\centering
-	\includegraphics[width=0.95\textwidth]{Graph/speech/Evaluate.png}
+	\begin{center}
+			\includegraphics[width=0.85\textwidth]{Graph/speech/Evaluate.png}
+	\end{center}
+
 	\caption{Direct models evaluation pipeline.}
 	\label{fig:eval}
 	
@@ -142,13 +146,16 @@ hypothesis is considered, we also perform experiments to utilize ASR $n$-best hy
 
 
 % For these results, we apply the BM model on each hypothesis independently and use different aggregation approach to combine prediction from all hypotheses. The Majority Vote approach picks the majority predicted label from all hypotheses, while the Sort by Score approach ranks all the predicted labels by the predictive probability. Another approach assumes that we are able to pick the best hypothesis, which has the minimum edit distance from transcript, and uses its corresponding prediction. 
-\section{Integration of N-BEST Hypotheses}
+\section{Integration of N-Best Hypotheses}
 \label{speech:models}
 All the above mentioned models apply the BM trained on one interpretation (transcription). Their abilities to take advantage of multiple interpretations are actually not trained. As a further step, we propose multiple ways to integrate the $n$-best hypotheses during training. The explored methods can be divided into two groups as shown in Fig. \ref{fig:integration}. Let $H_1, H_2,..., H_n $ denote all the hypotheses from ASR and $bp_{H_k, i} \in BPs$ denotes the $i$-th pair of bytes (BP) in the $k^{th}$ best hypothesis. The model parameters associated with the two possible ways both contain: embedding $e_{bp}$ for pairs of bytes, BiLSTM parameters $\theta$ and MLP parameters $W, b$.
 
 \begin{figure}[t!]
 	\vspace{2em}
-	\includegraphics[width=0.9\textwidth]{Graph/speech/Compress.png}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Graph/speech/Compress.png}
+	\end{center}
+
 	\vspace{1em}
 	\caption{Integration of $n$-best hypotheses with two possible ways: 1) concatenate hypothesized text  and 2) concatenate hypothesis embedding.}
 	\label{fig:integration}
@@ -218,7 +225,7 @@ Then, we stack  all the output states vertically as shown in Eqn. \ref{outputs}.
 }
 \label{mlp_1}
 \end{equation}
-\section{Experiment}
+\section{Experiments}
 \label{speech:exp}
 \subsection{Dataset}
 % We conduct our experiments on an SLU system serving the Alexa-enabled device. There are $\sim$ 8.7M utterances annotated and derived from requests across 23 domains. The $n$-bests list collected from ASR for each utterance contains no more than 5 hypotheses ($n=5$). For domain classification, the models work on the entire data. While for the intent classification task, we choose three popular domains for domain-specific intent classification. 
@@ -381,7 +388,7 @@ In the previous experiments, the number of utilized hypotheses for each utteranc
 	\centering
 
 	\scalebox{0.8}{
-		\includegraphics[width=0.7\textwidth]{Graph/speech/ASRAmountRelative.eps}
+		\includegraphics[width=0.6\textwidth]{Graph/speech/ASRAmountRelative.eps}
 	}
 
 	\caption{The influence of different amount of hypotheses.}
@@ -413,7 +420,7 @@ In the previous experiments, the number of utilized hypotheses for each utteranc
 Since another downstream task, intent classification, is similar to domain classification, we just show the best model in domain classification, PoolingAvg, on 
 domain-specific
 intent classification for three popular domains due to space limit. As Table \ref{tbl:intent} shows, the margins of using multiple hypotheses with PoolingAvg are significant as well.
-\section{Conclusions and Future Work}
+\section{Conclusion}
 \label{speech:conclusion}
 This chapter improves the SLU system robustness to ASR errors by integrating $n$-best hypotheses in different ways, e.g. the aggregation of predictions from hypotheses or the concatenation of hypothesis text or embedding. 
 % To leverage the $n$-best hypotheses, we propose multiple methods to combine $n$-bests, e.g.  concatenation on hypothesized text or hypotheses embedding . 

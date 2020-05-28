@@ -1,3 +1,4 @@
+In this chapter, we focus on designing a succinct expressing interface to facilitate complex data analysis, especially the recursive algorithms, which are commonly utilized to develop applications in various domains including graph data analytics, language models, etc.
 
 Due to the ever-increasing volume of data, there is an urgent need to provide expressive and efficient %data analytic tools. 
 tools to support Big-Data analytics.
@@ -9,6 +10,7 @@ performance and scalability  on  Apache Spark.
 % via concise recursive queries for graph, machine learning, and knowledge discovery applications
 % with superior scalability of Spark system.
 To help data scientists benefit from these advances in full synergy with  Spark's rich libraries and programming environs, we develop the  Spark DataFrame extension LFrame and the Logical Algorithm Library  LLib.
+
 LLib provides a wide range of Datalog algorithms written using BigDatalog  on Apache Spark. LLib encapsulates complex logic-based algorithms into 
 high-level APIs, which simplify the development and   provide a unified interface akin to the one of Spark MLlib.   As a fully compatible
 DataFrame-based API, LLib enables the integrated utilization of LLib 
@@ -544,7 +546,7 @@ Connected Components is to identify the connected components of a graph. And Sam
 The exploited datasets include RMAT-1M, RMAT-4M, Grid-150 and Grid-250.  RMAT-1M and RMAT-4M  are synthetic graphs generated with GTgraph generator \citep{Bader2006GTgraphA} using parameters (a, b, c) = (0.45, 0.25, 0.15). RMAT-$n$ ($n = $1, 4 Million) contains $n$ nodes and  $10n$ directed edges with uniform integer weights range from [0,100). Grid-150 is a 151 by 151 grid with 45,300 edges and Grid-250 is a 251 by 251 grid  with 125,500 edges. Comparing the BigDatalog (BD) \citep{shkapsky2016big} and  LLib execution time in Table \ref{tbl:llibExp}, we can find the performance overhead brought by LLib is always minor. The overhead could come from steps like DataFrame schema mapping and recovering for a general
 design. With a larger dataset (e.g. RMAT-4M or Grid-250), there is a trend of relatively smaller overhead considering the RelDiff. 
 
-\section{Conclusion and Future Work}
+\section{Conclusion}
 \label{conclusion}
 
 In this chapter, we have shown the LLib to encapsulate typical Datalog algorithms, which follows the data scientists' customs  and requires less logical programming expertise.  For the possible  extensions of LLib, we provide not only a unified template for normalizing the contribution, but also some utilities to simplify the extending process.  With some running examples, we  demonstrate the benefit of designing the LLib as a DataFrame-based API is that the Datalog algorithm can flexibly collaborate with other Spark operations. For the audience who has more logical programming experience and would like to design their own applications, we also provide an LFrame API containing both logical and DataFrame-based operations. A simple conversion function between the DataFrame and LFrame is also provided. Both LFrame and LLib make the Datalog as an integral part of data processing pipeline and are implemented to support general programming languages like Python, Scala and Java. Moving forward, we have  plenty of new algorithms and logical oeprations to add for the LLib and LFrame separately. We also  would like to implement the two interfaces on other distributed platforms or crossing various platforms in a way like a polystore system \citep{duggan2015bigdawg}.

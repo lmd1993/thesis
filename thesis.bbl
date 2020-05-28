@@ -1,9 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\astroncite{dls}{}]{dls}
-1st deep learning and security workshop.
-\newblock https://www.ieee-security.org/TC/SPW2018/DLS/.
-
 \bibitem[\protect\astroncite{Abadi et~al.}{2016}]{abadi2016tensorflow}
 Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M.,
   Ghemawat, S., Irving, G., Isard, M., et~al. (2016).
@@ -24,16 +20,11 @@ Amodei, D., Ananthanarayanan, S., Anubhai, R., Bai, J., Battenberg, E., Case,
 \newblock In {\em International conference on machine learning}, pages
   173--182.
 
-\bibitem[\protect\astroncite{arbor}{}]{arbor-spoofing}
-arbor.
-\newblock {Arbor confirms 1.7Tbps DDoS attack}.
-\newblock
-  https://asert.arbornetworks.com/netscout-arbor-confirms-1-7-tbps-ddos-attack-terabit-attack-era-upon-us/.
-
-\bibitem[\protect\astroncite{Ark}{}]{ark}
-Ark.
+\bibitem[\protect\astroncite{Ark IPv4}{}]{ark}
+Ark IPv4.
 \newblock Ark ipv4 routed topology dataset.
-\newblock http://www.caida.org/data/active/ipv4_routed_24_topology_dataset.xml.
+\newblock
+  http://www.caida.org/data/active/ipv4\_routed\_24\_top\\-ology\_dataset.xml.
 
 \bibitem[\protect\astroncite{Armbrust et~al.}{2015}]{sparksql}
 Armbrust, M., Xin, R.~S., Lian, C., Huai, Y., Liu, D., Bradley, J.~K., Meng,
@@ -138,8 +129,8 @@ Chodorow, K. (2013).
   storage}.
 \newblock " O'Reilly Media, Inc.".
 
-\bibitem[\protect\astroncite{cloudflare}{}]{cloudflare}
-cloudflare.
+\bibitem[\protect\astroncite{Cloudflare}{}]{cloudflare}
+Cloudflare.
 \newblock {The root cause of large DDoS IP Spoofing}.
 \newblock
   https://blog.cloudflare.com/the-root-cause-of-large-ddos-ip-spoofing/.
@@ -183,9 +174,14 @@ Das, A., Li, Y., Wang, J., Li, M., and Zaniolo, C. (2019).
   aggregates in recursion.
 \newblock {\em arXiv preprint arXiv:1909.08249}.
 
-\bibitem[\protect\astroncite{de~Br{\'e}bisson and
+\bibitem[\protect\astroncite{DDoS incident}{}]{github-spoofing}
+DDoS incident.
+\newblock {February 28th DDoS incident}.
+\newblock https://githubengineering.com/ddos-incident-report/.
+
+\bibitem[\protect\astroncite{De~Br{\'e}bisson and
   Vincent}{2015}]{de2015exploration}
-de~Br{\'e}bisson, A. and Vincent, P. (2015).
+De~Br{\'e}bisson, A. and Vincent, P. (2015).
 \newblock An exploration of softmax alternatives belonging to the spherical
   loss family.
 \newblock {\em arXiv preprint arXiv:1511.05042}.
@@ -239,8 +235,8 @@ Eriksson, B., Barford, P., Nowak, R., and Crovella, M. (2007).
 \newblock {Learning Network Structure from Passive Measurements}.
 \newblock In {\em IMC}.
 
-\bibitem[\protect\astroncite{fastText}{2019}]{fastTextGithub}
-fastText (2019).
+\bibitem[\protect\astroncite{FastText}{2019}]{fastTextGithub}
+FastText (2019).
 \newblock Facebook fasttext project source code.
 
 \bibitem[\protect\astroncite{Feamster and Rexford}{2017}]{self-driving}
@@ -273,11 +269,6 @@ Frankel, S. and Krishnan, S. (2011).
   Roadmap}.
 \newblock RFC 6071, RFC Editor.
 \newblock http://www.rfc-editor.org/rfc/rfc6071.txt.
-
-\bibitem[\protect\astroncite{github}{}]{github-spoofing}
-github.
-\newblock {February 28th DDoS incident}.
-\newblock https://githubengineering.com/ddos-incident-report/.
 
 \bibitem[\protect\astroncite{Goldberg and Levy}{2014}]{goldberg2014word2vec}
 Goldberg, Y. and Levy, O. (2014).
@@ -464,12 +455,6 @@ Luong, T., Socher, R., and Manning, C. (2013).
 \newblock In {\em Proceedings of the Seventeenth Conference on Computational
   Natural Language Learning}, pages 104--113.
 
-\bibitem[\protect\astroncite{Marcus et~al.}{1993}]{marcus-etal-1993-building}
-Marcus, M.~P., Santorini, B., and Marcinkiewicz, M.~A. (1993).
-\newblock Building a large annotated corpus of {E}nglish: The {P}enn
-  {T}reebank.
-\newblock {\em Computational Linguistics}, 19(2):313--330.
-
 \bibitem[\protect\astroncite{McKinney et~al.}{}]{mckinney2010data}
 McKinney, W. et~al.
 \newblock Data structures for statistical computing in python.
@@ -515,7 +500,7 @@ Mikolov, T., Sutskever, I., Chen, K., Corrado, G.~S., and Dean, J. (2013c).
 
 \bibitem[\protect\astroncite{MLM}{2008}]{mlm}
 MLM (2008).
-\newblock Multi-level_marketing.
+\newblock Multi-level\_marketing.
 
 \bibitem[\protect\astroncite{Mnih and Teh}{2012}]{mnih2012fast}
 Mnih, A. and Teh, Y.~W. (2012).
@@ -548,8 +533,8 @@ Ng, T. S.~E. and Zhang, H. (2002).
   approaches.
 \newblock In {\em INFOCOM}.
 
-\bibitem[\protect\astroncite{node2vec}{2019}]{node2vecGithub}
-node2vec, G. (2019).
+\bibitem[\protect\astroncite{Node2vec}{2019}]{node2vecGithub}
+Node2vec, G. (2019).
 \newblock Node2vec project souce code.
 \newblock https://github.com/snap-stanford/snap.git.
 
@@ -675,14 +660,14 @@ Spearman, C. (1904).
 \newblock The proof and measurement of association between two things.
 \newblock {\em American journal of Psychology}, 15(1):72--101.
 
-\bibitem[\protect\astroncite{spoofing-ps}{}]{spoofing-ps}
-spoofing-ps.
-\newblock {Port scanning techniques and the defense against them}.
+\bibitem[\protect\astroncite{Spoofing-ps}{}]{spoofing-ps}
+Spoofing-ps.
+\newblock Port scanning techniques and the defense against them.
 \newblock
   https://www.sans.org/reading-room/whitepapers/auditing/port-scanning-techniques-defense-70.
 
-\bibitem[\protect\astroncite{spoofing-state}{}]{spoofing-state}
-spoofing-state.
+\bibitem[\protect\astroncite{Spoofing-state}{}]{spoofing-state}
+Spoofing-state.
 \newblock {State of IP Spoofing}.
 \newblock https://spoofer.caida.org/summary.php.
 
@@ -750,8 +735,8 @@ Wang, Q., Mao, Z., Wang, B., and Guo, L. (2017).
 \newblock {\em IEEE Transactions on Knowledge and Data Engineering},
   29(12):2724--2743.
 
-\bibitem[\protect\astroncite{word2vec}{2019}]{word2vecGithub}
-word2vec, G. (2019).
+\bibitem[\protect\astroncite{Word2vec}{2019}]{word2vecGithub}
+Word2vec, G. (2019).
 \newblock Word2vec project source code.
 \newblock https://github.com/tmikolov/word2vec.git.
 
@@ -793,10 +778,6 @@ Zaharia, M., Das, T., Li, H., Hunter, T., Shenker, S., and Stoica, I. (2013).
 Zaniolo, C., Das, A., Gu, J., Li, Y., Wang, J., et~al. (2019).
 \newblock Monotonic properties of completed aggregates in recursive queries.
 \newblock {\em arXiv preprint arXiv:1910.08888}.
-
-\bibitem[\protect\astroncite{Zaremba et~al.}{2014}]{zaremba2014recurrent}
-Zaremba, W., Sutskever, I., and Vinyals, O. (2014).
-\newblock Recurrent neural network regularization.
 
 \bibitem[\protect\astroncite{Zhang and Yang}{2017}]{zhang2017survey}
 Zhang, Y. and Yang, Q. (2017).

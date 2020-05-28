@@ -8,49 +8,46 @@ You're missing a field name---line 900 of file thesis.bib
  :  %   title = {Apache Hive},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1442 of file thesis.bib
+Repeated entry---line 1447 of file thesis.bib
  : @misc{ark
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1481 of file thesis.bib
+Repeated entry---line 1486 of file thesis.bib
  : @inproceedings{pic
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1493 of file thesis.bib
+Repeated entry---line 1498 of file thesis.bib
  : @inproceedings{vivaldi
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1507 of file thesis.bib
+Repeated entry---line 1512 of file thesis.bib
  : @inproceedings{barford-infocom
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1534 of file thesis.bib
+Repeated entry---line 1539 of file thesis.bib
  : @techreport{ipsec
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1611 of file thesis.bib
+Repeated entry---line 1617 of file thesis.bib
  : @article{caruana1997multitask
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1650 of file thesis.bib
+Repeated entry---line 1656 of file thesis.bib
  : @inproceedings{gnp
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1670 of file thesis.bib
+Repeated entry---line 1676 of file thesis.bib
  : @misc{pyxida
  :             ,
 I'm skipping whatever remains of this entry
 A bad cross reference---entry "discriminative"
 refers to entry "DBLP:conf/asru/2011", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/asru/2011"
-Warning--to sort, need author or key in dls
-Warning--empty year in dls
-Warning--empty year in arbor-spoofing
 Warning--empty year in ark
 Warning--empty booktitle in Bader2006GTgraphA
 Warning--empty year in cloudflare
-Warning--empty journal in dean2004mapreduce
 Warning--empty year in github-spoofing
+Warning--empty journal in dean2004mapreduce
 Warning--empty year in Goodman
 Warning--empty year in hcf
 Warning--empty booktitle in hcf
@@ -65,45 +62,45 @@ Warning--empty year in yang2015parallel
 Warning--empty booktitle in yang2015parallel
 Warning--empty year in zaharia2010spark
 Warning--empty journal in zaharia2010spark
-You've used 140 entries,
+You've used 136 entries,
             1940 wiz_defined-function locations,
-            1117 strings with 28265 characters,
-and the built_in function-call counts, 59189 in all, are:
-= -- 5688
-> -- 2803
+            1105 strings with 27766 characters,
+and the built_in function-call counts, 58046 in all, are:
+= -- 5570
+> -- 2767
 < -- 85
-+ -- 992
-- -- 968
-* -- 4945
-:= -- 10020
-add.period$ -- 425
-call.type$ -- 140
-change.case$ -- 1177
-chr.to.int$ -- 134
-cite$ -- 163
-duplicate$ -- 2441
-empty$ -- 3985
-format.name$ -- 1162
-if$ -- 11735
++ -- 980
+- -- 956
+* -- 4846
+:= -- 9824
+add.period$ -- 415
+call.type$ -- 136
+change.case$ -- 1150
+chr.to.int$ -- 130
+cite$ -- 155
+duplicate$ -- 2397
+empty$ -- 3904
+format.name$ -- 1148
+if$ -- 11517
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 120
-newline$ -- 690
-num.names$ -- 396
-pop$ -- 1393
+missing$ -- 119
+newline$ -- 672
+num.names$ -- 390
+pop$ -- 1370
 preamble$ -- 1
-purify$ -- 1180
+purify$ -- 1153
 quote$ -- 0
-skip$ -- 1697
+skip$ -- 1667
 stack$ -- 0
-substring$ -- 3257
-swap$ -- 571
+substring$ -- 3183
+swap$ -- 566
 text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 836
-warning$ -- 22
-while$ -- 398
+type$ -- 812
+warning$ -- 19
+while$ -- 392
 width$ -- 0
-write$ -- 1718
+write$ -- 1675
 (There were 10 error messages)

@@ -1,4 +1,6 @@
-In this chapter, we propose a new sample-efficient training method, called \emph{amplified negative sampling}, for training multi-class classifiers with a large output-class size. Our method jumps out of the framework of softmax appximation and directly tackle the optimum convergence point of the learning algorithm. Our proposed method is based on our  analysis of the well-known negative sampling technique~\citep{mikolov2013distributed} and is designed for (1) higher performance in the general task and (2) lower training computational cost. Our experiments on real-world datasets demonstrate that our proposed method leads to sampling cost savings with performance boost compared to the standard technique.
+In this chapter, we discuss  the training of expensive multi-class classifiers with a large output-class size, which are widely utilized in different domains including word embedding, graph embedding and the previously introduced Internet embedding and SLU domains.   
+
+We  propose a new sample-efficient training method, called \emph{amplified negative sampling}, for efficient training  large output-class multi-class classifiers. Our method jumps out of the framework of softmax approximation and directly approaches the optimum convergence point of the learning algorithm. Our proposed method is based on our  analysis of the well-known negative sampling technique~\citep{mikolov2013distributed} and is designed for (1) higher performance in the general task and (2) lower training computational cost. Our experiments on real-world datasets demonstrate that our proposed method leads to sampling cost savings with performance boost compared to the standard technique.
 
 \section{Introduction}
 
@@ -22,14 +24,14 @@ In summary, we make the following contributions in this chapter:
 
 The rest of this chapter is organized as follows. In Section~\ref{sec:NS:framework}, 
 we formally describe the multi-class classification problem and review the standard negative sampling technique. Then in Section ~\ref{sec:NS:amplified}, 
-we propose amplified negative sampling and give the rigourous matematical analysis of the method. In Section ~\ref{sec:NS:exp}, 
+we propose amplified negative sampling and give the rigorous mathematical analysis of the method. In Section ~\ref{sec:NS:exp}, 
 we present the results of our experiments. We review related work in Section~\ref{sec:NS:related} 
 and wrap up the chapter in Section~\ref{sec:NS:conclusion}.
 
 \section{Related Work}
 \label{sec:NS:related}
 Softmax has been widely used in various models. In large output class classification problem, the intractable normalizing constant of softmax function will slow down the computation efficiency greatly. There are three major types of strategies have been investigated by the research community, including sampled softmax\citep{bengio2008adaptive}, hierarchical softmax\citep{morin2005hierarchical} and spherical softmax\citep{vincent2015efficient}.
-We are not aiming to approximate the softmax function. This work makes one related yet distinct contribution: an efficient training method based on negative sampling strategy for a large classifier.  The \citep{ruiz2018augment} share a similar scope with us which is not targeting on softmax appximation. Since the amplifying factor is distribution agnostic, this method actually can be applied to all the sampling-based softmax approximation method\citep{blanc2017adaptive,rawat2019sampled}.
+We are not aiming to approximate the softmax function. This work makes one related yet distinct contribution: an efficient training method based on negative sampling strategy for a large classifier.  The \citep{ruiz2018augment} share a similar scope with us which is not targeting on softmax approximation. Since the amplifying factor is distribution agnostic, this method actually can be applied to all the sampling-based softmax approximation method\citep{blanc2017adaptive,rawat2019sampled}.
 
 \textbf{Sampled Softmax} This category contains the method which generates a subset of negative samples to avoid the high overhead of full negative sampling. Among this category, one class of methods try to generate samples from the softmax distribution. An adaptive sampling method was proposed by Bengio~\citep{bengio2008adaptive} inspired by the importance sampling. Another prominent example is the negative sampling~\citep{mikolov2013efficient} which uses a simple noisy distribution to generate negative samples. TAPAS~\citep{bai2017tapas} uses a two pass scheme to generate samples from two different size candidate pools to reduce the sample overhead. Hashing method~\citep{bakhtiary2015speeding, vijayanarasimhan2014deep} is also applied to either find the closest class or partial computation.  ~\citep{rawat2019sampled}. 
 Another class of methods instead focus on the sampled loss, including Noisy Contrastive Estimation(NCE)~\citep{NCE} by assuming the partition as an extra parameter to be computed during the computation and Adversarial Contrastive Estimation(ACE)~\citep{bose2018adversarial} and ~\citep{schroff2015facenet,mussmann2017fast} selects the hardest negative examples.
@@ -235,7 +237,7 @@ where $\alpha$, the learning rate, controls how quickly and reliably the updates
 As we can see from Equation~\ref{eq:amplify}, our amplifying factor $\beta$ is also multiplied to (a part of) the loss function, so it indeed plays a role very similar to the learning rate. The only difference is that $\alpha$ is multiplied to the \emph{entire} loss function $L(f_{\theta},D)$ while $\beta$ is multiplied to its \emph{negative-sample terms only} $\sum_{y \in \text{NEG-$k$}(i)} f_{\theta}(x_i, y)^2$.  
 Interestingly, our analysis and later experiments show that this seemingly minor change leads to an enormous difference in terms of the final trained model.
 
-\textbf{Optimal Amplifying Factor and Model Quality.} The similarity of the learning rate and the amplifying factor raises another interesting question. How big a amplifying factor can we safely use? It is well known that a higher learning rate generally leads to a faster convergence rate initially, but it makes the training process less stable at a later stage. Will using a large amplifying factor lead to similar behavior? Or will it always be better to use a larger amplifying factor? Our analysis indicates that the optimal value of $\beta$ might be $\beta = \frac{1}{k p_y}$ since this value leads to the MLE model. 
+\textbf{Optimal Amplifying Factor and Model Quality.} The similarity of the learning rate and the amplifying factor raises another interesting question. How big a amplifying factor can we safely use? It is well known that a higher learning rate generally leads to a faster convergence rate initially, but it makes the training process less stable at a later stage. Will using a large amplifying factor lead to similar behaviour? Or will it always be better to use a larger amplifying factor? Our analysis indicates that the optimal value of $\beta$ might be $\beta = \frac{1}{k p_y}$ since this value leads to the MLE model. 
 
 The results from our experiments do not provide a single answer to this question. In the experiments conducted with our own code, where we measure the model accuracy in terms of the difference of the trained model from MLE, we observe that using a large amplifying factor always produces a model closer to MLE. It also does not introduce much instability to the training process all the way from 1 through $\beta = \frac{1}{k p_y}$. In the experiments conducted with existing codes for \emph{other downstream tasks}, we observe that using a amplifying factor up to $\beta = 3$ reduces the training time and improves downstream-task performance, but starting from $\beta > 3$, we sometimes observe reduced downstream-task performance. This may be due to the fact that downstream-tasks performance does not necessarily correlate with how well our model estimates the conditional probability $P(y|x)$. Given these two results, we find using a reasonably small amplifying factor, say $\beta = 3$, may be a safe choice in general; it reduces training time significantly and improves downstream-task performance.
 
@@ -384,6 +386,7 @@ From our other experiments whose results we could not include here due to space 
 	\captionof{table}{Word-analogy semantic-task top-1 accuracy.}
 	\label{tbl:semantic}
 		\centering
+			\scalebox{0.8}{
 		\begin{tabular}{| c |c c c|} 
 
 			\hline
@@ -395,7 +398,7 @@ From our other experiments whose results we could not include here due to space 
 			currency & 15.72 & 22.26 & 22.21\\
 			family & 56.86 & 60.30 & 64.27\\
 			\hline
-	\end{tabular}
+	\end{tabular}}
 \end{minipage}}
 \vspace{2em}
 
@@ -466,6 +469,7 @@ From our other experiments whose results we could not include here due to space 
 	\captionof{table}{Training time (seconds).}
 	\label{tbl:time}	
 		\centering
+			\scalebox{0.8}{
 		\begin{tabular}{|c|c c c|} 
 		
 			\hline
@@ -476,6 +480,7 @@ From our other experiments whose results we could not include here due to space 
 			Node2vec&3.28&3.28 &4.00\\
 			\hline
 	\end{tabular}
+}
 	%   \captionof{table}{Training time (seconds).}
 	% \label{tbl:time}
 \end{minipage}}
@@ -716,7 +721,7 @@ From our other experiments whose results we could not include here due to space 
 %     % \label{tbl:time}
 %     \end{minipage}
 % %\end{minipage}
-\section{Conclustion}
+\section{Conclusion}
 In this chapter, we proposed \emph{amplified negative sampling}, a new sample-efficient method for training multi-class classifiers with a large output-class size. Our proposed method was based on our rigorous mathematical analysis. Our extensive set of experiments demonstrated that amplified negative sampling gives us the best of both worlds: It leads to the higher-accuracy model of a larger sample size without paying its high computational cost. Given its simplicity, and experimental effectiveness, we believe our proposed method will be an important extension to the widely-popular technique that results in meaningful improvements in practice.
 
 \label{sec:NS:conclusion}

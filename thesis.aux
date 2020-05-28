@@ -61,11 +61,11 @@
 \@writefile{brf}{\backcite{gu2019rasql}{{3}{1.1}{section.1.1}}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Contributions}{3}{section.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Thesis Outline}{4}{section.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Extracing Latent Information from IP Network}{6}{chapter.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Extracting Latent Information from Unused IP Addresses}{6}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:dip}{{2}{6}{Extracing Latent Information from IP Network}{chapter.2}{}}
+\newlabel{ch:dip}{{2}{6}{Extracting Latent Information from Unused IP Addresses}{chapter.2}{}}
 \citation{silkroad}
 \citation{hc-filter}
 \citation{self-driving}
@@ -101,14 +101,14 @@
 \citation{barford-sigcomm}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Background and Related Work}{9}{subsection.2.1.2}\protected@file@percent }
 \newlabel{dip:background}{{2.1.2}{9}{Background and Related Work}{subsection.2.1.2}{}}
-\@writefile{brf}{\backcite{vivaldi}{{9}{2.1.2}{subsection.2.1.2}}}
-\@writefile{brf}{\backcite{gnp}{{9}{2.1.2}{subsection.2.1.2}}}
-\@writefile{brf}{\backcite{pic}{{9}{2.1.2}{subsection.2.1.2}}}
 \citation{lecun2015deep}
 \citation{kingma2014adam}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Cumulative distribution of (left) hop counts between pairs of host-server IPs that share the first, first two, or first three bytes, and (right) standard deviation of hop count distribution among groups of IPs sharing the first, first two, or first three bytes. The more similar two IPs are, the closer they are and the more similar their distances to the same third IP are.\relax }}{10}{figure.caption.4}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:difference}{{2.1}{10}{Cumulative distribution of (left) hop counts between pairs of host-server IPs that share the first, first two, or first three bytes, and (right) standard deviation of hop count distribution among groups of IPs sharing the first, first two, or first three bytes. The more similar two IPs are, the closer they are and the more similar their distances to the same third IP are.\relax }{figure.caption.4}{}}
+\@writefile{brf}{\backcite{vivaldi}{{10}{2.1.2}{subsection.2.1.2}}}
+\@writefile{brf}{\backcite{gnp}{{10}{2.1.2}{subsection.2.1.2}}}
+\@writefile{brf}{\backcite{pic}{{10}{2.1.2}{subsection.2.1.2}}}
 \@writefile{brf}{\backcite{pyxida}{{10}{2.1.2}{subsection.2.1.2}}}
 \@writefile{brf}{\backcite{zhao2011efficient}{{10}{2.1.2}{subsection.2.1.2}}}
 \@writefile{brf}{\backcite{barford-sigcomm}{{10}{2.1.2}{subsection.2.1.2}}}
@@ -121,65 +121,63 @@
 \citation{hc-filter}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Learning Network Representations}{11}{subsection.2.1.3}\protected@file@percent }
 \newlabel{dip:design}{{2.1.3}{11}{Learning Network Representations}{subsection.2.1.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.1}Data sources}{11}{subsubsection.2.1.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.1}Data Sources}{11}{subsubsection.2.1.3.1}\protected@file@percent }
 \@writefile{brf}{\backcite{hc-filter}{{11}{2.1.3.1}{subsubsection.2.1.3.1}}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.2}IP transformation}{11}{subsubsection.2.1.3.2}\protected@file@percent }
-\newlabel{dip:ipnorm}{{2.1.3.2}{11}{IP transformation}{subsubsection.2.1.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Generating a normalized IP address for 192.168.133.130/20.\relax }}{12}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:normalizedip}{{2.2}{12}{Generating a normalized IP address for 192.168.133.130/20.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.2}IP Transformation}{12}{subsubsection.2.1.3.2}\protected@file@percent }
+\newlabel{dip:ipnorm}{{2.1.3.2}{12}{IP Transformation}{subsubsection.2.1.3.2}{}}
 \citation{mikolov2010recurrent}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The neural network used for training our embedding model. The first eight layers receive the normalized IP addresses as input and compute the IP representations. The ninth layer estimates the hop count between two IP addresses and the tenth layer measures the model error. Elements in red are input. For simplicity we depict the input as one-dimensional vectors (one normalized IP); in reality, all inputs are matrices.\relax }}{13}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:neuralnetwork}{{2.3}{13}{The neural network used for training our embedding model. The first eight layers receive the normalized IP addresses as input and compute the IP representations. The ninth layer estimates the hop count between two IP addresses and the tenth layer measures the model error. Elements in red are input. For simplicity we depict the input as one-dimensional vectors (one normalized IP); in reality, all inputs are matrices.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.3}Network construction}{13}{subsubsection.2.1.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Generating a normalized IP address for 192.168.133.130/20.\relax }}{13}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:normalizedip}{{2.2}{13}{Generating a normalized IP address for 192.168.133.130/20.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3.3}Network Construction}{13}{subsubsection.2.1.3.3}\protected@file@percent }
 \@writefile{brf}{\backcite{mikolov2010recurrent}{{13}{2.1.3.3}{subsubsection.2.1.3.3}}}
-\newlabel{equ:input}{{2.1}{14}{Network construction}{equation.2.1.1}{}}
-\newlabel{equ:ilayer}{{2.2}{14}{Network construction}{equation.2.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The neural network used for training our embedding model. The first eight layers receive the normalized IP addresses as input and compute the IP representations. The ninth layer estimates the hop count between two IP addresses and the tenth layer measures the model error. Elements in red are input. For simplicity we depict the input as one-dimensional vectors (one normalized IP); in reality, all inputs are matrices.\relax }}{14}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:neuralnetwork}{{2.3}{14}{The neural network used for training our embedding model. The first eight layers receive the normalized IP addresses as input and compute the IP representations. The ninth layer estimates the hop count between two IP addresses and the tenth layer measures the model error. Elements in red are input. For simplicity we depict the input as one-dimensional vectors (one normalized IP); in reality, all inputs are matrices.\relax }{figure.caption.6}{}}
+\newlabel{equ:input}{{2.1}{14}{Network Construction}{equation.2.1.1}{}}
+\newlabel{equ:ilayer}{{2.2}{15}{Network Construction}{equation.2.1.2}{}}
+\newlabel{equ:distance}{{2.3}{15}{Network Construction}{equation.2.1.3}{}}
+\newlabel{equ:cost}{{2.4}{15}{Network Construction}{equation.2.1.4}{}}
 \citation{kingma2014adam}
 \citation{ark}
 \citation{routeviews}
-\newlabel{equ:distance}{{2.3}{15}{Network construction}{equation.2.1.3}{}}
-\newlabel{equ:cost}{{2.4}{15}{Network construction}{equation.2.1.4}{}}
-\@writefile{brf}{\backcite{kingma2014adam}{{15}{2.1.3.3}{equation.2.1.5}}}
+\@writefile{brf}{\backcite{kingma2014adam}{{16}{2.1.3.3}{equation.2.1.5}}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Evaluation}{16}{subsection.2.1.4}\protected@file@percent }
 \newlabel{dip:eval}{{2.1.4}{16}{Evaluation}{subsection.2.1.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4.1}Data and methodology}{16}{subsubsection.2.1.4.1}\protected@file@percent }
-\newlabel{subsec:data}{{2.1.4.1}{16}{Data and methodology}{subsubsection.2.1.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4.1}Data and Methodology}{16}{subsubsection.2.1.4.1}\protected@file@percent }
+\newlabel{subsec:data}{{2.1.4.1}{16}{Data and Methodology}{subsubsection.2.1.4.1}{}}
 \@writefile{brf}{\backcite{ark}{{16}{2.1.4.1}{subsubsection.2.1.4.1}}}
 \@writefile{brf}{\backcite{routeviews}{{16}{2.1.4.1}{subsubsection.2.1.4.1}}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4.2}Embedding accuracy}{16}{subsubsection.2.1.4.2}\protected@file@percent }
 \citation{vivaldi,gnp}
 \citation{barford-infocom}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces (left) Cumulative distribution of cluster similarity, computed using IP vector representations, for prefix-based and end-host random clusters; (right) Cumulative distributions of absolute distance estimation errors for DIP{} and {\em  mean}. DIP{} representations preserve real-world prefix-based clustering and predict distances accurately.\relax }}{17}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:clustering}{{2.4}{17}{(left) Cumulative distribution of cluster similarity, computed using IP vector representations, for prefix-based and end-host random clusters; (right) Cumulative distributions of absolute distance estimation errors for \system {} and {\em mean}. \system {} representations preserve real-world prefix-based clustering and predict distances accurately.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4.2}Embedding Accuracy}{17}{subsubsection.2.1.4.2}\protected@file@percent }
 \@writefile{brf}{\backcite{vivaldi}{{17}{2.1.4.2}{figure.caption.7}}}
 \@writefile{brf}{\backcite{gnp}{{17}{2.1.4.2}{figure.caption.7}}}
-\@writefile{brf}{\backcite{barford-infocom}{{17}{2.1.4.2}{figure.caption.7}}}
 \@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Absolute mean error (standard deviation between brackets) of distance prediction of DIP{} and {\em  mean}, for both known and new IPs, when varying the number of IPs, the number of servers and the embedding dimension. The default values are 10,000 IPs, 95 servers, and 140 dimensions.\relax }}{18}{table.caption.8}\protected@file@percent }
 \newlabel{tab:abserror}{{2.1}{18}{Absolute mean error (standard deviation between brackets) of distance prediction of \system {} and {\em mean}, for both known and new IPs, when varying the number of IPs, the number of servers and the embedding dimension. The default values are 10,000 IPs, 95 servers, and 140 dimensions.\relax }{table.caption.8}{}}
+\@writefile{brf}{\backcite{barford-infocom}{{18}{2.1.4.2}{figure.caption.7}}}
 \citation{vivaldi,gnp}
 \citation{barford-infocom}
 \citation{barford-infocom}
 \citation{hc-filter}
-\citation{vivaldi}
-\citation{dn-emb}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.5}Discussion}{19}{subsection.2.1.5}\protected@file@percent }
-\newlabel{dip:discussion}{{2.1.5}{19}{Discussion}{subsection.2.1.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.5}Discussion: Limitations and Opportunities}{19}{subsection.2.1.5}\protected@file@percent }
+\newlabel{dip:discussion}{{2.1.5}{19}{Discussion: Limitations and Opportunities}{subsection.2.1.5}{}}
 \@writefile{brf}{\backcite{vivaldi}{{19}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{gnp}{{19}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{barford-infocom}{{19}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{barford-infocom}{{19}{2.1.5}{subsection.2.1.5}}}
-\@writefile{brf}{\backcite{hc-filter}{{19}{2.1.5}{subsection.2.1.5}}}
+\citation{vivaldi}
+\citation{dn-emb}
 \citation{bruzzone1999incremental}
 \citation{barford-infocom}
 \citation{spoofing-ddos,spoofing-ps}
 \citation{github-spoofing}
-\citation{cloudflare,github-spoofing,arbor-spoofing}
+\citation{cloudflare,github-spoofing}
+\@writefile{brf}{\backcite{hc-filter}{{20}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{vivaldi}{{20}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{dn-emb}{{20}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{bruzzone1999incremental}{{20}{2.1.5}{subsection.2.1.5}}}
 \@writefile{brf}{\backcite{barford-infocom}{{20}{2.1.5}{subsection.2.1.5}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.6}Conclusions}{20}{subsection.2.1.6}\protected@file@percent }
-\newlabel{dip:conclusions}{{2.1.6}{20}{Conclusions}{subsection.2.1.6}{}}
 \citation{ipsec}
 \citation{puzzles}
 \citation{spm,spi}
@@ -197,7 +195,6 @@
 \@writefile{brf}{\backcite{github-spoofing}{{21}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{cloudflare}{{21}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{github-spoofing}{{21}{2.2.1}{subsection.2.2.1}}}
-\@writefile{brf}{\backcite{arbor-spoofing}{{21}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{ipsec}{{21}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{puzzles}{{21}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{spm}{{21}{2.2.1}{subsection.2.2.1}}}
@@ -218,7 +215,6 @@
 \@writefile{brf}{\backcite{dip}{{22}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{dip-ccr}{{22}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{hcf}{{22}{2.2.1}{subsection.2.2.1}}}
-\citation{dls}
 \citation{vern}
 \citation{ipsec}
 \citation{puzzles}
@@ -227,9 +223,8 @@
 \citation{spoofing-state}
 \citation{pam17-loops}
 \citation{iphc,hcf}
-\@writefile{brf}{\backcite{dls}{{23}{2.2.1}{subsection.2.2.1}}}
 \@writefile{brf}{\backcite{vern}{{23}{2.2.1}{subsection.2.2.1}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Towards learned maps for spoofing detection}{23}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Towards Learned Maps for Spoofing Detection}{23}{subsection.2.2.2}\protected@file@percent }
 \@writefile{brf}{\backcite{ipsec}{{23}{2.2.2}{subsection.2.2.2}}}
 \@writefile{brf}{\backcite{puzzles}{{23}{2.2.2}{subsection.2.2.2}}}
 \@writefile{brf}{\backcite{rpf}{{23}{2.2.2}{subsection.2.2.2}}}
@@ -259,10 +254,10 @@
 \@writefile{brf}{\backcite{dip}{{25}{2.2.2}{subsection.2.2.2}}}
 \@writefile{brf}{\backcite{net-emb}{{25}{2.2.2}{subsection.2.2.2}}}
 \@writefile{brf}{\backcite{dip}{{25}{2.2.2}{subsection.2.2.2}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Learning-based spoofing detection}{25}{subsection.2.2.3}\protected@file@percent }
-\newlabel{spoof:design}{{2.2.3}{25}{Learning-based spoofing detection}{subsection.2.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Learning-Based Spoofing Detection}{25}{subsection.2.2.3}\protected@file@percent }
+\newlabel{spoof:design}{{2.2.3}{25}{Learning-Based Spoofing Detection}{subsection.2.2.3}{}}
 \@writefile{brf}{\backcite{hcf}{{25}{2.2.3}{subsection.2.2.3}}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.1}IP map learning}{25}{subsubsection.2.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.1}IP Map Learning}{25}{subsubsection.2.2.3.1}\protected@file@percent }
 \@writefile{brf}{\backcite{dip}{{25}{2.2.3.1}{subsubsection.2.2.3.1}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Map-based spoofing detection. Network maps detect only spoofed packets traversing protected ASes (colored in green). Host maps detect only packets spoofed with IPs present in the map (also colored in green). Learned host maps have the ability to detect all packets because they learn missing map entries. The paths in the diagrams indicate the apparent source of the packet (the spoofed source). In reality, all packets originate from the attacker.\relax }}{26}{figure.caption.9}\protected@file@percent }
 \newlabel{fig:learnedmaps}{{2.5}{26}{Map-based spoofing detection. Network maps detect only spoofed packets traversing protected ASes (colored in green). Host maps detect only packets spoofed with IPs present in the map (also colored in green). Learned host maps have the ability to detect all packets because they learn missing map entries. The paths in the diagrams indicate the apparent source of the packet (the spoofed source). In reality, all packets originate from the attacker.\relax }{figure.caption.9}{}}
@@ -285,18 +280,18 @@
 \@writefile{brf}{\backcite{pyxida}{{29}{2.2.3.1}{equation.2.2.8}}}
 \@writefile{brf}{\backcite{barford-infocom}{{29}{2.2.3.1}{equation.2.2.8}}}
 \@writefile{brf}{\backcite{peerwise}{{29}{2.2.3.1}{equation.2.2.8}}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.2}Spoofing detector}{29}{subsubsection.2.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.2}Spoofing Detector}{29}{subsubsection.2.2.3.2}\protected@file@percent }
 \@writefile{brf}{\backcite{iphc}{{29}{2.2.3.2}{subsubsection.2.2.3.2}}}
 \citation{spoofing-state}
 \citation{pam17-loops}
 \citation{hcf}
 \citation{hcf,ark}
 \citation{ark}
-\@writefile{brf}{\backcite{spoofing-state}{{30}{\caption@xref {??}{ on input line 651}}{table.caption.11}}}
-\@writefile{brf}{\backcite{pam17-loops}{{30}{\caption@xref {??}{ on input line 651}}{table.caption.11}}}
-\@writefile{brf}{\backcite{hcf}{{30}{\caption@xref {??}{ on input line 653}}{table.caption.11}}}
-\@writefile{brf}{\backcite{hcf}{{30}{\caption@xref {??}{ on input line 653}}{table.caption.11}}}
-\@writefile{brf}{\backcite{ark}{{30}{\caption@xref {??}{ on input line 653}}{table.caption.11}}}
+\@writefile{brf}{\backcite{spoofing-state}{{30}{\caption@xref {??}{ on input line 657}}{table.caption.11}}}
+\@writefile{brf}{\backcite{pam17-loops}{{30}{\caption@xref {??}{ on input line 657}}{table.caption.11}}}
+\@writefile{brf}{\backcite{hcf}{{30}{\caption@xref {??}{ on input line 659}}{table.caption.11}}}
+\@writefile{brf}{\backcite{hcf}{{30}{\caption@xref {??}{ on input line 659}}{table.caption.11}}}
+\@writefile{brf}{\backcite{ark}{{30}{\caption@xref {??}{ on input line 659}}{table.caption.11}}}
 \@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Map-based spoofing detection methods.\relax }}{30}{table.caption.11}\protected@file@percent }
 \newlabel{tab:spoofing}{{2.2}{30}{Map-based spoofing detection methods.\relax }{table.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Evaluation}{30}{subsection.2.2.4}\protected@file@percent }
@@ -320,23 +315,23 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.2}Accuracy}{34}{subsubsection.2.2.4.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Detector accuracy under various scenarios. (left) We run detection on the same targets used in training and vary the detection threshold; increasing the threshold reduces sensitivity and improves specificity; (right) We perform detection using both training targets and new targets not used in the training process; we set the detection threshold to two hops (the average estimation error of the model); as we vary the ratio between training and detection targets, the sensitivity for the new targets is comparable to that of the training targets, while the specificity is lower; ``all'' indicates that we perform training and detection on all targets, therefore there are no new targets.\relax }}{35}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:sens}{{2.8}{35}{Detector accuracy under various scenarios. (left) We run detection on the same targets used in training and vary the detection threshold; increasing the threshold reduces sensitivity and improves specificity; (right) We perform detection using both training targets and new targets not used in the training process; we set the detection threshold to two hops (the average estimation error of the model); as we vary the ratio between training and detection targets, the sensitivity for the new targets is comparable to that of the training targets, while the specificity is lower; ``all'' indicates that we perform training and detection on all targets, therefore there are no new targets.\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.3}Model transfer}{35}{subsubsection.2.2.4.3}\protected@file@percent }
-\newlabel{spoof:transfer}{{2.2.4.3}{35}{Model transfer}{subsubsection.2.2.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.3}Model Transfer}{35}{subsubsection.2.2.4.3}\protected@file@percent }
+\newlabel{spoof:transfer}{{2.2.4.3}{35}{Model Transfer}{subsubsection.2.2.4.3}{}}
 \citation{net2vec}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.4}Performance}{36}{subsubsection.2.2.4.4}\protected@file@percent }
 \@writefile{brf}{\backcite{net2vec}{{36}{2.2.4.4}{subsubsection.2.2.4.4}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Discussion: Limitations and opportunities}{36}{subsection.2.2.5}\protected@file@percent }
-\newlabel{spoof:discussion}{{2.2.5}{36}{Discussion: Limitations and opportunities}{subsection.2.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Discussion: Limitations and Opportunities}{36}{subsection.2.2.5}\protected@file@percent }
+\newlabel{spoof:discussion}{{2.2.5}{36}{Discussion: Limitations and Opportunities}{subsection.2.2.5}{}}
 \citation{peerwise}
 \citation{net-emb}
 \citation{cunha,reasons}
+\citation{asym}
 \@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Performance of training for data sets containing hop count information from 96 servers to 1,000, 10,000, and 100,000 IPs. Each data set is sparse, with only about 15\% of all entries available.\relax }}{37}{table.caption.14}\protected@file@percent }
 \newlabel{tab:performance}{{2.3}{37}{Performance of training for data sets containing hop count information from 96 servers to 1,000, 10,000, and 100,000 IPs. Each data set is sparse, with only about 15\% of all entries available.\relax }{table.caption.14}{}}
 \@writefile{brf}{\backcite{peerwise}{{37}{2.2.5}{subsection.2.2.5}}}
 \@writefile{brf}{\backcite{net-emb}{{37}{2.2.5}{subsection.2.2.5}}}
 \@writefile{brf}{\backcite{cunha}{{37}{2.2.5}{subsection.2.2.5}}}
 \@writefile{brf}{\backcite{reasons}{{37}{2.2.5}{subsection.2.2.5}}}
-\citation{asym}
 \citation{ark}
 \citation{dip}
 \citation{barford-infocom}
@@ -344,103 +339,105 @@
 \@writefile{brf}{\backcite{ark}{{38}{2.2.5}{subsection.2.2.5}}}
 \@writefile{brf}{\backcite{dip}{{38}{2.2.5}{subsection.2.2.5}}}
 \@writefile{brf}{\backcite{barford-infocom}{{38}{2.2.5}{subsection.2.2.5}}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Conclusion}{38}{section.2.3}\protected@file@percent }
+\newlabel{dip:conclusions}{{2.3}{38}{Conclusion}{section.2.3}{}}
 \citation{tur2011spoken}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Extracing Latent Information from Abandoned Speech Interpretations}{39}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Extracting Latent Information from Unused Speech Interpretations}{40}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:nbest}{{3}{39}{Extracing Latent Information from Abandoned Speech Interpretations}{chapter.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{39}{section.3.1}\protected@file@percent }
-\newlabel{alexa:intro}{{3.1}{39}{Introduction}{section.3.1}{}}
-\@writefile{brf}{\backcite{tur2011spoken}{{39}{3.1}{section.3.1}}}
+\newlabel{ch:nbest}{{3}{40}{Extracting Latent Information from Unused Speech Interpretations}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{40}{section.3.1}\protected@file@percent }
+\newlabel{alexa:intro}{{3.1}{40}{Introduction}{section.3.1}{}}
 \citation{peng2013search,jyothi2012large}
 \citation{peng2013search,charniak2005coarse,morbini2012reranking,dikici2012classification,Sak2011DiscriminativeRO,sak2010fly,discriminative,collins2005discriminative,chan2004improving}
 \citation{discriminative,collins2005discriminative,chan2004improving}
 \citation{peng2013search,morbini2012reranking}
 \citation{peng2013search}
 \citation{oba2007approach}
-\@writefile{brf}{\backcite{peng2013search}{{40}{3.1}{section.3.1}}}
-\@writefile{brf}{\backcite{jyothi2012large}{{40}{3.1}{section.3.1}}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Spoken recognition quality distribution of the $n$ best hypotheses.\relax }}{40}{table.caption.15}\protected@file@percent }
-\newlabel{tbl:nbest}{{3.1}{40}{Spoken recognition quality distribution of the $n$ best hypotheses.\relax }{table.caption.15}{}}
-\@writefile{brf}{\backcite{peng2013search}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{charniak2005coarse}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{morbini2012reranking}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{dikici2012classification}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{Sak2011DiscriminativeRO}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{sak2010fly}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{discriminative}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{collins2005discriminative}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{chan2004improving}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{discriminative}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{collins2005discriminative}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{chan2004improving}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{peng2013search}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{morbini2012reranking}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{peng2013search}{{40}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{oba2007approach}{{40}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{tur2011spoken}{{41}{3.1}{section.3.1}}}
+\@writefile{brf}{\backcite{peng2013search}{{41}{3.1}{section.3.1}}}
+\@writefile{brf}{\backcite{jyothi2012large}{{41}{3.1}{section.3.1}}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Spoken recognition quality distribution of the $n$ best hypotheses.\relax }}{41}{table.caption.15}\protected@file@percent }
+\newlabel{tbl:nbest}{{3.1}{41}{Spoken recognition quality distribution of the $n$ best hypotheses.\relax }{table.caption.15}{}}
+\@writefile{brf}{\backcite{peng2013search}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{charniak2005coarse}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{morbini2012reranking}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{dikici2012classification}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{Sak2011DiscriminativeRO}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{sak2010fly}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{discriminative}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{collins2005discriminative}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{chan2004improving}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{discriminative}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{collins2005discriminative}{{41}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{chan2004improving}{{41}{3.1}{table.caption.15}}}
 \citation{caruana1997multitask}
 \citation{gong2013multi}
 \citation{sennrich2015neural}
 \citation{schuster1997bidirectional}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Motivating example: comparison of ASR $n$-Best hypotheses with the corresponding transcription. \relax }}{41}{table.caption.16}\protected@file@percent }
-\newlabel{tbl:expMotiv}{{3.2}{41}{Motivating example: comparison of ASR $n$-Best hypotheses with the corresponding transcription. \relax }{table.caption.16}{}}
-\@writefile{brf}{\backcite{caruana1997multitask}{{41}{3.1}{table.caption.15}}}
-\@writefile{brf}{\backcite{gong2013multi}{{41}{3.1}{table.caption.15}}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Baseline, Oracle and Direct Models}{41}{section.3.2}\protected@file@percent }
-\newlabel{speech:pretrain}{{3.2}{41}{Baseline, Oracle and Direct Models}{section.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Baseline and Oracle}{41}{subsection.3.2.1}\protected@file@percent }
-\@writefile{brf}{\backcite{sennrich2015neural}{{41}{3.2.1}{subsection.3.2.1}}}
-\@writefile{brf}{\backcite{schuster1997bidirectional}{{42}{3.2.1}{subsection.3.2.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Baseline pipeline for domain or intent classification.\relax }}{42}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:traditional}{{3.1}{42}{Baseline pipeline for domain or intent classification.\relax }{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Direct Models}{42}{subsection.3.2.2}\protected@file@percent }
-\newlabel{subspeech:combination}{{3.2.2}{42}{Direct Models}{subsection.3.2.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Direct models evaluation pipeline.\relax }}{42}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:eval}{{3.2}{42}{Direct models evaluation pipeline.\relax }{figure.caption.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Motivating example: comparison of ASR $n$-Best hypotheses with the corresponding transcription. \relax }}{42}{table.caption.16}\protected@file@percent }
+\newlabel{tbl:expMotiv}{{3.2}{42}{Motivating example: comparison of ASR $n$-Best hypotheses with the corresponding transcription. \relax }{table.caption.16}{}}
+\@writefile{brf}{\backcite{peng2013search}{{42}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{morbini2012reranking}{{42}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{peng2013search}{{42}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{oba2007approach}{{42}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{caruana1997multitask}{{42}{3.1}{table.caption.15}}}
+\@writefile{brf}{\backcite{gong2013multi}{{42}{3.1}{table.caption.15}}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Baseline, Oracle and Direct Models}{43}{section.3.2}\protected@file@percent }
+\newlabel{speech:pretrain}{{3.2}{43}{Baseline, Oracle and Direct Models}{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Baseline and Oracle}{43}{subsection.3.2.1}\protected@file@percent }
+\@writefile{brf}{\backcite{sennrich2015neural}{{43}{3.2.1}{subsection.3.2.1}}}
+\@writefile{brf}{\backcite{schuster1997bidirectional}{{43}{3.2.1}{subsection.3.2.1}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Baseline pipeline for domain or intent classification.\relax }}{43}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:traditional}{{3.1}{43}{Baseline pipeline for domain or intent classification.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Direct Models}{43}{subsection.3.2.2}\protected@file@percent }
+\newlabel{subspeech:combination}{{3.2.2}{43}{Direct Models}{subsection.3.2.2}{}}
 \citation{peng2013search,charniak2005coarse,morbini2012reranking}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Integration of $n$-best hypotheses with two possible ways: 1) concatenate hypothesized text and 2) concatenate hypothesis embedding.\relax }}{43}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:integration}{{3.3}{43}{Integration of $n$-best hypotheses with two possible ways: 1) concatenate hypothesized text and 2) concatenate hypothesis embedding.\relax }{figure.caption.19}{}}
-\@writefile{brf}{\backcite{peng2013search}{{43}{3.2.2}{figure.caption.18}}}
-\@writefile{brf}{\backcite{charniak2005coarse}{{43}{3.2.2}{figure.caption.18}}}
-\@writefile{brf}{\backcite{morbini2012reranking}{{43}{3.2.2}{figure.caption.18}}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Integration of N-BEST Hypotheses}{43}{section.3.3}\protected@file@percent }
-\newlabel{speech:models}{{3.3}{43}{Integration of N-BEST Hypotheses}{section.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Direct models evaluation pipeline.\relax }}{44}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:eval}{{3.2}{44}{Direct models evaluation pipeline.\relax }{figure.caption.18}{}}
+\@writefile{brf}{\backcite{peng2013search}{{44}{3.2.2}{figure.caption.18}}}
+\@writefile{brf}{\backcite{charniak2005coarse}{{44}{3.2.2}{figure.caption.18}}}
+\@writefile{brf}{\backcite{morbini2012reranking}{{44}{3.2.2}{figure.caption.18}}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Integration of N-Best Hypotheses}{44}{section.3.3}\protected@file@percent }
+\newlabel{speech:models}{{3.3}{44}{Integration of N-Best Hypotheses}{section.3.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Hypothesized Text Concatenation}{44}{subsection.3.3.1}\protected@file@percent }
-\newlabel{bilstm}{{3.1}{44}{Hypothesized Text Concatenation}{equation.3.3.1}{}}
-\newlabel{mlp}{{3.2}{44}{Hypothesized Text Concatenation}{equation.3.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Hypothesis Embedding Concatenation}{44}{subsection.3.3.2}\protected@file@percent }
-\newlabel{bilstm_1}{{3.3}{45}{Hypothesis Embedding Concatenation}{equation.3.3.3}{}}
-\newlabel{output}{{3.4}{45}{Hypothesis Embedding Concatenation}{equation.3.3.4}{}}
-\newlabel{outputs}{{3.5}{45}{Hypothesis Embedding Concatenation}{equation.3.3.5}{}}
-\newlabel{pooling}{{3.6}{45}{Hypothesis Embedding Concatenation}{equation.3.3.6}{}}
-\newlabel{mlp_1}{{3.7}{45}{Hypothesis Embedding Concatenation}{equation.3.3.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Experiment}{45}{section.3.4}\protected@file@percent }
-\newlabel{speech:exp}{{3.4}{45}{Experiment}{section.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Dataset}{45}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Performance on Entire Test Set}{46}{subsection.3.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Micro and Macro F1 score for multi-class domain classification.\relax }}{46}{table.caption.20}\protected@file@percent }
-\newlabel{tbl:entire dataset}{{3.3}{46}{Micro and Macro F1 score for multi-class domain classification.\relax }{table.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Performance Comparison among Various Subsets}{46}{subsection.3.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Performance comparison for the subset ($\sim $ 19\%) where ASR first best disagrees with transcription.\relax }}{47}{table.caption.21}\protected@file@percent }
-\newlabel{tbl:disagree}{{3.4}{47}{Performance comparison for the subset ($\sim $ 19\%) where ASR first best disagrees with transcription.\relax }{table.caption.21}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }}{47}{table.caption.22}\protected@file@percent }
-\newlabel{tbl:agree}{{3.5}{47}{Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }{table.caption.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Improvements on Different Domains and Different Numbers of Hypotheses}{47}{subsection.3.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Improvements on important domains.\relax }}{48}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:important}{{3.4}{48}{Improvements on important domains.\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Intent Classification}{48}{subsection.3.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Intent classification for three important domains.\relax }}{48}{table.caption.25}\protected@file@percent }
-\newlabel{tbl:intent}{{3.6}{48}{Intent classification for three important domains.\relax }{table.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Integration of $n$-best hypotheses with two possible ways: 1) concatenate hypothesized text and 2) concatenate hypothesis embedding.\relax }}{45}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:integration}{{3.3}{45}{Integration of $n$-best hypotheses with two possible ways: 1) concatenate hypothesized text and 2) concatenate hypothesis embedding.\relax }{figure.caption.19}{}}
+\newlabel{bilstm}{{3.1}{45}{Hypothesized Text Concatenation}{equation.3.3.1}{}}
+\newlabel{mlp}{{3.2}{45}{Hypothesized Text Concatenation}{equation.3.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Hypothesis Embedding Concatenation}{45}{subsection.3.3.2}\protected@file@percent }
+\newlabel{bilstm_1}{{3.3}{46}{Hypothesis Embedding Concatenation}{equation.3.3.3}{}}
+\newlabel{output}{{3.4}{46}{Hypothesis Embedding Concatenation}{equation.3.3.4}{}}
+\newlabel{outputs}{{3.5}{46}{Hypothesis Embedding Concatenation}{equation.3.3.5}{}}
+\newlabel{pooling}{{3.6}{46}{Hypothesis Embedding Concatenation}{equation.3.3.6}{}}
+\newlabel{mlp_1}{{3.7}{46}{Hypothesis Embedding Concatenation}{equation.3.3.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Experiments}{47}{section.3.4}\protected@file@percent }
+\newlabel{speech:exp}{{3.4}{47}{Experiments}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Dataset}{47}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Performance on Entire Test Set}{47}{subsection.3.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Micro and Macro F1 score for multi-class domain classification.\relax }}{47}{table.caption.20}\protected@file@percent }
+\newlabel{tbl:entire dataset}{{3.3}{47}{Micro and Macro F1 score for multi-class domain classification.\relax }{table.caption.20}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Performance comparison for the subset ($\sim $ 19\%) where ASR first best disagrees with transcription.\relax }}{48}{table.caption.21}\protected@file@percent }
+\newlabel{tbl:disagree}{{3.4}{48}{Performance comparison for the subset ($\sim $ 19\%) where ASR first best disagrees with transcription.\relax }{table.caption.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }}{48}{table.caption.22}\protected@file@percent }
+\newlabel{tbl:agree}{{3.5}{48}{Performance comparison for the subset ($\sim $ 81\%) where ASR first best agrees with transcription.\relax }{table.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Performance Comparison among Various Subsets}{48}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Improvements on Different Domains and Different Numbers of Hypotheses}{49}{subsection.3.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Improvements on important domains.\relax }}{49}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:important}{{3.4}{49}{Improvements on important domains.\relax }{figure.caption.23}{}}
 \citation{liu2014efficient}
 \citation{hakkani2006beyond,tur2002improving}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The influence of different amount of hypotheses.\relax }}{49}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:amount}{{3.5}{49}{The influence of different amount of hypotheses.\relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Conclusions and Future Work}{49}{section.3.5}\protected@file@percent }
-\newlabel{speech:conclusion}{{3.5}{49}{Conclusions and Future Work}{section.3.5}{}}
-\@writefile{brf}{\backcite{liu2014efficient}{{50}{3.5}{section.3.5}}}
-\@writefile{brf}{\backcite{hakkani2006beyond}{{50}{3.5}{section.3.5}}}
-\@writefile{brf}{\backcite{tur2002improving}{{50}{3.5}{section.3.5}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The influence of different amount of hypotheses.\relax }}{50}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:amount}{{3.5}{50}{The influence of different amount of hypotheses.\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Intent Classification}{50}{subsection.3.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Intent classification for three important domains.\relax }}{50}{table.caption.25}\protected@file@percent }
+\newlabel{tbl:intent}{{3.6}{50}{Intent classification for three important domains.\relax }{table.caption.25}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Conclusion}{50}{section.3.5}\protected@file@percent }
+\newlabel{speech:conclusion}{{3.5}{50}{Conclusion}{section.3.5}{}}
+\@writefile{brf}{\backcite{liu2014efficient}{{51}{3.5}{section.3.5}}}
+\@writefile{brf}{\backcite{hakkani2006beyond}{{51}{3.5}{section.3.5}}}
+\@writefile{brf}{\backcite{tur2002improving}{{51}{3.5}{section.3.5}}}
 \citation{mikolov2013distributed}
 \citation{morin2005hierarchical}
 \citation{mikolov2013efficient}
@@ -450,31 +447,31 @@
 \citation{mikolov2013distributed}
 \citation{node2vec-kdd2016,wang2017knowledge}
 \citation{barkan2016item2vec}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Amplified Negative Sampling: A Sample-Efficient Training Algorithm }{51}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Efficient Training with Amplified Negative Sampling}{52}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:nec}{{4}{51}{Amplified Negative Sampling: A Sample-Efficient Training Algorithm}{chapter.4}{}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{51}{4}{chapter.4}}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{51}{section.4.1}\protected@file@percent }
-\@writefile{brf}{\backcite{morin2005hierarchical}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{bengio2008adaptive}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{rawat2019sampled}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{blanc2017adaptive}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{grave2017efficient}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{chen2015strategies}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{bai2017tapas}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{wang2017knowledge}{{51}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{node2vec-kdd2016}{{51}{4.1}{section.4.1}}}
+\newlabel{ch:nec}{{4}{52}{Efficient Training with Amplified Negative Sampling}{chapter.4}{}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{52}{4}{chapter.4}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{52}{section.4.1}\protected@file@percent }
+\@writefile{brf}{\backcite{morin2005hierarchical}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{bengio2008adaptive}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{rawat2019sampled}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{blanc2017adaptive}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{grave2017efficient}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{chen2015strategies}{{52}{4.1}{section.4.1}}}
 \citation{mikolov2013distributed}
-\@writefile{brf}{\backcite{barkan2016item2vec}{{52}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{52}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{node2vec-kdd2016}{{52}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{wang2017knowledge}{{52}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{barkan2016item2vec}{{52}{4.1}{section.4.1}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{52}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{bai2017tapas}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{wang2017knowledge}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{node2vec-kdd2016}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{barkan2016item2vec}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{node2vec-kdd2016}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{wang2017knowledge}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{barkan2016item2vec}{{53}{4.1}{section.4.1}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{53}{4.1}{section.4.1}}}
 \citation{bengio2008adaptive}
 \citation{morin2005hierarchical}
 \citation{vincent2015efficient}
@@ -488,109 +485,109 @@
 \citation{NCE}
 \citation{bose2018adversarial}
 \citation{schroff2015facenet,mussmann2017fast}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Related Work}{53}{section.4.2}\protected@file@percent }
-\newlabel{sec:NS:related}{{4.2}{53}{Related Work}{section.4.2}{}}
-\@writefile{brf}{\backcite{bengio2008adaptive}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{morin2005hierarchical}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{vincent2015efficient}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{ruiz2018augment}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{blanc2017adaptive}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{rawat2019sampled}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{bengio2008adaptive}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{53}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{bai2017tapas}{{53}{4.2}{section.4.2}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Related Work}{54}{section.4.2}\protected@file@percent }
+\newlabel{sec:NS:related}{{4.2}{54}{Related Work}{section.4.2}{}}
+\@writefile{brf}{\backcite{bengio2008adaptive}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{morin2005hierarchical}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{vincent2015efficient}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{ruiz2018augment}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{blanc2017adaptive}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{rawat2019sampled}{{54}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{bengio2008adaptive}{{54}{4.2}{section.4.2}}}
 \citation{Goodman}
 \citation{morin2005hierarchical}
 \citation{vincent2015efficient,de2015exploration}
 \citation{blanc2017adaptive,rawat2019sampled}
-\@writefile{brf}{\backcite{bakhtiary2015speeding}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{vijayanarasimhan2014deep}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{rawat2019sampled}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{NCE}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{bose2018adversarial}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{schroff2015facenet}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{mussmann2017fast}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{Goodman}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{morin2005hierarchical}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{vincent2015efficient}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{de2015exploration}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{blanc2017adaptive}{{54}{4.2}{section.4.2}}}
-\@writefile{brf}{\backcite{rawat2019sampled}{{54}{4.2}{section.4.2}}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Framework}{54}{section.4.3}\protected@file@percent }
-\newlabel{sec:NS:framework}{{4.3}{54}{Framework}{section.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Preliminaries}{54}{subsection.4.3.1}\protected@file@percent }
+\@writefile{brf}{\backcite{mikolov2013efficient}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{bai2017tapas}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{bakhtiary2015speeding}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{vijayanarasimhan2014deep}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{rawat2019sampled}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{NCE}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{bose2018adversarial}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{schroff2015facenet}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{mussmann2017fast}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{Goodman}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{morin2005hierarchical}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{vincent2015efficient}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{de2015exploration}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{blanc2017adaptive}{{55}{4.2}{section.4.2}}}
+\@writefile{brf}{\backcite{rawat2019sampled}{{55}{4.2}{section.4.2}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Framework}{55}{section.4.3}\protected@file@percent }
+\newlabel{sec:NS:framework}{{4.3}{55}{Framework}{section.4.3}{}}
 \citation{mikolov2013efficient,mikolov2013distributed}
 \citation{grover2016node2vec}
 \citation{barkan2016item2vec}
 \citation{mikolov2013distributed}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{55}{4.3.1}{subsection.4.3.1}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{55}{4.3.1}{subsection.4.3.1}}}
-\@writefile{brf}{\backcite{grover2016node2vec}{{55}{4.3.1}{subsection.4.3.1}}}
-\@writefile{brf}{\backcite{barkan2016item2vec}{{55}{4.3.1}{subsection.4.3.1}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{55}{4.3.1}{subsection.4.3.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Preliminaries}{56}{subsection.4.3.1}\protected@file@percent }
+\@writefile{brf}{\backcite{mikolov2013efficient}{{56}{4.3.1}{subsection.4.3.1}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{56}{4.3.1}{subsection.4.3.1}}}
+\@writefile{brf}{\backcite{grover2016node2vec}{{56}{4.3.1}{subsection.4.3.1}}}
+\@writefile{brf}{\backcite{barkan2016item2vec}{{56}{4.3.1}{subsection.4.3.1}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{56}{4.3.1}{subsection.4.3.1}}}
 \citation{NCE}
 \citation{mnih2012fast}
 \citation{mikolov2013efficient}
 \citation{node2vec-kdd2016,barkan2016item2vec,grover2016node2vec}
-\newlabel{eq:allneg}{{4.4}{56}{Preliminaries}{equation.4.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Negative Sampling}{56}{subsection.4.3.2}\protected@file@percent }
-\newlabel{sec:negative}{{4.3.2}{56}{Negative Sampling}{subsection.4.3.2}{}}
-\@writefile{brf}{\backcite{NCE}{{56}{4.3.2}{subsection.4.3.2}}}
-\@writefile{brf}{\backcite{mnih2012fast}{{56}{4.3.2}{subsection.4.3.2}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{56}{4.3.2}{subsection.4.3.2}}}
-\@writefile{brf}{\backcite{node2vec-kdd2016}{{56}{4.3.2}{subsection.4.3.2}}}
-\@writefile{brf}{\backcite{barkan2016item2vec}{{56}{4.3.2}{subsection.4.3.2}}}
-\@writefile{brf}{\backcite{grover2016node2vec}{{56}{4.3.2}{subsection.4.3.2}}}
-\newlabel{eq:l2-neg-1}{{4.5}{57}{Negative Sampling}{equation.4.3.5}{}}
-\newlabel{eq:l2-neg-2}{{4.6}{57}{Negative Sampling}{equation.4.3.6}{}}
-\newlabel{eq:neg-k}{{4.7}{57}{Negative Sampling}{equation.4.3.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Optimal Model of Negative Sampling and Full-gradient Model}{57}{subsection.4.3.3}\protected@file@percent }
+\newlabel{eq:allneg}{{4.4}{57}{Preliminaries}{equation.4.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Negative Sampling}{57}{subsection.4.3.2}\protected@file@percent }
+\newlabel{sec:negative}{{4.3.2}{57}{Negative Sampling}{subsection.4.3.2}{}}
+\@writefile{brf}{\backcite{NCE}{{57}{4.3.2}{subsection.4.3.2}}}
+\@writefile{brf}{\backcite{mnih2012fast}{{57}{4.3.2}{subsection.4.3.2}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{57}{4.3.2}{subsection.4.3.2}}}
+\@writefile{brf}{\backcite{node2vec-kdd2016}{{57}{4.3.2}{subsection.4.3.2}}}
+\@writefile{brf}{\backcite{barkan2016item2vec}{{57}{4.3.2}{subsection.4.3.2}}}
+\@writefile{brf}{\backcite{grover2016node2vec}{{57}{4.3.2}{subsection.4.3.2}}}
+\newlabel{eq:l2-neg-1}{{4.5}{58}{Negative Sampling}{equation.4.3.5}{}}
+\newlabel{eq:l2-neg-2}{{4.6}{58}{Negative Sampling}{equation.4.3.6}{}}
+\newlabel{eq:neg-k}{{4.7}{58}{Negative Sampling}{equation.4.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Optimal Model of Negative Sampling and Full-gradient Model}{58}{subsection.4.3.3}\protected@file@percent }
 \citation{goldberg2014word2vec}
-\newlabel{th:neg-k}{{1}{58}{Optimal Model of Negative Sampling}{theorem.1}{}}
-\newlabel{th:full-gradient}{{1.1}{58}{Full-Gradient Model}{corollary.1.1}{}}
-\@writefile{brf}{\backcite{goldberg2014word2vec}{{58}{2}{theorem.1}}}
+\newlabel{th:neg-k}{{1}{59}{Optimal Model of Negative Sampling}{theorem.1}{}}
+\@writefile{brf}{\backcite{goldberg2014word2vec}{{59}{2}{theorem.1}}}
 \citation{levy2014neural}
 \citation{mikolov2013distributed}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Amplified Negative Sampling}{59}{section.4.4}\protected@file@percent }
-\newlabel{sec:NS:amplified}{{4.4}{59}{Amplified Negative Sampling}{section.4.4}{}}
-\@writefile{brf}{\backcite{levy2014neural}{{59}{4.4}{section.4.4}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{59}{4.4}{section.4.4}}}
-\newlabel{eq:amplify}{{4.8}{60}{Amplified Negative Sampling}{equation.4.4.8}{}}
-\newlabel{th:amplified}{{1.2}{60}{Amplified Negative Sampling}{corollary.1.2}{}}
-\newlabel{eq:l2-proof-3}{{4.9}{61}{Amplified Negative Sampling}{equation.4.4.9}{}}
-\newlabel{eq:l2-proof1}{{4.10}{61}{Amplified Negative Sampling}{equation.4.4.10}{}}
-\newlabel{eq:amplifyed}{{4.13}{61}{Amplified Negative Sampling}{equation.4.4.13}{}}
+\newlabel{th:full-gradient}{{1.1}{60}{Full-Gradient Model}{corollary.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Amplified Negative Sampling}{60}{section.4.4}\protected@file@percent }
+\newlabel{sec:NS:amplified}{{4.4}{60}{Amplified Negative Sampling}{section.4.4}{}}
+\@writefile{brf}{\backcite{levy2014neural}{{60}{4.4}{section.4.4}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{60}{4.4}{section.4.4}}}
+\newlabel{eq:amplify}{{4.8}{61}{Amplified Negative Sampling}{equation.4.4.8}{}}
+\newlabel{th:amplified}{{1.2}{61}{Amplified Negative Sampling}{corollary.1.2}{}}
+\newlabel{eq:l2-proof-3}{{4.9}{62}{Amplified Negative Sampling}{equation.4.4.9}{}}
+\newlabel{eq:l2-proof1}{{4.10}{62}{Amplified Negative Sampling}{equation.4.4.10}{}}
+\newlabel{eq:amplifyed}{{4.13}{62}{Amplified Negative Sampling}{equation.4.4.13}{}}
 \citation{mikolov2013efficient}
 \citation{fastText}
 \citation{node2vec-kdd2016}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Experiments}{63}{section.4.5}\protected@file@percent }
-\newlabel{sec:NS:exp}{{4.5}{63}{Experiments}{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Experiments}{64}{section.4.5}\protected@file@percent }
+\newlabel{sec:NS:exp}{{4.5}{64}{Experiments}{section.4.5}{}}
 \citation{mikolov2013efficient}
 \citation{mikolov2013efficient}
 \citation{mikolov2013efficient}
 \citation{mikolov2013efficient}
 \citation{mikolov2013efficient}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5}{section.4.5}}}
-\@writefile{brf}{\backcite{fastText}{{64}{4.5}{section.4.5}}}
-\@writefile{brf}{\backcite{node2vec-kdd2016}{{64}{4.5}{section.4.5}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Model Accuracy and Training Efficiency}{64}{subsection.4.5.1}\protected@file@percent }
-\newlabel{sec:simulation}{{4.5.1}{64}{Model Accuracy and Training Efficiency}{subsection.4.5.1}{}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5.1}{subsection.4.5.1}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5.1}{subsection.4.5.1}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5.1}{subsection.4.5.1}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5.1}{subsection.4.5.1}}}
-\@writefile{brf}{\backcite{mikolov2013efficient}{{64}{4.5.1}{subsection.4.5.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Model accuracy\relax }}{65}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:l2Loss}{{4.1}{65}{Model accuracy\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Training time.\relax }}{65}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:trainingTime}{{4.2}{65}{Training time.\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Amplifying factor vs learning rate\relax }}{65}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:amplifyLR}{{4.3}{65}{Amplifying factor vs learning rate\relax }{figure.caption.26}{}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5}{section.4.5}}}
+\@writefile{brf}{\backcite{fastText}{{65}{4.5}{section.4.5}}}
+\@writefile{brf}{\backcite{node2vec-kdd2016}{{65}{4.5}{section.4.5}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Model Accuracy and Training Efficiency}{65}{subsection.4.5.1}\protected@file@percent }
+\newlabel{sec:simulation}{{4.5.1}{65}{Model Accuracy and Training Efficiency}{subsection.4.5.1}{}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5.1}{subsection.4.5.1}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5.1}{subsection.4.5.1}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5.1}{subsection.4.5.1}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5.1}{subsection.4.5.1}}}
+\@writefile{brf}{\backcite{mikolov2013efficient}{{65}{4.5.1}{subsection.4.5.1}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Model accuracy\relax }}{66}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:l2Loss}{{4.1}{66}{Model accuracy\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Training time.\relax }}{66}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:trainingTime}{{4.2}{66}{Training time.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Amplifying factor vs learning rate\relax }}{66}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:amplifyLR}{{4.3}{66}{Amplifying factor vs learning rate\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Experiments on Other Downstream Tasks}{67}{subsection.4.5.2}\protected@file@percent }
+\newlabel{sec:realworld}{{4.5.2}{67}{Experiments on Other Downstream Tasks}{subsection.4.5.2}{}}
 \citation{mikolov2013distributed}
 \citation{word2vecGithub}
 \citation{mikolov2013distributed}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Experiments on Other Downstream Tasks}{66}{subsection.4.5.2}\protected@file@percent }
-\newlabel{sec:realworld}{{4.5.2}{66}{Experiments on Other Downstream Tasks}{subsection.4.5.2}{}}
 \citation{fastText}
 \citation{fastTextGithub}
 \citation{luong2013better}
@@ -599,278 +596,274 @@
 \citation{node2vecGithub}
 \citation{Zafarani+Liu:2009}
 \citation{mikolov2013distributed}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{word2vecGithub}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{fastText}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{fastTextGithub}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{luong2013better}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{spearman1904proof}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{node2vec-kdd2016}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{node2vecGithub}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{Zafarani+Liu:2009}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{brf}{\backcite{mikolov2013distributed}{{67}{4.5.2}{subsection.4.5.2}}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Word-analogy semantic-task top-1 accuracy.\relax }}{68}{table.4.1}\protected@file@percent }
-\newlabel{tbl:semantic}{{4.1}{68}{Word-analogy semantic-task top-1 accuracy.\relax }{table.4.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Training time (seconds).\relax }}{68}{table.4.2}\protected@file@percent }
-\newlabel{tbl:time}{{4.2}{68}{Training time (seconds).\relax }{table.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclustion}{68}{section.4.6}\protected@file@percent }
-\newlabel{sec:NS:conclusion}{{4.6}{68}{Conclustion}{section.4.6}{}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{word2vecGithub}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{fastText}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{fastTextGithub}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{luong2013better}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{spearman1904proof}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{node2vec-kdd2016}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{node2vecGithub}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{Zafarani+Liu:2009}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{brf}{\backcite{mikolov2013distributed}{{68}{4.5.2}{subsection.4.5.2}}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Word-analogy semantic-task top-1 accuracy.\relax }}{69}{table.4.1}\protected@file@percent }
+\newlabel{tbl:semantic}{{4.1}{69}{Word-analogy semantic-task top-1 accuracy.\relax }{table.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Training time (seconds).\relax }}{69}{table.4.2}\protected@file@percent }
+\newlabel{tbl:time}{{4.2}{69}{Training time (seconds).\relax }{table.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Conclusion}{69}{section.4.6}\protected@file@percent }
+\newlabel{sec:NS:conclusion}{{4.6}{69}{Conclusion}{section.4.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Expressive Library for Recursive Queries: LLib and LFrame}{70}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{loa}{\addvspace {10\p@ }}
+\newlabel{ch:lib}{{5}{70}{Expressive Library for Recursive Queries: LLib and LFrame}{chapter.5}{}}
 \citation{zaharia2012resilient}
 \citation{alsubaiee2014asterixdb}
 \citation{olston2008pig}
 \citation{thusoo2009hive}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Expressive Library for Recursive Queries: LLib and LFrame}{69}{chapter.5}\protected@file@percent }
-\@writefile{lof}{\addvspace {10pt}}
-\@writefile{lot}{\addvspace {10pt}}
-\@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:lib}{{5}{69}{Expressive Library for Recursive Queries: LLib and LFrame}{chapter.5}{}}
 \citation{consens1990low}
 \citation{yang2015parallel}
 \citation{shkapsky2016big}
 \citation{gu2019rasql}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{71}{section.5.1}\protected@file@percent }
+\@writefile{brf}{\backcite{zaharia2012resilient}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{alsubaiee2014asterixdb}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{olston2008pig}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{thusoo2009hive}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{consens1990low}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{yang2015parallel}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{shkapsky2016big}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{gu2019rasql}{{71}{5.1}{section.5.1}}}
 \citation{mckinney2010data}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{70}{section.5.1}\protected@file@percent }
-\@writefile{brf}{\backcite{zaharia2012resilient}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{alsubaiee2014asterixdb}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{olston2008pig}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{thusoo2009hive}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{consens1990low}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{yang2015parallel}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{shkapsky2016big}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{gu2019rasql}{{70}{5.1}{section.5.1}}}
-\@writefile{brf}{\backcite{mckinney2010data}{{71}{5.1}{section.5.1}}}
+\@writefile{brf}{\backcite{mckinney2010data}{{72}{5.1}{section.5.1}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Prelimiaries}{73}{section.5.2}\protected@file@percent }
+\newlabel{pre}{{5.2}{73}{Prelimiaries}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Datalog}{73}{subsection.5.2.1}\protected@file@percent }
 \citation{zaniolo2019monotonic,das2019bigdata}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Prelimiaries}{72}{section.5.2}\protected@file@percent }
-\newlabel{pre}{{5.2}{72}{Prelimiaries}{section.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Datalog}{72}{subsection.5.2.1}\protected@file@percent }
 \citation{sparksql}
 \citation{meng2016mllib}
 \citation{gonzalez2014graphx}
 \citation{dean2004mapreduce}
+\@writefile{brf}{\backcite{zaniolo2019monotonic}{{74}{5.2.1}{subsection.5.2.1}}}
+\@writefile{brf}{\backcite{das2019bigdata}{{74}{5.2.1}{subsection.5.2.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Related Platforms: Apache Spark, BigDatalog and RaSQL}{74}{subsection.5.2.2}\protected@file@percent }
+\@writefile{brf}{\backcite{sparksql}{{74}{5.2.2}{subsection.5.2.2}}}
+\@writefile{brf}{\backcite{meng2016mllib}{{74}{5.2.2}{subsection.5.2.2}}}
+\@writefile{brf}{\backcite{gonzalez2014graphx}{{74}{5.2.2}{subsection.5.2.2}}}
+\@writefile{brf}{\backcite{dean2004mapreduce}{{74}{5.2.2}{subsection.5.2.2}}}
 \citation{shkapsky2016big}
 \citation{gu2019rasql}
-\@writefile{brf}{\backcite{zaniolo2019monotonic}{{73}{5.2.1}{subsection.5.2.1}}}
-\@writefile{brf}{\backcite{das2019bigdata}{{73}{5.2.1}{subsection.5.2.1}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Related Platforms: Apache Spark, BigDatalog and RaSQL}{73}{subsection.5.2.2}\protected@file@percent }
-\@writefile{brf}{\backcite{sparksql}{{73}{5.2.2}{subsection.5.2.2}}}
-\@writefile{brf}{\backcite{meng2016mllib}{{73}{5.2.2}{subsection.5.2.2}}}
-\@writefile{brf}{\backcite{gonzalez2014graphx}{{73}{5.2.2}{subsection.5.2.2}}}
-\@writefile{brf}{\backcite{dean2004mapreduce}{{73}{5.2.2}{subsection.5.2.2}}}
-\@writefile{brf}{\backcite{shkapsky2016big}{{73}{5.2.2}{subsection.5.2.2}}}
 \citation{pythonDataframe}
-\@writefile{brf}{\backcite{gu2019rasql}{{74}{5.2.2}{subsection.5.2.2}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Spark MLlib and DataFrame}{74}{subsection.5.2.3}\protected@file@percent }
-\@writefile{brf}{\backcite{pythonDataframe}{{74}{5.2.3}{subsection.5.2.3}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}LLib}{74}{section.5.3}\protected@file@percent }
-\newlabel{llib}{{5.3}{74}{LLib}{section.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Working Paradigms Comparison: LLib, BigDatalog and RaSQL}{75}{subsection.5.3.1}\protected@file@percent }
-\newlabel{sec:paradigm}{{5.3.1}{75}{Working Paradigms Comparison: LLib, BigDatalog and RaSQL}{subsection.5.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Working paradigm comparison between existing Spark-Based Datalog platforms and LLib.\relax }}{76}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:comparison}{{5.1}{76}{Working paradigm comparison between existing Spark-Based Datalog platforms and LLib.\relax }{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}LLib Processing Pipeline and Underlying Architecture}{76}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.1}Working Session and Acquiring Data}{76}{subsubsection.5.3.2.1}\protected@file@percent }
-\newlabel{sec:data}{{5.3.2.1}{76}{Working Session and Acquiring Data}{subsubsection.5.3.2.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.2}Initializing an Executable Object of LLib and Mapping the Schema}{77}{subsubsection.5.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.3}Execution and Persistence}{78}{subsubsection.5.3.2.3}\protected@file@percent }
+\@writefile{brf}{\backcite{shkapsky2016big}{{75}{5.2.2}{subsection.5.2.2}}}
+\@writefile{brf}{\backcite{gu2019rasql}{{75}{5.2.2}{subsection.5.2.2}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Spark MLlib and DataFrame}{75}{subsection.5.2.3}\protected@file@percent }
+\@writefile{brf}{\backcite{pythonDataframe}{{75}{5.2.3}{subsection.5.2.3}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}LLib}{76}{section.5.3}\protected@file@percent }
+\newlabel{llib}{{5.3}{76}{LLib}{section.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Working Paradigms Comparison: LLib, BigDatalog and RaSQL}{76}{subsection.5.3.1}\protected@file@percent }
+\newlabel{sec:paradigm}{{5.3.1}{76}{Working Paradigms Comparison: LLib, BigDatalog and RaSQL}{subsection.5.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Working paradigm comparison between existing Spark-Based Datalog platforms and LLib.\relax }}{77}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:comparison}{{5.1}{77}{Working paradigm comparison between existing Spark-Based Datalog platforms and LLib.\relax }{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}LLib Processing Pipeline and Underlying Architecture}{78}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.1}Working Session and Acquiring Data}{78}{subsubsection.5.3.2.1}\protected@file@percent }
+\newlabel{sec:data}{{5.3.2.1}{78}{Working Session and Acquiring Data}{subsubsection.5.3.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.2}Initializing an Executable Object of LLib and Mapping the Schema}{78}{subsubsection.5.3.2.2}\protected@file@percent }
 \citation{mlm}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.4}Multiple Data Sources}{79}{subsubsection.5.3.2.4}\protected@file@percent }
-\newlabel{sec:multiple}{{5.3.2.4}{79}{Multiple Data Sources}{subsubsection.5.3.2.4}{}}
-\@writefile{brf}{\backcite{mlm}{{79}{5.3.2.4}{subsubsection.5.3.2.4}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Extension of LLib}{80}{subsection.5.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Collaboration with Other Applications}{81}{subsection.5.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}User Defined Datalog Function}{82}{subsection.5.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}LFrame}{83}{section.5.4}\protected@file@percent }
-\newlabel{lframe}{{5.4}{83}{LFrame}{section.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Conversion from DataFrame to LFrame}{83}{subsection.5.4.1}\protected@file@percent }
-\newlabel{sec:utility}{{5.4.1}{83}{Conversion from DataFrame to LFrame}{subsection.5.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}LFrame: Unary Operation}{83}{subsection.5.4.2}\protected@file@percent }
-\newlabel{sec:unary}{{5.4.2}{83}{LFrame: Unary Operation}{subsection.5.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}LFrame: N-ary Operation}{85}{subsection.5.4.3}\protected@file@percent }
-\newlabel{sec:nary}{{5.4.3}{85}{LFrame: N-ary Operation}{subsection.5.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.3}Execution and Persistence}{80}{subsubsection.5.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.4}Multiple Data Sources}{80}{subsubsection.5.3.2.4}\protected@file@percent }
+\newlabel{sec:multiple}{{5.3.2.4}{80}{Multiple Data Sources}{subsubsection.5.3.2.4}{}}
+\@writefile{brf}{\backcite{mlm}{{80}{5.3.2.4}{subsubsection.5.3.2.4}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Extension of LLib}{82}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Collaboration with Other Applications}{82}{subsection.5.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}User Defined Datalog Function}{83}{subsection.5.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}LFrame}{84}{section.5.4}\protected@file@percent }
+\newlabel{lframe}{{5.4}{84}{LFrame}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Conversion from DataFrame to LFrame}{84}{subsection.5.4.1}\protected@file@percent }
+\newlabel{sec:utility}{{5.4.1}{84}{Conversion from DataFrame to LFrame}{subsection.5.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}LFrame: Unary Operation}{84}{subsection.5.4.2}\protected@file@percent }
+\newlabel{sec:unary}{{5.4.2}{84}{LFrame: Unary Operation}{subsection.5.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}LFrame: N-ary Operation}{86}{subsection.5.4.3}\protected@file@percent }
+\newlabel{sec:nary}{{5.4.3}{86}{LFrame: N-ary Operation}{subsection.5.4.3}{}}
 \citation{py4j}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Multi-language Programming}{87}{section.5.5}\protected@file@percent }
-\newlabel{multi}{{5.5}{87}{Multi-language Programming}{section.5.5}{}}
-\@writefile{brf}{\backcite{py4j}{{87}{5.5}{section.5.5}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Performance Overhead}{87}{section.5.6}\protected@file@percent }
-\newlabel{sec:libperf}{{5.6}{87}{Performance Overhead}{section.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Multi-language Programming}{88}{section.5.5}\protected@file@percent }
+\newlabel{multi}{{5.5}{88}{Multi-language Programming}{section.5.5}{}}
+\@writefile{brf}{\backcite{py4j}{{88}{5.5}{section.5.5}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Performance Overhead}{88}{section.5.6}\protected@file@percent }
+\newlabel{sec:libperf}{{5.6}{88}{Performance Overhead}{section.5.6}{}}
 \citation{Bader2006GTgraphA}
 \citation{shkapsky2016big}
 \citation{duggan2015bigdawg}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Execution time comparison for typical Datalog algorithms.\relax }}{88}{table.caption.28}\protected@file@percent }
-\newlabel{tbl:llibExp}{{5.1}{88}{Execution time comparison for typical Datalog algorithms.\relax }{table.caption.28}{}}
-\@writefile{brf}{\backcite{Bader2006GTgraphA}{{88}{5.6}{table.caption.28}}}
-\@writefile{brf}{\backcite{shkapsky2016big}{{88}{5.6}{table.caption.28}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Conclusion and Future Work}{88}{section.5.7}\protected@file@percent }
-\newlabel{conclusion}{{5.7}{88}{Conclusion and Future Work}{section.5.7}{}}
-\@writefile{brf}{\backcite{duggan2015bigdawg}{{89}{5.7}{section.5.7}}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{90}{chapter.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Execution time comparison for typical Datalog algorithms.\relax }}{89}{table.caption.28}\protected@file@percent }
+\newlabel{tbl:llibExp}{{5.1}{89}{Execution time comparison for typical Datalog algorithms.\relax }{table.caption.28}{}}
+\@writefile{brf}{\backcite{Bader2006GTgraphA}{{89}{5.6}{table.caption.28}}}
+\@writefile{brf}{\backcite{shkapsky2016big}{{89}{5.6}{table.caption.28}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Conclusion}{89}{section.5.7}\protected@file@percent }
+\newlabel{conclusion}{{5.7}{89}{Conclusion}{section.5.7}{}}
+\@writefile{brf}{\backcite{duggan2015bigdawg}{{90}{5.7}{section.5.7}}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{91}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{ch:con}{{6}{90}{Conclusion}{chapter.6}{}}
+\newlabel{ch:con}{{6}{91}{Conclusions and Future Work}{chapter.6}{}}
 \citation{kumar2014normalization,fiscus1997post}
 \citation{liu2014efficient}
 \citation{hakkani2006beyond,tur2002improving}
 \citation{vivaldi}
 \citation{barford-infocom}
 \citation{zhang2017survey,liu2019multi,caruana1997multitask}
-\@writefile{brf}{\backcite{kumar2014normalization}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{fiscus1997post}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{liu2014efficient}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{hakkani2006beyond}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{tur2002improving}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{vivaldi}{{92}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{barford-infocom}{{92}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{kumar2014normalization}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{fiscus1997post}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{liu2014efficient}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{hakkani2006beyond}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{tur2002improving}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{vivaldi}{{93}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{barford-infocom}{{93}{6}{chapter.6}}}
 \citation{zaharia2013discretized}
 \citation{chodorow2013mongodb}
 \citation{duggan2015bigdawg}
 \bibstyle{apa}
 \bibdata{thesis}
-\@writefile{brf}{\backcite{zhang2017survey}{{93}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{liu2019multi}{{93}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{caruana1997multitask}{{93}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{zaharia2013discretized}{{93}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{chodorow2013mongodb}{{93}{6}{chapter.6}}}
-\@writefile{brf}{\backcite{duggan2015bigdawg}{{93}{6}{chapter.6}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliograpy}{93}{section*.29}\protected@file@percent }
-\bibcite{dls}{{1}{}{{dls}}{{}}}
-\bibcite{abadi2016tensorflow}{{2}{2016}{{Abadi et~al.}}{{}}}
-\bibcite{alsubaiee2014asterixdb}{{3}{2014}{{Alsubaiee et~al.}}{{}}}
-\bibcite{amodei2016deep}{{4}{2016}{{Amodei et~al.}}{{}}}
-\bibcite{arbor-spoofing}{{5}{}{{arbor}}{{}}}
-\bibcite{ark}{{6}{}{{Ark}}{{}}}
-\bibcite{sparksql}{{7}{2015}{{Armbrust et~al.}}{{}}}
-\bibcite{Bader2006GTgraphA}{{8}{2006}{{Bader and Madduri}}{{}}}
-\bibcite{bai2017tapas}{{9}{2017}{{Bai et~al.}}{{}}}
-\bibcite{rpf}{{10}{2004}{{Baker and Savola}}{{}}}
-\bibcite{bakhtiary2015speeding}{{11}{2015}{{Bakhtiary et~al.}}{{}}}
-\bibcite{barkan2016item2vec}{{12}{2016}{{Barkan and Koenigstein}}{{}}}
-\bibcite{bengio2008adaptive}{{13}{2008}{{Bengio}}{{}}}
-\bibcite{blanc2017adaptive}{{14}{2017}{{Blanc and Rendle}}{{}}}
-\bibcite{fastText}{{15}{2017}{{Bojanowski et~al.}}{{}}}
-\bibcite{bose2018adversarial}{{16}{2018}{{Bose et~al.}}{{}}}
-\bibcite{spm}{{17}{2005}{{Bremler-Barr and Levy}}{{}}}
-\bibcite{bruzzone1999incremental}{{18}{1999}{{Bruzzone and Prieto}}{{}}}
-\bibcite{caruana1997multitask}{{19}{1997}{{Caruana}}{{}}}
-\bibcite{chan2004improving}{{20}{2004}{{Chan and Woodland}}{{}}}
-\bibcite{charniak2005coarse}{{21}{2005}{{Charniak and Johnson}}{{}}}
-\bibcite{chen2015strategies}{{22}{2015}{{Chen et~al.}}{{}}}
-\bibcite{spoofing-ddos}{{23}{2008}{{Chen et~al.}}{{}}}
-\bibcite{chodorow2013mongodb}{{24}{2013}{{Chodorow}}{{}}}
-\bibcite{cloudflare}{{25}{}{{cloudflare}}{{}}}
-\bibcite{collins2005discriminative}{{26}{2005}{{Collins et~al.}}{{}}}
-\bibcite{consens1990low}{{27}{1990}{{Consens and Mendelzon}}{{}}}
-\bibcite{pic}{{28}{2004}{{Costa et~al.}}{{}}}
-\bibcite{cunha}{{29}{2011}{{Cunha et~al.}}{{}}}
-\bibcite{vivaldi}{{30}{2004}{{Dabek et~al.}}{{}}}
-\bibcite{py4j}{{31}{2009}{{Dagenais}}{{}}}
-\bibcite{das2019bigdata}{{32}{2019}{{Das et~al.}}{{}}}
-\bibcite{de2015exploration}{{33}{2015}{{de~Br{\'e}bisson and Vincent}}{{}}}
-\bibcite{dean2004mapreduce}{{34}{2004}{{Dean and Ghemawat}}{{}}}
-\bibcite{devlin2018bert}{{35}{2018}{{Devlin et~al.}}{{}}}
-\bibcite{dikici2012classification}{{36}{2012}{{Dikici et~al.}}{{}}}
-\bibcite{idpf}{{37}{2008}{{Duan et~al.}}{{}}}
-\bibcite{duggan2015bigdawg}{{38}{2015}{{Duggan et~al.}}{{}}}
-\bibcite{erhan2010does}{{39}{2010}{{Erhan et~al.}}{{}}}
-\bibcite{barford-sigcomm}{{40}{2008}{{Eriksson et~al.}}{{}}}
-\bibcite{barford-infocom}{{41}{2009}{{Eriksson et~al.}}{{}}}
-\bibcite{barford-imc}{{42}{2007}{{Eriksson et~al.}}{{}}}
-\bibcite{fastTextGithub}{{43}{2019}{{fastText}}{{}}}
-\bibcite{self-driving}{{44}{2017}{{Feamster and Rexford}}{{}}}
-\bibcite{puzzles}{{45}{2005}{{Feng et~al.}}{{}}}
-\bibcite{ingress}{{46}{2000}{{Ferguson and Senie}}{{}}}
-\bibcite{fiscus1997post}{{47}{1997}{{Fiscus}}{{}}}
-\bibcite{ipsec}{{48}{2011}{{Frankel and Krishnan}}{{}}}
-\bibcite{github-spoofing}{{49}{}{{github}}{{}}}
-\bibcite{goldberg2014word2vec}{{50}{2014}{{Goldberg and Levy}}{{}}}
-\bibcite{gong2013multi}{{51}{2013}{{Gong et~al.}}{{}}}
-\bibcite{gonzalez2014graphx}{{52}{2014}{{Gonzalez et~al.}}{{}}}
-\bibcite{net2vec}{{53}{2017}{{Gonzalez et~al.}}{{}}}
-\bibcite{Goodman}{{54}{}{{Goodman}}{{}}}
-\bibcite{grave2017efficient}{{55}{2017}{{Grave et~al.}}{{}}}
-\bibcite{graves2013speech}{{56}{2013}{{Graves et~al.}}{{}}}
-\bibcite{node2vec-kdd2016}{{57}{2016a}{{Grover and Leskovec}}{{}}}
-\bibcite{grover2016node2vec}{{58}{2016b}{{Grover and Leskovec}}{{}}}
-\bibcite{gu2019rasql}{{59}{2019}{{Gu et~al.}}{{}}}
-\bibcite{NCE}{{60}{2010}{{Gutmann and Hyv{\"a}rinen}}{{}}}
-\bibcite{hakkani2006beyond}{{61}{2006}{{Hakkani-T{\"u}r et~al.}}{{}}}
-\bibcite{he2016deep}{{62}{2016}{{He et~al.}}{{}}}
-\bibcite{hcf}{{63}{}{{Jin et~al.}}{{}}}
-\bibcite{hc-filter}{{64}{2003}{{Jin et~al.}}{{}}}
-\bibcite{asym}{{65}{2010}{{John et~al.}}{{}}}
-\bibcite{jyothi2012large}{{66}{2012}{{Jyothi et~al.}}{{}}}
-\bibcite{karpathy2015deep}{{67}{2015}{{Karpathy and Fei-Fei}}{{}}}
-\bibcite{egress}{{68}{2000}{{Killalea}}{{}}}
-\bibcite{kingma2014adam}{{69}{2014}{{Kingma and Ba}}{{}}}
-\bibcite{kumar2014normalization}{{70}{2014}{{Kumar et~al.}}{{}}}
-\bibcite{lecun2015deep}{{71}{2015}{{LeCun et~al.}}{{}}}
-\bibcite{packetlab}{{72}{2017}{{Levchenko et~al.}}{{}}}
-\bibcite{levy2014neural}{{73}{2014}{{Levy and Goldberg}}{{}}}
-\bibcite{dip}{{74}{2018a}{{Li et~al.}}{{}}}
-\bibcite{dip-ccr}{{75}{2018b}{{Li et~al.}}{{}}}
-\bibcite{liu2019multi}{{76}{2019}{{Liu et~al.}}{{}}}
-\bibcite{liu2014efficient}{{77}{2014}{{Liu et~al.}}{{}}}
-\bibcite{pam17-loops}{{78}{2017}{{Lone et~al.}}{{}}}
-\bibcite{peerwise}{{79}{2007}{{Lumezanu et~al.}}{{}}}
-\bibcite{luong2013better}{{80}{2013}{{Luong et~al.}}{{}}}
-\bibcite{marcus-etal-1993-building}{{81}{1993}{{Marcus et~al.}}{{}}}
-\bibcite{mckinney2010data}{{82}{}{{McKinney et~al.}}{{}}}
-\bibcite{pythonDataframe}{{83}{2010}{{McKinney et~al.}}{{}}}
-\bibcite{meng2016mllib}{{84}{2016}{{Meng et~al.}}{{}}}
-\bibcite{silkroad}{{85}{2017}{{Miao et~al.}}{{}}}
-\bibcite{mikolov2013efficient}{{86}{2013a}{{Mikolov et~al.}}{{}}}
-\bibcite{mikolov2010recurrent}{{87}{2010}{{Mikolov et~al.}}{{}}}
-\bibcite{mikolov2013exploiting}{{88}{2013b}{{Mikolov et~al.}}{{}}}
-\bibcite{mikolov2013distributed}{{89}{2013c}{{Mikolov et~al.}}{{}}}
-\bibcite{mlm}{{90}{2008}{{MLM}}{{}}}
-\bibcite{mnih2012fast}{{91}{2012}{{Mnih and Teh}}{{}}}
-\bibcite{morbini2012reranking}{{92}{2012}{{Morbini et~al.}}{{}}}
-\bibcite{morin2005hierarchical}{{93}{2005}{{Morin and Bengio}}{{}}}
-\bibcite{mussmann2017fast}{{94}{2017}{{Mussmann et~al.}}{{}}}
-\bibcite{gnp}{{95}{2002}{{Ng and Zhang}}{{}}}
-\bibcite{node2vecGithub}{{96}{2019}{{node2vec}}{{}}}
-\bibcite{oba2007approach}{{97}{2007}{{Oba et~al.}}{{}}}
-\bibcite{olston2008pig}{{98}{2008}{{Olston et~al.}}{{}}}
-\bibcite{reasons}{{99}{2016}{{Padmanabhan et~al.}}{{}}}
-\bibcite{rbf}{{100}{2001}{{Park and Lee}}{{}}}
-\bibcite{paszke2019pytorch}{{101}{2019}{{Paszke et~al.}}{{}}}
-\bibcite{peng2013search}{{102}{2013}{{Peng et~al.}}{{}}}
-\bibcite{pyxida}{{103}{}{{Pyxida}}{{}}}
-\bibcite{rawat2019sampled}{{104}{2019}{{Rawat et~al.}}{{}}}
-\bibcite{routeviews}{{105}{}{{RouteViews}}{{}}}
-\bibcite{ruiz2018augment}{{106}{2018}{{Ruiz et~al.}}{{}}}
-\bibcite{sak2010fly}{{107}{2010}{{Sak et~al.}}{{}}}
-\bibcite{discriminative}{{108}{2011a}{{Sak et~al.}}{{}}}
-\bibcite{Sak2011DiscriminativeRO}{{109}{2011b}{{Sak et~al.}}{{}}}
-\bibcite{schroff2015facenet}{{110}{2015}{{Schroff et~al.}}{{}}}
-\bibcite{schuster1997bidirectional}{{111}{1997}{{Schuster and Paliwal}}{{}}}
-\bibcite{sennrich2015neural}{{112}{2015}{{Sennrich et~al.}}{{}}}
-\bibcite{shkapsky2016big}{{113}{2016}{{Shkapsky et~al.}}{{}}}
-\bibcite{ipsec-overhead}{{114}{2005}{{Shue et~al.}}{{}}}
-\bibcite{vern}{{115}{2010}{{Sommer and Paxson}}{{}}}
-\bibcite{spearman1904proof}{{116}{1904}{{Spearman}}{{}}}
-\bibcite{spoofing-ps}{{117}{}{{spoofing-ps}}{{}}}
-\bibcite{spoofing-state}{{118}{}{{spoofing-state}}{{}}}
-\bibcite{rocketfuel}{{119}{2003}{{Spring et~al.}}{{}}}
-\bibcite{thusoo2009hive}{{120}{2009}{{Thusoo et~al.}}{{}}}
-\bibcite{tur2011spoken}{{121}{2011}{{Tur and De~Mori}}{{}}}
-\bibcite{tur2002improving}{{122}{2002}{{Tur et~al.}}{{}}}
-\bibcite{vijayanarasimhan2014deep}{{123}{2014}{{Vijayanarasimhan et~al.}}{{}}}
-\bibcite{vincent2015efficient}{{124}{2015}{{Vincent et~al.}}{{}}}
-\bibcite{dn-emb}{{125}{2016a}{{Wang et~al.}}{{}}}
-\bibcite{net-emb}{{126}{2016b}{{Wang et~al.}}{{}}}
-\bibcite{iphc}{{127}{2007}{{Wang et~al.}}{{}}}
-\bibcite{wang2018learning}{{128}{2018}{{Wang et~al.}}{{}}}
-\bibcite{wang2017knowledge}{{129}{2017}{{Wang et~al.}}{{}}}
-\bibcite{word2vecGithub}{{130}{2019}{{word2vec}}{{}}}
-\bibcite{spi}{{131}{2006}{{Yaar et~al.}}{{}}}
-\bibcite{yang2015parallel}{{132}{}{{Yang et~al.}}{{}}}
-\bibcite{Zafarani+Liu:2009}{{133}{2009}{{Zafarani and Liu}}{{}}}
-\bibcite{zaharia2012resilient}{{134}{2012}{{Zaharia et~al.}}{{}}}
-\bibcite{zaharia2010spark}{{135}{}{{Zaharia et~al.}}{{}}}
-\bibcite{zaharia2013discretized}{{136}{2013}{{Zaharia et~al.}}{{}}}
-\bibcite{zaniolo2019monotonic}{{137}{2019}{{Zaniolo et~al.}}{{}}}
-\bibcite{zaremba2014recurrent}{{138}{2014}{{Zaremba et~al.}}{{}}}
-\bibcite{zhang2017survey}{{139}{2017}{{Zhang and Yang}}{{}}}
-\bibcite{zhao2011efficient}{{140}{2011}{{Zhao et~al.}}{{}}}
+\@writefile{brf}{\backcite{zhang2017survey}{{94}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{liu2019multi}{{94}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{caruana1997multitask}{{94}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{zaharia2013discretized}{{94}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{chodorow2013mongodb}{{94}{6}{chapter.6}}}
+\@writefile{brf}{\backcite{duggan2015bigdawg}{{94}{6}{chapter.6}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliograpy}{94}{section*.29}\protected@file@percent }
+\bibcite{abadi2016tensorflow}{{1}{2016}{{Abadi et~al.}}{{}}}
+\bibcite{alsubaiee2014asterixdb}{{2}{2014}{{Alsubaiee et~al.}}{{}}}
+\bibcite{amodei2016deep}{{3}{2016}{{Amodei et~al.}}{{}}}
+\bibcite{ark}{{4}{}{{Ark IPv4}}{{}}}
+\bibcite{sparksql}{{5}{2015}{{Armbrust et~al.}}{{}}}
+\bibcite{Bader2006GTgraphA}{{6}{2006}{{Bader and Madduri}}{{}}}
+\bibcite{bai2017tapas}{{7}{2017}{{Bai et~al.}}{{}}}
+\bibcite{rpf}{{8}{2004}{{Baker and Savola}}{{}}}
+\bibcite{bakhtiary2015speeding}{{9}{2015}{{Bakhtiary et~al.}}{{}}}
+\bibcite{barkan2016item2vec}{{10}{2016}{{Barkan and Koenigstein}}{{}}}
+\bibcite{bengio2008adaptive}{{11}{2008}{{Bengio}}{{}}}
+\bibcite{blanc2017adaptive}{{12}{2017}{{Blanc and Rendle}}{{}}}
+\bibcite{fastText}{{13}{2017}{{Bojanowski et~al.}}{{}}}
+\bibcite{bose2018adversarial}{{14}{2018}{{Bose et~al.}}{{}}}
+\bibcite{spm}{{15}{2005}{{Bremler-Barr and Levy}}{{}}}
+\bibcite{bruzzone1999incremental}{{16}{1999}{{Bruzzone and Prieto}}{{}}}
+\bibcite{caruana1997multitask}{{17}{1997}{{Caruana}}{{}}}
+\bibcite{chan2004improving}{{18}{2004}{{Chan and Woodland}}{{}}}
+\bibcite{charniak2005coarse}{{19}{2005}{{Charniak and Johnson}}{{}}}
+\bibcite{chen2015strategies}{{20}{2015}{{Chen et~al.}}{{}}}
+\bibcite{spoofing-ddos}{{21}{2008}{{Chen et~al.}}{{}}}
+\bibcite{chodorow2013mongodb}{{22}{2013}{{Chodorow}}{{}}}
+\bibcite{cloudflare}{{23}{}{{Cloudflare}}{{}}}
+\bibcite{collins2005discriminative}{{24}{2005}{{Collins et~al.}}{{}}}
+\bibcite{consens1990low}{{25}{1990}{{Consens and Mendelzon}}{{}}}
+\bibcite{pic}{{26}{2004}{{Costa et~al.}}{{}}}
+\bibcite{cunha}{{27}{2011}{{Cunha et~al.}}{{}}}
+\bibcite{vivaldi}{{28}{2004}{{Dabek et~al.}}{{}}}
+\bibcite{py4j}{{29}{2009}{{Dagenais}}{{}}}
+\bibcite{das2019bigdata}{{30}{2019}{{Das et~al.}}{{}}}
+\bibcite{github-spoofing}{{31}{}{{DDoS incident}}{{}}}
+\bibcite{de2015exploration}{{32}{2015}{{De~Br{\'e}bisson and Vincent}}{{}}}
+\bibcite{dean2004mapreduce}{{33}{2004}{{Dean and Ghemawat}}{{}}}
+\bibcite{devlin2018bert}{{34}{2018}{{Devlin et~al.}}{{}}}
+\bibcite{dikici2012classification}{{35}{2012}{{Dikici et~al.}}{{}}}
+\bibcite{idpf}{{36}{2008}{{Duan et~al.}}{{}}}
+\bibcite{duggan2015bigdawg}{{37}{2015}{{Duggan et~al.}}{{}}}
+\bibcite{erhan2010does}{{38}{2010}{{Erhan et~al.}}{{}}}
+\bibcite{barford-sigcomm}{{39}{2008}{{Eriksson et~al.}}{{}}}
+\bibcite{barford-infocom}{{40}{2009}{{Eriksson et~al.}}{{}}}
+\bibcite{barford-imc}{{41}{2007}{{Eriksson et~al.}}{{}}}
+\bibcite{fastTextGithub}{{42}{2019}{{FastText}}{{}}}
+\bibcite{self-driving}{{43}{2017}{{Feamster and Rexford}}{{}}}
+\bibcite{puzzles}{{44}{2005}{{Feng et~al.}}{{}}}
+\bibcite{ingress}{{45}{2000}{{Ferguson and Senie}}{{}}}
+\bibcite{fiscus1997post}{{46}{1997}{{Fiscus}}{{}}}
+\bibcite{ipsec}{{47}{2011}{{Frankel and Krishnan}}{{}}}
+\bibcite{goldberg2014word2vec}{{48}{2014}{{Goldberg and Levy}}{{}}}
+\bibcite{gong2013multi}{{49}{2013}{{Gong et~al.}}{{}}}
+\bibcite{gonzalez2014graphx}{{50}{2014}{{Gonzalez et~al.}}{{}}}
+\bibcite{net2vec}{{51}{2017}{{Gonzalez et~al.}}{{}}}
+\bibcite{Goodman}{{52}{}{{Goodman}}{{}}}
+\bibcite{grave2017efficient}{{53}{2017}{{Grave et~al.}}{{}}}
+\bibcite{graves2013speech}{{54}{2013}{{Graves et~al.}}{{}}}
+\bibcite{node2vec-kdd2016}{{55}{2016a}{{Grover and Leskovec}}{{}}}
+\bibcite{grover2016node2vec}{{56}{2016b}{{Grover and Leskovec}}{{}}}
+\bibcite{gu2019rasql}{{57}{2019}{{Gu et~al.}}{{}}}
+\bibcite{NCE}{{58}{2010}{{Gutmann and Hyv{\"a}rinen}}{{}}}
+\bibcite{hakkani2006beyond}{{59}{2006}{{Hakkani-T{\"u}r et~al.}}{{}}}
+\bibcite{he2016deep}{{60}{2016}{{He et~al.}}{{}}}
+\bibcite{hcf}{{61}{}{{Jin et~al.}}{{}}}
+\bibcite{hc-filter}{{62}{2003}{{Jin et~al.}}{{}}}
+\bibcite{asym}{{63}{2010}{{John et~al.}}{{}}}
+\bibcite{jyothi2012large}{{64}{2012}{{Jyothi et~al.}}{{}}}
+\bibcite{karpathy2015deep}{{65}{2015}{{Karpathy and Fei-Fei}}{{}}}
+\bibcite{egress}{{66}{2000}{{Killalea}}{{}}}
+\bibcite{kingma2014adam}{{67}{2014}{{Kingma and Ba}}{{}}}
+\bibcite{kumar2014normalization}{{68}{2014}{{Kumar et~al.}}{{}}}
+\bibcite{lecun2015deep}{{69}{2015}{{LeCun et~al.}}{{}}}
+\bibcite{packetlab}{{70}{2017}{{Levchenko et~al.}}{{}}}
+\bibcite{levy2014neural}{{71}{2014}{{Levy and Goldberg}}{{}}}
+\bibcite{dip}{{72}{2018a}{{Li et~al.}}{{}}}
+\bibcite{dip-ccr}{{73}{2018b}{{Li et~al.}}{{}}}
+\bibcite{liu2019multi}{{74}{2019}{{Liu et~al.}}{{}}}
+\bibcite{liu2014efficient}{{75}{2014}{{Liu et~al.}}{{}}}
+\bibcite{pam17-loops}{{76}{2017}{{Lone et~al.}}{{}}}
+\bibcite{peerwise}{{77}{2007}{{Lumezanu et~al.}}{{}}}
+\bibcite{luong2013better}{{78}{2013}{{Luong et~al.}}{{}}}
+\bibcite{mckinney2010data}{{79}{}{{McKinney et~al.}}{{}}}
+\bibcite{pythonDataframe}{{80}{2010}{{McKinney et~al.}}{{}}}
+\bibcite{meng2016mllib}{{81}{2016}{{Meng et~al.}}{{}}}
+\bibcite{silkroad}{{82}{2017}{{Miao et~al.}}{{}}}
+\bibcite{mikolov2013efficient}{{83}{2013a}{{Mikolov et~al.}}{{}}}
+\bibcite{mikolov2010recurrent}{{84}{2010}{{Mikolov et~al.}}{{}}}
+\bibcite{mikolov2013exploiting}{{85}{2013b}{{Mikolov et~al.}}{{}}}
+\bibcite{mikolov2013distributed}{{86}{2013c}{{Mikolov et~al.}}{{}}}
+\bibcite{mlm}{{87}{2008}{{MLM}}{{}}}
+\bibcite{mnih2012fast}{{88}{2012}{{Mnih and Teh}}{{}}}
+\bibcite{morbini2012reranking}{{89}{2012}{{Morbini et~al.}}{{}}}
+\bibcite{morin2005hierarchical}{{90}{2005}{{Morin and Bengio}}{{}}}
+\bibcite{mussmann2017fast}{{91}{2017}{{Mussmann et~al.}}{{}}}
+\bibcite{gnp}{{92}{2002}{{Ng and Zhang}}{{}}}
+\bibcite{node2vecGithub}{{93}{2019}{{Node2vec}}{{}}}
+\bibcite{oba2007approach}{{94}{2007}{{Oba et~al.}}{{}}}
+\bibcite{olston2008pig}{{95}{2008}{{Olston et~al.}}{{}}}
+\bibcite{reasons}{{96}{2016}{{Padmanabhan et~al.}}{{}}}
+\bibcite{rbf}{{97}{2001}{{Park and Lee}}{{}}}
+\bibcite{paszke2019pytorch}{{98}{2019}{{Paszke et~al.}}{{}}}
+\bibcite{peng2013search}{{99}{2013}{{Peng et~al.}}{{}}}
+\bibcite{pyxida}{{100}{}{{Pyxida}}{{}}}
+\bibcite{rawat2019sampled}{{101}{2019}{{Rawat et~al.}}{{}}}
+\bibcite{routeviews}{{102}{}{{RouteViews}}{{}}}
+\bibcite{ruiz2018augment}{{103}{2018}{{Ruiz et~al.}}{{}}}
+\bibcite{sak2010fly}{{104}{2010}{{Sak et~al.}}{{}}}
+\bibcite{discriminative}{{105}{2011a}{{Sak et~al.}}{{}}}
+\bibcite{Sak2011DiscriminativeRO}{{106}{2011b}{{Sak et~al.}}{{}}}
+\bibcite{schroff2015facenet}{{107}{2015}{{Schroff et~al.}}{{}}}
+\bibcite{schuster1997bidirectional}{{108}{1997}{{Schuster and Paliwal}}{{}}}
+\bibcite{sennrich2015neural}{{109}{2015}{{Sennrich et~al.}}{{}}}
+\bibcite{shkapsky2016big}{{110}{2016}{{Shkapsky et~al.}}{{}}}
+\bibcite{ipsec-overhead}{{111}{2005}{{Shue et~al.}}{{}}}
+\bibcite{vern}{{112}{2010}{{Sommer and Paxson}}{{}}}
+\bibcite{spearman1904proof}{{113}{1904}{{Spearman}}{{}}}
+\bibcite{spoofing-ps}{{114}{}{{Spoofing-ps}}{{}}}
+\bibcite{spoofing-state}{{115}{}{{Spoofing-state}}{{}}}
+\bibcite{rocketfuel}{{116}{2003}{{Spring et~al.}}{{}}}
+\bibcite{thusoo2009hive}{{117}{2009}{{Thusoo et~al.}}{{}}}
+\bibcite{tur2011spoken}{{118}{2011}{{Tur and De~Mori}}{{}}}
+\bibcite{tur2002improving}{{119}{2002}{{Tur et~al.}}{{}}}
+\bibcite{vijayanarasimhan2014deep}{{120}{2014}{{Vijayanarasimhan et~al.}}{{}}}
+\bibcite{vincent2015efficient}{{121}{2015}{{Vincent et~al.}}{{}}}
+\bibcite{dn-emb}{{122}{2016a}{{Wang et~al.}}{{}}}
+\bibcite{net-emb}{{123}{2016b}{{Wang et~al.}}{{}}}
+\bibcite{iphc}{{124}{2007}{{Wang et~al.}}{{}}}
+\bibcite{wang2018learning}{{125}{2018}{{Wang et~al.}}{{}}}
+\bibcite{wang2017knowledge}{{126}{2017}{{Wang et~al.}}{{}}}
+\bibcite{word2vecGithub}{{127}{2019}{{Word2vec}}{{}}}
+\bibcite{spi}{{128}{2006}{{Yaar et~al.}}{{}}}
+\bibcite{yang2015parallel}{{129}{}{{Yang et~al.}}{{}}}
+\bibcite{Zafarani+Liu:2009}{{130}{2009}{{Zafarani and Liu}}{{}}}
+\bibcite{zaharia2012resilient}{{131}{2012}{{Zaharia et~al.}}{{}}}
+\bibcite{zaharia2010spark}{{132}{}{{Zaharia et~al.}}{{}}}
+\bibcite{zaharia2013discretized}{{133}{2013}{{Zaharia et~al.}}{{}}}
+\bibcite{zaniolo2019monotonic}{{134}{2019}{{Zaniolo et~al.}}{{}}}
+\bibcite{zhang2017survey}{{135}{2017}{{Zhang and Yang}}{{}}}
+\bibcite{zhao2011efficient}{{136}{2011}{{Zhao et~al.}}{{}}}

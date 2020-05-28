@@ -1,5 +1,7 @@
 %We propose to use deep learning on neural networks to learn structural properties of the Internet, such as node clustering or distance between nodes. 
-In this chapter, we firstly present \system{}, a deep learning based framework to learn structural properties of the Internet, such as node clustering or distance between nodes, from the IP addresses. 
+In this chapter, we discuss IP addresses (IPs), the unused data in internet embedding domain by illustrating (1) the reasons why IPs could reveal the structural information of  nodes in the Internet, (2) one approach  to incorporate the IPs in the internet embedding and (3)  one application which the new embedding framework can be utilized in. 
+
+ We firstly present \system{}, a deep learning based framework to learn structural properties of the Internet, such as node clustering or distance between nodes, from the IP addresses. 
 %
 Existing embedding-based approaches use linear algorithms on a single source of data, such as latency or hop count information, to approximate the position of a node in the Internet.
 %
@@ -108,7 +110,7 @@ Using gradient-based back-propagation algorithms to optimize the objective funct
 
 \system{} learns an embedding model that accurately reflects the structure of the Internet, \ie{}, preserves node clustering and distances between nodes. The goal of learning is to minimize the prediction error for the distance between any two nodes. The learned model is defined by the structure of the neural network and the final values for the weights and biases of each neuron. Next, we describe the data used in learning and how we construct the neural network.
 
-\subsubsection{Data sources} 
+\subsubsection{Data Sources} 
 
 %Our goal is to learn a network model that accurately reflects the structure of the Internet, \ie{}, preserves node clustering and distances between nodes. Next we identify and analyze several data sources that determine local and global structure properties.
 
@@ -120,7 +122,7 @@ The routable part, usually expressed by an integer representing the number of bi
 
 
 
-\subsubsection{IP transformation}
+\subsubsection{IP Transformation}
 \label{dip:ipnorm}
 
 The key idea of our work is to use both local (IPs and routing information) and global (hop counts) structural information to guide the embedding of network nodes. By utilizing deep learning for embedding, we can identify and use hidden features encoded in the IP address of a given node. We perform several transformations on the input, guided by observations on real network data.
@@ -140,13 +142,18 @@ Figure~\ref{fig:difference}(right). The smaller the standard deviation is, the m
 
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{Graph/dip/normalized-ip}
+	\begin{center}
+	\includegraphics[width=.8\linewidth]{Graph/dip/normalized-ip}
+		\end{center}
 	\caption{Generating a normalized IP address for 192.168.133.130/20.}
 	\label{fig:normalizedip}
 \end{figure}
 
 \begin{figure*}[t]
-	\includegraphics[width=.9\textwidth]{Graph/dip/neural-network-2}
+	\begin{center}
+			\includegraphics[width=.9\textwidth]{Graph/dip/neural-network-2}
+	\end{center}
+
 	\caption{The neural network used for training our embedding model. The first eight layers receive the normalized IP addresses as input and compute the IP representations. The ninth layer estimates the hop count between two IP addresses and the tenth layer measures the model error. Elements in red are input. For simplicity we depict the input as one-dimensional vectors (one normalized IP); in reality, all inputs are matrices.}
 	\label{fig:neuralnetwork}
 \end{figure*}
@@ -176,7 +183,7 @@ As shown in Figure~\ref{fig:difference}, an IP address can help learn node repre
 
 %\textbf{Hop count.} This is represented by the distances between the pairs of IPs. Because %it requires two IP addresses, we propose that at each step of the algorithm we feed the IP %address to obtain an initial representation which we refine using the distance. 
 
-\subsubsection{Network construction}
+\subsubsection{Network Construction}
 
 Driven by the insight gained in the previous section, we develop \system{}, a deep neural network that computes vector representations of network hosts based on their IP addresses and the hop counts to other hosts. 
 %
@@ -258,7 +265,7 @@ To minimize the cost, we utilize the Adam algorithm, a gradient descent based ba
 \subsection{Evaluation}
 \label{dip:eval}
 
-\subsubsection{Data and methodology}
+\subsubsection{Data and Methodology}
 \label{subsec:data}
 
 We use a large data set of network hop counts from the Ark project~\citep{ark}. The data contains hop count information from 95 geographically distributed servers to ten million IP addresses that cover all routable prefixes in the Internet. We use data collected by Ark during Jun 2015. For each IP in the data, we look up the routable prefix and normalize it using the steps in Section~\ref{dip:ipnorm}.
@@ -270,7 +277,7 @@ We build a prototype for \system{} using TensorFlow. We train the neural network
 
 %We generate testing sets by sampling the orig- inal data and making sure to preserve the parameters of training (e.g., the same number of servers or IPs).
 
-\subsubsection{Embedding accuracy}
+\subsubsection{Embedding Accuracy}
 
 \textbf{Clustering.} First, we assess how well \system{} preserves the clustering of hosts in the original IP space. For this, we group all IPs first according to their routable prefix and then at random. For each cluster we compute an embedding similarity metric, defined as the ratio between the average distance between all pairs of IP representations in the cluster and the maximum distance across all clusters. The lower the similarity value, the closer to each other the IPs of a cluster are in the embedding space. Figure~\ref{fig:clustering}(left) shows the similarity distribution for prefix-based and random clusters. Each IP representations is a 140-dimensional vector and computed after training the network using 10,000 IP addresses and 95 servers. Our embedding preserves the clustering of the original IP space well. 
 
@@ -294,7 +301,7 @@ We build a prototype for \system{} using TensorFlow. We train the neural network
 %\textbf{Mean estimation approach.} For the hop counts in training set between hosts and servers, we group the hop counts by servers. In each group, we calculate the mean value as the estimated hop count for the test set's same server. Meanwhile, the average value of the whole training hop counts is used  when the server in testing set is not related in training set. 
 
 
-We look at how well our embedding estimates the hop count value between a host and a server. We first consider only the IP addresses used in the training process (\ie{}, {\em known IPs}). For this, we train a model using 90\% of all host-server pairs and use the remaining 10\% for testing. Figure~\ref{fig:clustering}(right) compares the absolute error between estimated and real hop count for \system{} and {\em mean} for the 10,000 IPs data set on 140 dimensions. \system{} predicts distances with a mean absolute error of around two hops (23\% mean relative error) and reduces the error of the {\em mean} estimation by almost 30\%.
+We look at how well our embedding estimates the hop count value between a host and a server. We first consider only the IP addresses used in the training process (\ie{}, {\em known IPs}). For this, we train a model using 90\% of all host-server pairs and use the remaining 10\% for testing. Figure~\ref{fig:clustering} (right) compares the absolute error between estimated and real hop count for \system{} and {\em mean} for the 10,000 IPs data set on 140 dimensions. \system{} predicts distances with a mean absolute error of around two hops (23\% mean relative error) and reduces the error of the {\em mean} estimation by almost 30\%.
 %
 Table~\ref{tab:abserror} presents the average absolute error and standard deviation for hop count estimation for embeddings trained with different number of hosts, servers, or dimensions. As expected, increasing the the number of IPs, servers, or the dimensionality reduces the absolute error. We also trained models with parameters outside the ranges presented in the table but found no improvement.
 
@@ -372,6 +379,7 @@ Table~\ref{tab:abserror} presents the average absolute error and standard deviat
 
 \begin{table}
 	\centering
+		\scalebox{0.9}{
 		\begin{tabular}{|c|c|c|c|c|}
 			\multicolumn{1}{c}{} & \multicolumn{2}{c|}{\bf \system{}} & \multicolumn{2}{c}{\textbf Mean}\\
 			\cline{2-5}
@@ -397,6 +405,7 @@ Table~\ref{tab:abserror} presents the average absolute error and standard deviat
 			170 & 2.19 (1.86) & 2.72 (2.33) & 3.00 (2.42) & 3.04 (2.43) \\
 			\hline
 	\end{tabular}
+}
    
 	\caption{Absolute mean error (standard deviation between brackets) of distance prediction of \system{} and {\em mean}, for both known and new IPs, when varying the number of IPs, the number of servers and the embedding dimension. The default values are 10,000 IPs, 95 servers, and 140 dimensions.}
 	\label{tab:abserror}
@@ -412,7 +421,7 @@ Figure~\ref{fig:clustering} (right) and Table~\ref{tab:abserror} show that \syst
 
 
 %\vspace{-0.5cm}
-\subsection{Discussion}
+\subsection{Discussion: Limitations and Opportunities}
 \label{dip:discussion}
 
 We discuss several future applications and directions of using deep learning to understand and capture the Internet structure.
@@ -425,7 +434,7 @@ Furthermore, AS membership information could help find more accurate representat
 
 \textbf{Applications.} Building a model that accurately predicts structural properties of the Internet has several applications. Knowing the distance to remote IPs can help selecting a load balancing server or an overlay peer more efficiently and without having to perform expensive measurements. Understanding how nodes are clustered can make the transmission of video or large files faster by using close-by CDN nodes. 
 %
-\system{} can be a passive defense mechanism against IP spoofing attacks, where malicious users change the source IP of attack packets to avoid identification and subvert authentication. By comparing the predicted distance according to the spoofed source IP to the real distance (extracted from a packet's TTL field), one could verify whether the packet is spoofed or not~\citep{hc-filter}. 
+\system{} can be a passive defense mechanism against IP spoofing attacks, where malicious users change the source IP of attack packets to avoid identification and subvert authentication. By comparing the predicted distance according to the spoofed source IP to the real distance (extracted from a packet's TTL field), one could verify whether the packet is spoofed or not~\citep{hc-filter}.  This idea inspires our next research work introduced in the next section  (Learning IP Maps for Network Spoofing Detection).  
 
 %Furthermore, to find the true source of attack traffic, one could find the true representations of the real source and map it back to the IP space. We are currently working towards extending our modeling technique to offer such security services.
 
@@ -437,10 +446,7 @@ While our preliminary experiments focused on accuracy, the performance of buildi
 
 Because our data is sparse, not even the best embedding may be able to recover all structural properties. While we show that our results are reasonably accurate, even when we have less than 15\% of all distances available, getting more data is clearly helpful~\citep{barford-infocom}. We plan to use active monitoring techniques (\eg{}, {\em traceroute}) to collect more information for the training phase. Knowing the IPs and connectivity of routers in the network would make the training data set richer and constrain the representation of end-hosts further.
 
-\subsection{Conclusions}
-\label{dip:conclusions}
 
-We used deep learning to learn vector representations for nodes in the Internet based on their IP address, routing information, and a sparse hop count distance matrix. Deep learning helps uncover hidden features in the input data and recover structural properties of the Internet, such as node clusters or distances between nodes. Our experiments on a large real-world data set show that our embeddings can recover most distances, even to arbitrary hosts, with two hops absolute error, even when the training data is sparse. 
 %\todo{I think it is 13\% for 10,000}
 
 
@@ -449,7 +455,7 @@ We used deep learning to learn vector representations for nodes in the Internet 
 \subsection{Introduction}
 \label{spoof:intro}
 
-Spoofing the source IP address of network packets is a mechanism frequently used in denial-of-service attacks~\citep{spoofing-ddos,spoofing-ps}. IP spoofing can both hide the true source of the attack, thereby subverting IP-based firewalls and authentication mechanisms, and force legitimate hosts to redirect malicious traffic, thereby amplifying the effects of the attack~\citep{github-spoofing}. In 2018 alone, IP spoofing was the vehicle for several high-profile, terabyte-size DDoS attacks~\citep{cloudflare,github-spoofing,arbor-spoofing}.  
+Spoofing the source IP address of network packets is a mechanism frequently used in denial-of-service attacks~\citep{spoofing-ddos,spoofing-ps}. IP spoofing can both hide the true source of the attack, thereby subverting IP-based firewalls and authentication mechanisms, and force legitimate hosts to redirect malicious traffic, thereby amplifying the effects of the attack~\citep{github-spoofing}. In 2018 alone, IP spoofing was the vehicle for several high-profile, terabyte-size DDoS attacks~\citep{cloudflare,github-spoofing}.  
 
 There are two types of defenses against spoofing attacks. Active methods encrypt connections~\citep{ipsec}, probe suspicious IPs~\citep{puzzles}, or mark legitimate packets with unique identifiers~\citep{spm,spi}. They come at the expense of bandwidth, latency, or computation overhead~\citep{ipsec-overhead}.
 %
@@ -498,13 +504,13 @@ We analyze the coverage, accuracy, and cost of our learning-based detector. We s
 
 This work brings two contributions. First, we introduce a framework to help {\em any} Internet server detect packets spoofed with {\em any} IP address without any additional measurements to that IP. This represents a major shift from previous map-based spoofing detection mechanisms, who are either restricted to specific targets or to detect packets spoofed with known IPs. Although our method does not yet achieve by itself the accuracy necessary for a real-world deployment, it nevertheless shows that learning, rather than measuring, network properties could be an important piece in the spoofing detection puzzle.
 
-Second, our work explores the impact of deep learning in the network and security operations decision making. As AI moves beyond just being the word {\em du jour} and increasingly becomes an integral part of the network~\citep{dls}, it is important to understand the trade-offs between its cost and benefits~\citep{vern}.
+Second, our work explores the impact of deep learning in the network and security operations decision making. As AI moves beyond just being the word {\em du jour} and increasingly becomes an integral part of the network, it is important to understand the trade-offs between its cost and benefits~\citep{vern}.
 %
 It is precisely such a trade-off that we analyze in our work: while learning IP maps for spoofing detection can ease the task of administrators and help build complete maps much faster, it may decrease the detection accuracy. Understanding this balance can lead to better and more protected networks.
 
 %The rest of the chapter flows as follows. In the next section, we revisit map-based spoofing detection mechanisms and reiterate the motivation for learning maps. We describe our vision for a learning-based spoofing detector in Section~\ref{sec:design}. In Section~\ref{sec:eval}, we use real world data to evaluate the trade-offs involved in introducing learning to spoofing detection. We discuss the limitations and opportunities of our work in Section~\ref{sec:discussion} and conclude in Section~\ref{sec:conclusions}.
 
-\subsection{Towards learned maps for spoofing detection}
+\subsection{Towards Learned Maps for Spoofing Detection}
 
 %Internet hosts can {\em actively} protect themselves from IP spoofing by securing their connections using private keys~\citep{ipsec}, probing suspicious IPs to check their validity~\citep{xxx}, or asking sources to send the solution to a computational puzzle before connecting~\citep{puzzles}. All these solutions are expensive to deploy and may introduce performance overhead in the form of additional network throughput and latency~\citep{ipsec-overhead}.
 
@@ -562,13 +568,13 @@ Figure~\ref{fig:learnedmaps} presents a visual representation of the benefits of
 
 \begin{figure}
 	\centering
-	\includegraphics[width=.8\linewidth]{Graph/spoof/learnedmaps.png}
+	\includegraphics[width=.7\linewidth]{Graph/spoof/learnedmaps.png}
 	\caption{Map-based spoofing detection. Network maps detect only spoofed packets traversing protected ASes (colored in green). Host maps detect only packets spoofed with IPs present in the map (also colored in green). Learned host maps have the ability to detect all packets because they learn missing map entries. The paths in the diagrams indicate the apparent source of the packet (the spoofed source). In reality, all packets originate from the attacker.}
 	\label{fig:learnedmaps}
 	\vspace{0.5cm}
 \end{figure}
 
-\subsection{Learning-based spoofing detection}
+\subsection{Learning-Based Spoofing Detection}
 \label{spoof:design}
 
 To illustrate the benefits of a learning-based spoofing detector, we propose a prototype detection framework based on the hop count filtering method first introduced by Wang~\etal{}~\citep{hcf}.
@@ -577,7 +583,7 @@ Our prototype consists of two main components: an offline IP map learning module
 
 
 
-\subsubsection{IP map learning}
+\subsubsection{IP Map Learning}
 
 In a previous work, we introduced DIP, a deep learning framework that uses hop count information between network host to learn an embedding of the Internet~\citep{dip}. Using a small data set of IP addresses, their prefix information, and hop counts among them, DIP computes a vector representation of each IP in a high-dimensional Euclidean space. The algorithm ensures that representations reflect hop counts between hosts: the Euclidean distance between two representations estimates the hop count between the associated IPs. We briefly describe DIP below and refer the reader to the work of ~\citet{dip, dip-ccr} for more details.
 
@@ -626,7 +632,7 @@ In Section~\ref{spoof:eval}, we show that spoofing detection still works when th
 	% \vspace{-0.5cm}
 \end{figure*}
 
-\subsubsection{Spoofing detector}
+\subsubsection{Spoofing Detector}
 
 The spoofing detector is deployed on a potential target and consists of the learned map, packet processor, hop count extractor, and detector (Figure~\ref{fig:detector}). The packet processor extracts the source IP and TTL values from an incoming packet. It then computes the hop count information from the TTL, using the algorithm described by Wang~\etal{}~\citep{iphc}. The hop count estimator uses an existing embedding model (\ie{}, built offline using IP and hop count data from legitimate packets) to compute a representation for the packet's source IP and estimate the hop count to the target. 
 %
@@ -751,7 +757,7 @@ We set up the experiment as follows. We use the 10,000 IP data set for both trai
 
 {\bf Summary.} Learning maps can trade-off high accuracy in detecting spoofed traffic with a high rate of false positives. This indicates that learning maps could be an important part of a bigger framework for spoofing detection, which could process the false alarms faster or dynamically adjust the detection threshold to control their rate.
 
-\subsubsection{Model transfer} 
+\subsubsection{Model Transfer} 
 \label{spoof:transfer}
 
 To understand whether our learned model is general and can be transferred to new hosts, we split the data set into two disjoint sets, such that the targets in each set are disjoint. We train a model using only the targets in the first set and then run detection on both sets. Our goal is to understand how the detector performance for a target changes when we use a model learned for other targets. We consider three different splits: the number of targets in each set is the same (``1/1'' split), the number of training targets is four times larger (``4/1'' split) and, the training targets are four times fewer (``1/4'' split). We set the detection threshold at two hops and compute the average sensitivity and specificity for spoofing detection on each set across all splits. 
@@ -767,6 +773,7 @@ Training a representative embedding does not require significant resources. Lear
 
 \begin{table}[]
 	\centering
+		\scalebox{0.9}{
 	\begin{tabular}{l|c|c|c}
 		{\bf Number of source IPs}   & 1,000 & 10,000 & 100,000 \\
 		\hline
@@ -774,12 +781,13 @@ Training a representative embedding does not require significant resources. Lear
 		\hline
 		{\bf Size of model (MB)} & 4.5 & 4.5 & 4.5\\
 	\end{tabular}
+}
 	\caption{Performance of training for data sets containing hop count information from 96 servers to 1,000, 10,000, and 100,000 IPs. Each data set is sparse, with only about 15\% of all entries available.}
 	\label{tab:performance}
 	% \vspace{-0.5cm}
 \end{table}
 
-\subsection{Discussion: Limitations and opportunities}
+\subsection{Discussion: Limitations and Opportunities}
 \label{spoof:discussion}
 
 %We discuss several aspects related to the accuracy and deployment of our learning-based spoofing detection.
@@ -809,7 +817,12 @@ Furthermore, if the attacker learns the hop count between the spoofed IP and the
 
 
 
+\section{Conclusion}
+\label{dip:conclusions}
 
+We used deep learning to learn vector representations for nodes in the Internet based on their IP address, routing information, and a sparse hop count distance matrix. Deep learning helps uncover hidden features in the input data and recover structural properties of the Internet, such as node clusters or distances between nodes. Our experiments on a large real-world data set show that our embeddings can recover most distances, even to arbitrary hosts, with two hops absolute error, even when the training data is sparse. 
+Using the deep learning framework in network spoofing detection, we found the learning-based network coordinate system (DIP) could dramatically increase the detection coverage. For any Internet server's received packets spoofed with any IP address, the DIP-based spoofing detection mechanism could determine whether the packets are spoofed or not with acceptable accuracy.  
+%\todo{I think it is 13\% for 10,000}
 
 
 
