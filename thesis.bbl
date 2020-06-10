@@ -26,9 +26,15 @@ Ark IPv4.
 \newblock
   http://www.caida.org/data/active/ipv4\_routed\_24\_top\\-ology\_dataset.xml.
 
-\bibitem[\protect\astroncite{Armbrust et~al.}{2015}]{sparksql}
+\bibitem[\protect\astroncite{Armbrust et~al.}{2015a}]{armbrust2015scaling}
+Armbrust, M., Das, T., Davidson, A., Ghodsi, A., Or, A., Rosen, J., Stoica, I.,
+  Wendell, P., Xin, R., and Zaharia, M. (2015a).
+\newblock Scaling spark in the real world: performance and usability.
+\newblock {\em Proceedings of the VLDB Endowment}, 8(12):1840--1843.
+
+\bibitem[\protect\astroncite{Armbrust et~al.}{2015b}]{sparksql}
 Armbrust, M., Xin, R.~S., Lian, C., Huai, Y., Liu, D., Bradley, J.~K., Meng,
-  X., Kaftan, T., Franklin, M.~J., Ghodsi, A., et~al. (2015).
+  X., Kaftan, T., Franklin, M.~J., Ghodsi, A., et~al. (2015b).
 \newblock Spark sql: Relational data processing in spark.
 \newblock In {\em Proceedings of the 2015 ACM SIGMOD international conference
   on management of data}, pages 1383--1394.
@@ -332,6 +338,12 @@ Gu, J., Watanabe, Y.~H., Mazza, W.~A., Shkapsky, A., Yang, M., Ding, L., and
 \newblock In {\em Proceedings of the 2019 International Conference on
   Management of Data}, pages 467--484. ACM.
 
+\bibitem[\protect\astroncite{Gulzar et~al.}{2017}]{gulzar2017automated}
+Gulzar, M.~A., Interlandi, M., Han, X., Li, M., Condie, T., and Kim, M. (2017).
+\newblock Automated debugging in data-intensive scalable computing.
+\newblock In {\em Proceedings of the 2017 Symposium on Cloud Computing}, pages
+  520--534.
+
 \bibitem[\protect\astroncite{Gutmann and Hyv{\"a}rinen}{2010}]{NCE}
 Gutmann, M. and Hyv{\"a}rinen, A. (2010).
 \newblock Noise-contrastive estimation: A new estimation principle for
@@ -350,6 +362,12 @@ He, K., Zhang, X., Ren, S., and Sun, J. (2016).
 \newblock Deep residual learning for image recognition.
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition}, pages 770--778.
+
+\bibitem[\protect\astroncite{Interlandi et~al.}{2018}]{interlandi2018adding}
+Interlandi, M., Ekmekji, A., Shah, K., Gulzar, M.~A., Tetali, S.~D., Kim, M.,
+  Millstein, T., and Condie, T. (2018).
+\newblock Adding data provenance support to apache spark.
+\newblock {\em The VLDB Journal}, 27(5):595--615.
 
 \bibitem[\protect\astroncite{Jin et~al.}{}]{hcf}
 Jin, C., Wang, H., and Shin, K.~G.
@@ -425,6 +443,18 @@ Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018a).
 Li, M., Lumezanu, C., Zong, B., and Chen, H. (2018b).
 \newblock {Learning IP Network Representations}.
 \newblock {\em SIGCOMM CCR}.
+
+\bibitem[\protect\astroncite{Li et~al.}{2020}]{li2020improving}
+Li, M., Ruan, W., Liu, X., Soldaini, L., Hamza, W., and Su, C. (2020).
+\newblock Improving spoken language understanding by exploiting asr n-best
+  hypotheses.
+\newblock {\em arXiv preprint arXiv:2001.05284}.
+
+\bibitem[\protect\astroncite{Li et~al.}{2018c}]{li2018rios}
+Li, Y., Li, M., Ding, L., and Interlandi, M. (2018c).
+\newblock Rios: Runtime integrated optimizer for spark.
+\newblock In {\em Proceedings of the ACM Symposium on Cloud Computing}, pages
+  275--287.
 
 \bibitem[\protect\astroncite{Liu et~al.}{2019}]{liu2019multi}
 Liu, X., He, P., Chen, W., and Gao, J. (2019).
@@ -581,6 +611,16 @@ Pyxida.
 \newblock Pyxida.
 \newblock http://pyxida.sourceforge.net/.
 
+\bibitem[\protect\astroncite{Ram{\'\i}rez-Gallego
+  et~al.}{2017}]{ramirez2017information}
+Ram{\'\i}rez-Gallego, S., Mouri{\~n}o-Tal{\'\i}n, H., Mart{\'\i}nez-Rego, D.,
+  Bol{\'o}n-Canedo, V., Ben{\'\i}tez, J.~M., Alonso-Betanzos, A., and Herrera,
+  F. (2017).
+\newblock An information theory-based feature selection framework for big data
+  under apache spark.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+  48(9):1441--1453.
+
 \bibitem[\protect\astroncite{Rawat et~al.}{2019}]{rawat2019sampled}
 Rawat, A.~S., Chen, J., Yu, F. X.~X., Suresh, A.~T., and Kumar, S. (2019).
 \newblock Sampled softmax with random fourier features.
@@ -723,6 +763,22 @@ Wang, D., Cui, P., and Zhu, W. (2016b).
 Wang, H., Jin, C., and Shin, K.~G. (2007).
 \newblock Defense against spoofed ip traffic using hop-count filtering.
 \newblock {\em IEEE/ACM Transactions on Networking}, 15:40--53.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2016c}]{wang2016cleanix}
+Wang, H., Li, M., Bu, Y., Li, J., Gao, H., and Zhang, J. (2016c).
+\newblock Cleanix: A parallel big data cleaning system.
+\newblock {\em ACM SIGMOD Record}, 44(4):35--40.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2019}]{wang2019efficient}
+Wang, J., Lin, C., Li, M., and Zaniolo, C. (2019).
+\newblock An efficient sliding window approach for approximate entity
+  extraction with synonyms.
+
+\bibitem[\protect\astroncite{Wang et~al.}{2020}]{wang2020boosting}
+Wang, J., Lin, C., Li, M., and Zaniolo, C. (2020).
+\newblock Boosting approximate dictionary-based entity extraction with
+  synonyms.
+\newblock {\em Information Sciences}.
 
 \bibitem[\protect\astroncite{Wang et~al.}{2018}]{wang2018learning}
 Wang, L., Li, Y., Huang, J., and Lazebnik, S. (2018).

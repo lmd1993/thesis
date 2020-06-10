@@ -45,22 +45,23 @@
 \BOOKMARK [1][-]{section.4.6}{4.6 Conclusion}{chapter.4}% 45
 \BOOKMARK [0][-]{chapter.5}{5 Expressive Library for Recursive Queries: LLib and LFrame}{}% 46
 \BOOKMARK [1][-]{section.5.1}{5.1 Introduction}{chapter.5}% 47
-\BOOKMARK [1][-]{section.5.2}{5.2 Prelimiaries}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{5.2 Preliminaries}{chapter.5}% 48
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Datalog}{section.5.2}% 49
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Related Platforms: Apache Spark, BigDatalog and RaSQL}{section.5.2}% 50
 \BOOKMARK [2][-]{subsection.5.2.3}{5.2.3 Spark MLlib and DataFrame}{section.5.2}% 51
 \BOOKMARK [1][-]{section.5.3}{5.3 LLib}{chapter.5}% 52
 \BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Working Paradigms Comparison: LLib, BigDatalog and RaSQL}{section.5.3}% 53
 \BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 LLib Processing Pipeline and Underlying Architecture}{section.5.3}% 54
-\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 Extension of LLib}{section.5.3}% 55
-\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Collaboration with Other Applications}{section.5.3}% 56
-\BOOKMARK [2][-]{subsection.5.3.5}{5.3.5 User Defined Datalog Function}{section.5.3}% 57
-\BOOKMARK [1][-]{section.5.4}{5.4 LFrame}{chapter.5}% 58
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Conversion from DataFrame to LFrame}{section.5.4}% 59
-\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 LFrame: Unary Operation}{section.5.4}% 60
-\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 LFrame: N-ary Operation}{section.5.4}% 61
-\BOOKMARK [1][-]{section.5.5}{5.5 Multi-language Programming}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.6}{5.6 Performance Overhead}{chapter.5}% 63
-\BOOKMARK [1][-]{section.5.7}{5.7 Conclusion}{chapter.5}% 64
-\BOOKMARK [0][-]{chapter.6}{6 Conclusions and Future Work}{}% 65
-\BOOKMARK [0][-]{section*.29}{Bibliograpy}{}% 66
+\BOOKMARK [2][-]{subsection.5.3.3}{5.3.3 LLib Categories and an Example of Machine Learning with LLib}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.4}{5.3.4 Extension of LLib}{section.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.3.5}{5.3.5 Collaboration with Other Applications}{section.5.3}% 57
+\BOOKMARK [2][-]{subsection.5.3.6}{5.3.6 User Defined Datalog Function}{section.5.3}% 58
+\BOOKMARK [1][-]{section.5.4}{5.4 LFrame}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Conversion from DataFrame to LFrame}{section.5.4}% 60
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 LFrame: Unary Operation}{section.5.4}% 61
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 LFrame: N-ary Operation}{section.5.4}% 62
+\BOOKMARK [1][-]{section.5.5}{5.5 Multi-language Programming}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.6}{5.6 Performance Overhead}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.7}{5.7 Conclusion}{chapter.5}% 65
+\BOOKMARK [0][-]{chapter.6}{6 Conclusions and Future Work}{}% 66
+\BOOKMARK [0][-]{section*.29}{Bibliograpy}{}% 67

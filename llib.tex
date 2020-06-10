@@ -63,7 +63,7 @@ The chapter is organized as follows. Section \ref{pre} reviews the basics about 
 user-defined Datalog functions and the collaborations with other Spark libraries. 
 Section \ref{lframe} presents the conversion between LFrame and DataFrame, the basic unary and $N$-ary operations supported by LFrame, and some examples by LFrame. Section \ref{multi} demonstrates our design to support multi-language programming. Section \ref{sec:libperf} discusses the performance overhead. Section \ref{conclusion} draws  conclusion and maps out plans for future work.
 
-\section{Prelimiaries}
+\section{Preliminaries}
 \label{pre}
 \subsection{Datalog}
 % base case, recursive case,
@@ -95,8 +95,8 @@ One fact of this relation can be \textsf{warc(1, 2, 5)}, which shows the  cost f
 In the first rule (line~2), it initializes the shortest distance from the source vertex to itself as 0, where the ``\{startvetex\}'' can allow user to input the source vertex ID. The second rule (line~3) recursively produces all the minimum distances for all possible paths from source node to another node. The monotonic aggregate \citep{zaniolo2019monotonic,das2019bigdata}, \textsf{mmin} is utilized, which allows the aggregation inside the recursion when set containment is satisfied. The \textsf{mmin} will get a new lower value with a larger set of possible paths. And a normal aggregate \textsf{min} is finally exploited (line~4) to obtain the minimum cost path. The fifth line denotes the  predicate (\textit{relation}), \textsf{result(T,C)} will be evaluated and become the output of the application.
 
 \subsection{Related Platforms: Apache Spark, BigDatalog and RaSQL}
-\textbf{Apache Spark.} Apache Spark is a DISC system with various modules like Spark SQL \citep{sparksql},  MLlib \citep{meng2016mllib} and GraphX \citep{gonzalez2014graphx} to support analytics on structured data, machine learing algorithms and graph computation algorithms respectively.  All the Spark applications are eventually represented by a series of transformations and actions on Resilient Distributed Datasets (RDDs) \citep{dean2004mapreduce}, the main abstraction provided by Spark. The operators like groupBy and filter are lazily evaluated until an output action like count trigger evaluations on RDDs. In this way, before execution, the Spark Optimizer can design a better physical plan by avoiding some duplicate computation or pipelining operations. RDDs in Spark are actually Python or Java objects stored in memory and can be processed in parallel. %Unlike RDD, the Spark DataFrame organize  data  into named columns.
-% The RDD is fault-tolerant due to its lineage. The lineage graph of RDDs records the transformations applied to them.  The Spark has attracted wide audiences from database community due to its high usability and performance.
+\textbf{Apache Spark.} Apache Spark is a DISC system with various modules like Spark SQL \citep{sparksql},  MLlib \citep{meng2016mllib} and GraphX \citep{gonzalez2014graphx} to support analytics on structured data, machine learning algorithms and graph computation algorithms respectively.  All the Spark applications are eventually represented by a series of transformations and actions on Resilient Distributed Datasets (RDDs) \citep{dean2004mapreduce}, the main abstraction provided by Spark. The operators like groupBy and filter are lazily evaluated until an output action like count trigger evaluations on RDDs. In this way, before execution, the Spark Optimizer can design a better physical plan by avoiding some duplicate computation or pipelining operations. RDDs in Spark are actually Python or Java objects stored in memory and can be processed in parallel. %Unlike RDD, the Spark DataFrame organize  data  into named columns.
+The RDD is fault-tolerant due to its lineage. The lineage graph of RDDs records the transformations applied to them, which facilitates the tracking and debugging through data transformations \citep{gulzar2017automated,interlandi2018adding}.  The Spark has attracted wide audiences from database community due to its high usability \citep{armbrust2015scaling} and continuously optimized query planner \citep{li2018rios}.
 
 \textbf{BigDatalog.}
 With the popularity of Spark and the benefits for recursive query evaluation and optimization brought by Datalog, the new requirements have been re-emerged to support the Datalog programming on Spark. 
@@ -171,7 +171,7 @@ To tackle those issues, we develop the DataFrame-core LLib as shown in Figure \r
 
 
 \subsection{LLib Processing Pipeline and Underlying Architecture}
-
+\label{sec:pipeline}
 \subsubsection{Working Session and Acquiring Data}
 \label{sec:data}
 In LLib, the first step is to construct a working environment for the Datalog queries and libraries. We respect the customs of building Spark Session and exploit the similar way as following (with Transitive Closure, i.e. TC as a running example):
@@ -252,14 +252,14 @@ programming.
 
 \subsubsection{Multiple Data Sources}
 \label{sec:multiple}
-The previous TC example operates on only one relation, however there are many applications requiring more than one relation, which brings changes to the  pipeline. We illustrate the Multi level Market (MLM) Bonus as a typical Datalog application \citep{mlm} acquiring more than one dataset. The application is to calculate the bonus for members of a hierarchical structural Multi Level Marketing  organization. In the organization,  new members are recruited by  and get products from old members (sponsors). One member's bonus is based on his own sales and a proportion of the sales from the people directly or indirectly recruited by him. The  scale of the proportion is user-defined. 
+The previous TC example operates on only one relation, however there are many applications requiring more than one relation, which brings changes to the  pipeline. We illustrate the Multi Level Market (MLM) Bonus as a typical Datalog application \citep{mlm} acquiring more than one dataset. The application is to calculate the bonus for members of a hierarchical structural Multi Level Marketing  organization. In the organization,  new members are recruited by  and get products from old members (sponsors). One member's bonus is based on his own sales and a proportion of the sales from the people directly or indirectly recruited by him. The  scale of the proportion is user-defined. 
 
 There are two relations in MLM Bonus, including the \textit{sponsor} and \textit{sales}. The sponsor relation describes the recruiting relationship among members, while the sales relation records the profits for each member. In  Datalog syntax, the base case should be calculating the member's bonus by the sales table. And the recursive rule is to calculate the bonus based on the basic profits and the profits derived from the downstream members.
 
 With the help of LLib, users could implement MLM Bonus by a pre-defined class in LLib  ignoring the complex logic. The program can be as easy as  follows.
 
 \vspace{0.5em}
-\ex{2} - LLib with more than one input relation: Multi level Market Bonus.
+\ex{2} - LLib with more than one input relation: Multi Level Market Bonus.
 \bldl
 val\ MLM = new\ MLM() \\
 MLM.setDirection(MCol = "Member", ProfitCol = "Bonus")\\
@@ -269,6 +269,34 @@ MLM.run(Array(dfSales, dfSponsor), output = "resMLM", session) \\
 \eldl
 Suppose we already have the two relations stored in dfSales and dfSponsor. In the first line, we build an executable object of MLM. Then, we set the schema mappings for two relations in the next two lines. To operate the data and persist to resMLM file, we use the forth line with the run function.  The run function of previous TC application only expects one relation as the input. While dealing with multiple relations, we aggregate the relations in an array as the input. The schema mapping is implemented by adding a new function for the second relation. However, it is possible to  maintain the schema mapping for each relation in a hash function ($h_r$) and use another hash function with the relation's name as the key and the schema mapping information (the hash function, $h_r$) as the value. 
 % to store the mapping between the relation and the schema mapping hashing. 
+
+\subsection{LLib Categories and an Example of Machine Learning with LLib}
+The supported common Datalog algorithms and utilities in LLib can be  categorized into five groups including the graph algorithms (Connected Components, Count Paths, etc.), machine learning algorithms (Linear Regression, Logistic Regression, etc.), financial applications (MLM Bonus, Bill of Materials, etc.), temporal database queries (like Interval Coalesce) and other applications. Although the machine learning algorithms already exist in Spark MLlib, we also provide the Datalog version in LLib because in our another work, it has been proven that the Datalog implementation can bring performance boost. 
+
+The working pipelines of all those libraries are unified and similar to the previous introduced TC and MLM example in Section \ref{sec:pipeline}. Here, we describe one machine learning example (Example 3) to train a linear regression model with LLib as following.
+% Since the working pipeline with other libraries except machine learning should be similar to the previous introduced pipeline, we only describe one machine learning example here. 
+In this example, the training data is stored in the verticalized format (a format often used for sparse data processing), whose schema is (item, column, value, prediction). The \textit{item} represents the training instance. The \textit{column} and \textit{value} record each item's feature ID and feature value, while the \textit{prediction} is the estimated value. To train on the loaded DataFrame (\textit{dfTrain}), we could simply establish a training object \textit{lr}, which wraps all the computation rules for a Datalog version of linear regression. We can also set the properties like learning rate or initial values of parameters before training. And the trained model (parameters values) could be either stored to a file (lr.run) or to a DataFrame (lr.genDF) for further usage. It can be observed that the LLib's machine learning library usage is as succinct as the usage of machine learning libraries in Spark MLlib.
+
+\vspace{0.5em}
+\ex{3} - Training of Linear Regression model with LLib.
+\bldl
+//\ Import\ data. 
+\\
+var\ vs = StructType(List(StructField("item", IntegerType, true), \\StructField(
+"column", IntegerType, true),
+StructField("value", DoubleType, true),\\ StructField("prediction", IntegerType, true))) \\
+
+var\ dfTrain = spark.read.format("csv").schema(vs).load("dataV") \\
+\\
+//\ Training\ on\ the\ input\ relation\ df. \\
+import\ edu.ucla.cs.wis.bigdatalog.spark.LLib.LL\_LinearRegression \\
+val\ lr = new\  LL\_LinearRegression().setMaxIter(10).setLearningRate(lr=0.01).setInitial(0) \\
+% val\ model = lr.genDF(dfTrain, session) \\
+lr.run(dfTrain, output = "model.out", session)
+
+\eldl
+
+
 \iffalse
 \subsection{LLib Categories}
 The supported common Datalog algorithms and utilities in LLib can be  categorized into five groups. We briefly introduce each group and the typical algorithms. 
@@ -378,7 +406,7 @@ With the template, the implementation becomes quite uncomplicated. As long as us
 The input and output relations in LLib can be both DataFrames, which makes it possible to add a preprocessing algorithm which generates the input DataFrames  or  a subsequent processing algorithm which takes the DataFrame generated from LLib. LLib allows users to exploit the Datalog application as a simple step at any place of their  processing pipelines. In this section, we illustrate with a concrete example to show the collaborations between LLib and other applications like Spark MLlib or Spark DataFrame Operations. The showed LLib application is the MLM Bonus application mentioned previously, and we want to use the linear regression library from MLlib to get the relation between the bonus and the working days for a member. To save space, we do not show the process to build the session (LLibSession), and load input relations (dfSales, dfSponsor, dfWorkTime).  The dfWorkTime stores the working days for each member. With MLM class from LLib, we could get the \textit{dfRes} storing the bonus for each member. Joining the result relation with the dfWorkTime on the member column will generate a new relation with columns of the day and bonus. The Linear Regression function from MLlib could train on the result DataFrame. In this example, we can find the  LLib is able to collaborate fluently with other operations in Spark like MLlib (LinearRegression), DataFrame Operations (join). Similarly, the collaboration among multiple Datalog applications is also possible.  
 
 \vspace{0.5em}
-\ex{3} - Collaboration between LLib and other Spark libraries.
+\ex{4} - Collaboration between LLib and other Spark libraries.
 \bldl
 val\ MLM = new\ MLM()\\
 MLM.setDirection(MCol = "Member", ProfitCol = "Bonus")\\
@@ -429,7 +457,7 @@ The session can  load the data to a DataFrame variable df, but the df cannot exe
 % The constructed LFrame variable, lframe, could support various Datalog operations like specifying the rules, input tables, persisting the result to a file, etc. These operations are categorised to unary operations and $N$-ary operations and introduced later.
 
 \vspace{0.5em}
-\ex{4.1} - Development with LFrame:  Conversion from DataFrame to LFrame.
+\ex{5.1} - Development with LFrame:  Conversion from DataFrame to LFrame.
 \bldl
 val\ session = LLibSession.builder().appName("LFrame").master("local[*]").getOrCreate() \\
 var\ schema = StructType(List(StructField("Parent", IntegerType, true),\\ \ StructField("Child", IntegerType, true)))\\
@@ -444,7 +472,7 @@ The unary operation only involves one LFrame object each time. With the lframe, 
 
 
 \vspace{0.5em}
-\ex{4.2} - Development with LFrame:  Unary operations with SG application.
+\ex{5.2} - Development with LFrame:  Unary operations with SG application.
 \setcounter{myrow}{0}
 \\
 
@@ -467,12 +495,12 @@ lframe.nonRecursive().where("X < 10").select("X").collect().foreach(println) \\
 
 There are five categories of unary operations included in the above example. 
 \begin{itemize}
-	\item \textbf{Registering one LFrame as a base relation.} In line 1, the registerCurLFrame is to register the lframe as a base relation so that the Datalog rules can utilize it as a given dataset. While registering, users are free to rename the dataset's columns and  LFrame will map the columns according to the order of appearance. 
-	\item \textbf{Appending (or removing) rules.} The main body (line~2 to~4) of a Datalog program is a finite set of rules. To state the rules, the function called "rules" can be exploited. Whenever the function is utilized,  a new rule will be appended to the existing rule sets owned by the lframe.
+	\item Registering one LFrame as a base relation. In line 1, the registerCurLFrame is to register the lframe as a base relation so that the Datalog rules can utilize it as a given dataset. While registering, users are free to rename the dataset's columns and  LFrame will map the columns according to the order of appearance. 
+	\item Appending (or removing) rules. The main body (line~2 to~4) of a Datalog program is a finite set of rules. To state the rules, the function called "rules" can be exploited. Whenever the function is utilized,  a new rule will be appended to the existing rule sets owned by the lframe.
 	If one rule is wrongly appended, it can be removed by the delRule (line 5) function using its index. The provided index variable can be an array  to remove more than one rule.
-	\item \textbf{Specifying the output relation.} To evaluate the application, the query function (line 6)  assists to point out the output relation, which is the sg relation in the SG. The generated result LFrame will store the output dataset in the schema specified in query, (X, Y).  
-	\item \textbf{Lazy execution and persistence.} In DataFrame, the evaluation is lazy. Similarly, the LFrame's evaluation is lazy until the run action is triggered.  As shown in the second part of the code (line~8 to~10), the run function will store the result relation to a file and if a user wants to restore to a DataFrame or RDD,  genDF or genRDD function can be considered. 
-	\item \textbf{Non-recursive transactions.} The design of LFrame is to wrap both the Datalog transactions and the normal DataFrame transactions. When a normal DataFrame transaction is required, like the line 12 shows, the nonRecusive function will convert LFrame to the normal DataFrame for all the DataFrame operators afterwards. 
+	\item Specifying the output relation. To evaluate the application, the query function (line 6)  assists to point out the output relation, which is the sg relation in the SG. The generated result LFrame will store the output dataset in the schema specified in query, (X, Y).  
+	\item Lazy execution and persistence. In DataFrame, the evaluation is lazy. Similarly, the LFrame's evaluation is lazy until the run action is triggered.  As shown in the second part of the code (line~8 to~10), the run function will store the result relation to a file and if a user wants to restore to a DataFrame or RDD,  genDF or genRDD function can be considered. 
+	\item Non-recursive transactions. The design of LFrame is to wrap both the Datalog transactions and the normal DataFrame transactions. When a normal DataFrame transaction is required, like the line 12 shows, the nonRecusive function will convert LFrame to the normal DataFrame for all the DataFrame operators afterwards. 
 \end{itemize}
 Compare the LFrame and DataFrame, we can find they work in  analogous ways  but LFrame can support more operations. A more compact way to express the transactions from line 2 to 7 is to list them back to the lframe one by one like in line 15. 
 \subsection{LFrame: N-ary Operation}
@@ -480,7 +508,7 @@ Compare the LFrame and DataFrame, we can find they work in  analogous ways  but 
 In the previous SG example, only one relation is contained in the Datalog application, while in this section, we illustrate the transaction (registerMoreDFs)  embroiling more relations like the join operator of the relational database. We adopt the MLM Bonus application as a running example (introduced in Example 2), for it contains both the sales and the sponsor relations. 
 
 \vspace{0.5em}
-\ex{4.3} - Development with LFrame:  $N$-ary operations with MLM Bonus application.
+\ex{5.3} - Development with LFrame:  $N$-ary operations with MLM Bonus application.
 \setcounter{myrow}{0}
 \\
 
@@ -493,7 +521,7 @@ $\begin{array}{>{\stepcounter   {myrow} \themyrow : \quad}lrl}
 %     //\ Datalog\ operations\ for \ Delivery\ application. \\
 var\ lfSales = DatalogLibSession.wrapperDF(dfSales, session) \\
 lfSales = lfSales.registerCurDF("sales(Member: integer, Bonus: integer)")\\
-lfSales = lfSales.\textbf{registerMoreDFs}(otherDF = Array(dfSponsor), \\ \quad registers = Array("sponsor(Member1: integer, Member2: integer)"))  \\
+lfSales = lfSales.registerMoreDFs(otherDF = Array(dfSponsor), \\ \quad registers = Array("sponsor(Member1: integer, Member2: integer)"))  \\
 lfSales = lfSales.rules(" bonus(M, msum<(M,B)>) \\ \quad \leftarrow sales(M, P), B = (P * 0.1)") \\
 lfSales = lfSales.rules("bonus(M1, msum<(M2,B)>) \\ \quad \leftarrow bonus(M2, B2), sponsor(M1, M2), B = (B2 * 0.5)")\\
 lfSales = lfSales.query("bonus(M, B)")\\
@@ -549,4 +577,7 @@ design. With a larger dataset (e.g. RMAT-4M or Grid-250), there is a trend of re
 \section{Conclusion}
 \label{conclusion}
 
-In this chapter, we have shown the LLib to encapsulate typical Datalog algorithms, which follows the data scientists' customs  and requires less logical programming expertise.  For the possible  extensions of LLib, we provide not only a unified template for normalizing the contribution, but also some utilities to simplify the extending process.  With some running examples, we  demonstrate the benefit of designing the LLib as a DataFrame-based API is that the Datalog algorithm can flexibly collaborate with other Spark operations. For the audience who has more logical programming experience and would like to design their own applications, we also provide an LFrame API containing both logical and DataFrame-based operations. A simple conversion function between the DataFrame and LFrame is also provided. Both LFrame and LLib make the Datalog as an integral part of data processing pipeline and are implemented to support general programming languages like Python, Scala and Java. Moving forward, we have  plenty of new algorithms and logical oeprations to add for the LLib and LFrame separately. We also  would like to implement the two interfaces on other distributed platforms or crossing various platforms in a way like a polystore system \citep{duggan2015bigdawg}.
+In this chapter, we have shown the LLib to encapsulate typical Datalog algorithms, which follows the data scientists' customs  and requires less logical programming expertise.  For the possible  extensions of LLib, we provide not only a unified template for normalizing the contribution, but also some utilities to simplify the extending process.  With some running examples, we  demonstrate the benefit of designing the LLib as a DataFrame-based API is that the Datalog algorithm can flexibly collaborate with other Spark operations. For the audience who has more logical programming experience and would like to design their own applications, we also provide an LFrame API containing both logical and DataFrame-based operations. A simple conversion function between the DataFrame and LFrame is also provided. Both LFrame and LLib make the Datalog as an integral part of data processing pipeline and are implemented to support general programming languages like Python, Scala and Java. Moving forward, we have  plenty of data processing algorithms and logical oeprations to add for the LLib and LFrame separately.  For example, the feature extraction \citep{ramirez2017information} or data cleaning  \citep{wang2016cleanix} or entity extraction \citep{wang2019efficient, wang2020boosting}  algorithms for preprocessing.
+%We also  would like to implement the two interfaces on other distributed platforms or crossing various platforms in a way like a polystore system \citep{duggan2015bigdawg}.
+Further plans call for the implementation of both our  interfaces on other distributed platforms  and 
+across various platforms in ways  akin to those  of the  polystore system \citep{duggan2015bigdawg}.
